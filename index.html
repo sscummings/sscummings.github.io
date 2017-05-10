@@ -20,39 +20,135 @@ content="stephen cummings or whatever" />
 
 <style type="text/css">
 
-	body {
-		margin: 0;
+body {
+	margin: 0;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: Arial, sans, sans-serif;
+    font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.content {
+	width: calc(220px * 3);
+	max-width: 100%;
+	padding-bottom: 20px;
+}
+
+h1, p {
+    box-sizing: border-box;
+	font-weight: normal;
+	padding: 10px;
+	margin: 0;
+	max-width: 100%;
+}
+
+.options {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+    padding-left: 0;
+    margin: 0;
+}
+
+.option {
+    box-sizing: border-box;
+	display: inline-block;
+	margin: 10px;
+	float: left;
+}
+
+.option > a {
+	box-sizing: border-box;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background: cyan;
+    color: white;
+    text-decoration: none;
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    */
+    overflow: hidden;
+    position: relative;
+}
+
+.option > a > span {
+	color: white;
+	text-transform: lowercase;
+    font-size: 6rem;
+    position: relative;
+    left: -.45rem;
+    top: 40%;
+    display: none;
+    position: absolute;
+}
+
+	.option:nth-of-type(1) > a {
+		background: cyan;
 	}
-	
-	#all {
-		box-sizing: border-box;
-		padding: 30px 0;
-		margin: 0 30px;
-		position: relative;
-		min-height: 100vh;
+
+	.option:nth-of-type(2) > a {
+		background: magenta;
+	}
+
+	.option:nth-of-type(3) > a {
+		background: yellow;
+	}
+
+.option > a:hover > span {
+	display: inline;
+}
+
+	.option > a.art > span {
+		left: auto;
+		right: -.85rem;
+	}
+
+p {
+	clear: both;
+}
+
+@media (max-width: 680px) {
+
+	.content {
+		width: calc(220px * 2);
+	}
+}
+
+@media (max-width: 480px) {
+
+	.container {
+		align-items: flex-start;
 	}
 
 	.content {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		width:	570px;
-		max-width: 100%;
-		font-family: Arial, sans-serif;
-		text-align: center;
-		line-height: 1.25;
+		padding: 30px 0;
 	}
 
-	ul, li {
-		list-style-type: none;
-		padding-left: 0;
+	h1, p {
+		width: 360px;
+		margin: 10px auto;
 	}
 
-	li {
+	.option {
 		display: block;
-		text-align: center;
+		float: none;
+		width: 200px;
+		margin: 10px auto 20px;
 	}
+}
 
 </style>
 
@@ -61,21 +157,32 @@ content="stephen cummings or whatever" />
 
 <body>
 
-<div id="all">
-
-	<div class="content">
-		<p>Yo. stephencummings.us is being rebuilt. Probably.</p>
-		<p>In the meantime, find things related to the person you came to look for &mdash; namely, Stephen Cummings, i.e. me &mdash; in these places:</p>
-
-		<ul>
-			<li><a href="http://sscummings.tumblr.com/">some of my art things</a></li>
-			<li><a href="https://www.newsreview.com/reno/stephen-cummings/author">some of my writings</a></li>
-			<li><a href="https://www.instagram.com/sssscummings/">instagram</a></li>
+<div class="container">
+  <div class="content">
+	  <h1>Hello.</h1>
+		<ul class="options">
+			<li class="option">
+			  <a href="http://sscummings.tumblr.com/" target="_blank" class="art">
+			  	<span>Art</span>
+			  </a>
+			</li>
+			<li class="option">
+			  <a href="https://www.flickr.com/photos/hillaryforfl/sets/72157675249867506" target="_blank" class="photo">
+			  	<span>Photography</span>
+			  </a>
+			</li>
+			<li class="option">
+			  <a href="https://www.newsreview.com/reno/stephen-cummings/author" target="_blank" class="writing">
+			  	<span>Writing</span>
+			  </a>
+			</li>
 		</ul>
-
+		<p>
+			Thanks for coming by. I'm in the process of rebuilding the website at the moment, so in the meantime, follow the links above for some samples of my work.
+		</p>
 	</div>
+</div>
 
-</div><!-- #all -->
 </body>
 
 </html>
