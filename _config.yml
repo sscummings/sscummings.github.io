@@ -16,6 +16,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+collections:
+  - art
 
 # Welcome to Jekyll!
 #
