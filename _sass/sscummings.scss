@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+// $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$grid-gutter-width:     30px !default;
+
+$text-color:    #111 !default;
+$bg-color:		#ededed !default;
+$link-color:	#2a7ae2 !default;
+
+$grey:       #828282 !default;
+$grey-light: lighten($grey, 40%) !default;
+$grey-dark:  darken($grey, 25%) !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "sscummings/base",
+  "sscummings/layout"
+;
