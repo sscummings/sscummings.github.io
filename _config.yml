@@ -18,7 +18,10 @@ exclude:
   - Gemfile.lock
 permalink: /:year/:month/:title.html
 collections:
-  - art
+  art:
+    output: true
+  # - design
+  # - writing
 
 # Welcome to Jekyll!
 #

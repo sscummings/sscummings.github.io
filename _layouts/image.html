@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="image" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {% if page.img %}
+      <img src="../assets/{{ page.img }}" alt="{{ page.title | escape }}" />
+    {% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.author %}
+      {{ page.author }}
+    {% endif %}
+</section>
