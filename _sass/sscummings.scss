@@ -2,8 +2,11 @@
 
 // Define defaults for each variable.
 
+$font-sans:	'Questrial', sans-serif !default;
+$font-mono:	'Inconsolata', monospace;
+
 // $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-family: Arial, sans-serif !default;
+$base-font-family: $font-sans;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
