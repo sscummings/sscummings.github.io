@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid $grey-light;
   min-height: $grid-gutter-width * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -44,7 +43,7 @@
     }
   }
 
-  @include media-query($on-palm) {
+  @include media-query($sm-down) {
     position: absolute;
     top: 9px;
     right: $grid-gutter-width / 2;
@@ -147,7 +146,7 @@
   width:         calc(45% - (#{$grid-gutter-width} / 2));
 }
 
-@include media-query($on-laptop) {
+@include media-query($md-down) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$grid-gutter-width} / 2));
@@ -160,7 +159,7 @@
   }
 }
 
-@include media-query($on-palm) {
+@include media-query($sm-down) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$grid-gutter-width} / 2));
@@ -209,7 +208,7 @@
   letter-spacing: -1px;
   line-height: 1;
 
-  @include media-query($on-laptop) {
+  @include media-query($md-down) {
     @include relative-font-size(2.25);
   }
 }
@@ -220,7 +219,7 @@
   h2 {
     @include relative-font-size(2);
 
-    @include media-query($on-laptop) {
+    @include media-query($md-down) {
       @include relative-font-size(1.75);
     }
   }
@@ -228,7 +227,7 @@
   h3 {
     @include relative-font-size(1.625);
 
-    @include media-query($on-laptop) {
+    @include media-query($md-down) {
       @include relative-font-size(1.375);
     }
   }
@@ -236,7 +235,7 @@
   h4 {
     @include relative-font-size(1.25);
 
-    @include media-query($on-laptop) {
+    @include media-query($md-down) {
       @include relative-font-size(1.125);
     }
   }

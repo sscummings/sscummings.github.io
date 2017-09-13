@@ -19,10 +19,11 @@ $grey-light: lighten($grey, 40%) !default;
 $grey-dark:  darken($grey, 25%) !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    		800px !default;
+$content-width-fluid:   1600px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$sm-down:	600px !default;
+$md-down:	800px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
