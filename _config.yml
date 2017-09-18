@@ -1,7 +1,8 @@
 title: sscummings
+author: Stephen Cummings
 email: sscummings@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I've made these things for you. Please peruse them at your leisure.
+  I made these things for you.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://stephencummings.us" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sscummings
