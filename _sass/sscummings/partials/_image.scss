@@ -1,0 +1,31 @@
+.section-image {
+
+	.image {
+		text-align: center;
+
+		img {
+			padding: 0 0 $grid-gutter-width;
+			max-height: 86vh;
+		}
+	}
+
+	.image-details {
+
+		h1 {
+			font-size: $base-font-size;
+		}
+
+		h1,
+		span {
+			display: inline;
+			margin-bottom: 0;
+
+			&:after {
+				content: ".";
+				display: inline;
+				margin-left: .1em;
+				margin-right: .5em;
+			}
+		}
+	}
+}

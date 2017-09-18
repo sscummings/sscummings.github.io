@@ -1,13 +1,32 @@
 ---
 layout: default
 ---
-<section class="image" itemscope itemtype="http://schema.org/BlogPosting">
+<section class="section-image">
 
     {% if page.img %}
-      <img src="../assets/{{ page.img }}" alt="{{ page.title | escape }}" />
+    	<div class="image">
+			<img src="../assets/{{ page.img }}" alt="{{ site.author | escape }}, {{ page.title | escape }}, {{ page.year }}" />
+		</div>
     {% endif %}
-    <h1>{{ page.title | escape }}</h1>
-    {% if page.author %}
-      {{ page.author }}
-    {% endif %}
+
+    <div class="image-details">
+	    {% if page.title %}
+	    	<h1>{{ page.title | escape }}</h1>
+	    {% endif %}
+	    {% if page.year %}
+	    	<span>{{ page.year }}</span>
+	    {% endif %}
+	    {% if page.location %}
+	    	<span>{{ page.location | escape }}</span>
+	    {% endif %}
+
+	    {% comment %}
+		    {% if page.size %}
+		    	<span>{{ page.size | escape }}</span>
+		    {% endif %}
+		    {% if page.medium %}
+		    	<span>{{ page.medium | escape }}</span>
+		    {% endif %}
+	    {% endcomment %}
+	</div>
 </section>
