@@ -90,8 +90,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey;
-  border-left: 4px solid $grey-light;
+  color: $gray;
+  border-left: 4px solid $white;
   padding-left: $grid-gutter-width / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;

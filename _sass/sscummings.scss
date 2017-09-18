@@ -13,13 +13,12 @@ $base-line-height: 1.5 !default;
 
 $grid-gutter-width:     30px !default;
 
-$text-color:    #111 !default;
+$gray:      #777777;
+$white:		#ffffff;
+
+$text-color:    $gray !default;
 $bg-color:		#ededed !default;
 $link-color:	#2a7ae2 !default;
-
-$grey:       #828282 !default;
-$grey-light: lighten($grey, 40%) !default;
-$grey-dark:  darken($grey, 25%) !default;
 
 // Width of the content area
 $content-width:    		800px !default;
