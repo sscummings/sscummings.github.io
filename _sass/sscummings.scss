@@ -28,6 +28,9 @@ $content-width-fluid:   1600px !default;
 $sm-down:	600px !default;
 $md-down:	800px !default;
 
+// Layout
+$header-height: 55px;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -45,8 +48,13 @@ $md-down:	800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-// Import partials.
+// Import
 @import
   "sscummings/base",
   "sscummings/layout"
+;
+
+// Import partials
+@import
+  "sscummings/partials/header",
 ;
