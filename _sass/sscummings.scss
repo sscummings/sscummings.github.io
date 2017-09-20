@@ -13,12 +13,20 @@ $base-line-height: 1.5 !default;
 
 $grid-gutter-width:     30px !default;
 
+$black:		#000000;
 $gray:      #777777;
+$gray-dark:	#444444;
 $white:		#ffffff;
+
+$c:			cyan;
+$m:			magenta;
+$y:			yellow;
+$k:			black;
 
 $text-color:    $gray !default;
 $bg-color:		#ededed !default;
-$link-color:	#2a7ae2 !default;
+$link-color:	$m !default;
+$link-hover:	darken($link-color, 10%) !default;
 
 // Width of the content area
 $content-width:    		800px !default;

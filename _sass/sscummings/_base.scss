@@ -75,12 +75,12 @@ a {
   color: $link-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($link-color, 10%);
-  }
+  // &:visited {
+  //   color: darken($link-color, 10%);
+  // }
 
   &:hover {
-    color: $text-color;
+    color: $link-hover;
     text-decoration: underline;
   }
 }
