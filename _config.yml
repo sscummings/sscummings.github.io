@@ -22,7 +22,8 @@ collections:
   art:
     output: true
   # - design
-  # - writing
+  writing:
+    output: true
 
 # Welcome to Jekyll!
 #

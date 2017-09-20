@@ -1,0 +1,47 @@
+.section-writing {
+
+	h1 {
+	}
+
+	.publisher {
+		a {
+			color: $text-color;
+		}
+
+		&:after {
+			content: ".";
+			display: inline;
+			margin-left: .3em;
+			margin-right: .2em;
+		}
+	}
+
+	.writing-preview {
+		font-size: 1.5em;
+		color: $k;
+	}
+
+	.read-more {
+		font-size: 1.5em;
+		text-transform: lowercase;
+
+		&:after {
+			content: "";
+			transform: rotateZ(45deg);
+			display: inline-block;
+			position: relative;
+			left: -.1em;
+			top: -.05em;
+			width: .3em;
+			height: .3em;
+			border-top: 2px solid $link-color;
+			border-right: 2px solid $link-color;
+		}
+
+		&:hover {
+			&:after {
+				border-color: $link-hover;
+			}
+		}
+	}
+}
