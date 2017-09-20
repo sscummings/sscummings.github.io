@@ -19,9 +19,13 @@ exclude:
   - Gemfile.lock
 permalink: /:year/:month/:title.html
 collections:
+  # - announcements
   art:
     output: true
   # - design
+  # - dev
+  # - events
+  # - photography
   writing:
     output: true
 
