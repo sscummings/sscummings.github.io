@@ -29,25 +29,40 @@ $link-color:	$m !default;
 $link-hover:	darken($link-color, 10%) !default;
 
 // Width of the content area
-$content-width:    		800px !default;
-$content-width-fluid:   1600px !default;
+$content-width:       800px !default;
+$content-width-fluid: 1600px !default;
 
 // Breakpoints
 $sm-down:	600px !default;
-$md-down:	800px !default;
+$md-down:	$content-width !default;
+
+$md-up:   601px !default;
+$lg-up:   $content-width + 1px !default;
 
 // Layout
 $header-height: 55px;
 
 // Use media queries like this:
-// @include media-query($on-palm) {
+// @include mq-down($sm-down) {
 //   .wrapper {
 //     padding-right: $spacing-unit / 2;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
+// @include mq-up($lg-up) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+
+@mixin mq-down($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin mq-up($size) {
+  @media screen and (min-width: $size) {
     @content;
   }
 }
