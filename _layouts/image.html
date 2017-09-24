@@ -16,8 +16,14 @@ layout: default
 	    {% if page.year %}
 	    	<span>{{ page.year }}</span>
 	    {% endif %}
-	    {% if page.location %}
-	    	<span>{{ page.location | escape }}</span>
+	    {% if page.city %}
+	    	<span>{{ page.city | escape }}</span>
+	    {% endif %}
+	    {% if page.state %}
+	    	<span>{{ page.state | escape }}</span>
+	    {% endif %}
+	    {% if page.country %}
+	    	<span>{{ page.country | escape }}</span>
 	    {% endif %}
 
 	    {% comment %}
