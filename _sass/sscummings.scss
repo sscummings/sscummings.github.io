@@ -29,15 +29,17 @@ $link-color:	$m !default;
 $link-hover:	darken($link-color, 10%) !default;
 
 // Width of the content area
-$content-width:       800px !default;
+$content-width:       1000px !default;
 $content-width-fluid: 1600px !default;
 
 // Breakpoints
-$sm-down:	600px !default;
-$md-down:	$content-width !default;
+$xs-down:	600px !default;
+$sm-down: 800px !default;
+$md-down: $content-width !default;
 
-$md-up:   601px !default;
-$lg-up:   $content-width + 1px !default;
+$sm-up:   $xs-down + 1px !default;
+$md-up:   $sm-down + 1px !default;
+$lg-up:   $md-down + 1px !default;
 
 // Layout
 $header-height: 55px;

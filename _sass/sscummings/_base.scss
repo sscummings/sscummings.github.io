@@ -127,7 +127,7 @@ blockquote {
     padding-left: $grid-gutter-width;
   }
 
-  @include mq-down($sm-down) {
+  @include mq-down($xs-down) {
     width: -webkit-calc(100% - (#{$grid-gutter-width}));
     width:         calc(100% - (#{$grid-gutter-width}));
     padding-right: $grid-gutter-width / 2;
@@ -158,7 +158,7 @@ blockquote {
     padding-left: $grid-gutter-width;
   }
 
-  @include mq-down($sm-down) {
+  @include mq-down($xs-down) {
     width: -webkit-calc(100% - (#{$grid-gutter-width}));
     width:         calc(100% - (#{$grid-gutter-width}));
     max-width: -webkit-calc(100% - (#{$grid-gutter-width}));
