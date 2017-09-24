@@ -1,47 +1,89 @@
-.section-writing {
+.single-writing {
 
-	h1 {
-	}
+	.post-header {
+		font-family: $font-mono;
+		// text-transform: lowercase;
 
-	.publisher {
-		a {
-			color: $text-color;
+		h1 {
+			font-size: 1.25em;
+			line-height: 1.1;
 		}
 
-		&:after {
-			content: ".";
-			display: inline;
-			margin-left: .3em;
-			margin-right: .2em;
+	  	.post-meta {
+	  		.publisher,
+	  		.date {
+	  			display: block;
+	  		}
+			.publisher {
+				font-style: normal;
+				a {
+					color: $text-color;
+				}
+				// &:after {
+				// 	content: ".";
+				// 	display: inline;
+				// 	margin-left: .3em;
+				// 	margin-right: .2em;
+				// }
+			}
 		}
 	}
 
 	.writing-preview {
-		font-size: 1.5em;
+		font-size: 1.25em;
 		color: $k;
-	}
 
-	.read-more {
-		font-size: 1.5em;
-		text-transform: lowercase;
+		.read-more {
+			font-family: $font-mono;
+			text-transform: lowercase;
 
-		&:after {
-			content: "";
-			transform: rotateZ(45deg);
-			display: inline-block;
-			position: relative;
-			left: -.1em;
-			top: -.05em;
-			width: .3em;
-			height: .3em;
-			border-top: 2px solid $link-color;
-			border-right: 2px solid $link-color;
-		}
+			a {
+				&:after {
+					content: "";
+					transform: rotateZ(45deg);
+					display: inline-block;
+					position: relative;
+					left: -.1em;
+					top: -.05em;
+					width: .3em;
+					height: .3em;
+					border-top: 2px solid $link-color;
+					border-right: 2px solid $link-color;
+				}
 
-		&:hover {
-			&:after {
-				border-color: $link-hover;
+				&:hover {
+					&:after {
+						border-color: $link-hover;
+					}
+				}
 			}
 		}
+	}
+
+	@include mq-up($sm-up) {
+		.writing-preview {
+			font-size: 1.5em;
+		}
+	}
+	@include mq-up($md-up) {
+	  display: flex;
+	  justify-content: space-between;
+
+	  .post-header {
+	  	width: calc(30% - #{$grid-gutter-width} / 2);
+	  	text-align: right;
+	  	margin-top: .25em;
+	  }
+	  .writing-preview {
+	  	width: calc(65% - #{$grid-gutter-width} / 2);
+	  }
+	}
+
+	@include mq-up($lg-up) {
+	  .writing-preview {
+	  	.read-more {
+			text-align: right;
+	  	}
+	  }
 	}
 }
