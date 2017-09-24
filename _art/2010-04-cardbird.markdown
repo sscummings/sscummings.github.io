@@ -9,6 +9,5 @@ medium:		cardboard
 city:		Seattle
 state:
 country:
-medium:		cardboard
 size:
 ---

@@ -9,6 +9,5 @@ medium:		traffic barrier
 city:		Antigua
 state:
 country:	Guatemala
-medium:		traffic barrier
 size:
 ---
