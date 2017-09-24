@@ -1,0 +1,12 @@
+---
+layout: 	image
+title:  	Congressman John Lewis speaks at Bethune Cookman University's march to the polls
+date:   	2016-11-01 11:43:56 -0500
+categories: photography
+img:		photography/20161101-DaytonaBeach-01-JohnLewis.jpg
+year:		2016
+medium:
+city:		Daytona Beach
+state:		Florida
+country:
+---
