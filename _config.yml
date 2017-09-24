@@ -22,7 +22,8 @@ collections:
   # - announcements
   art:
     output: true
-  # - design
+  design:
+    output: true
   # - dev
   # - events
   photography:

@@ -4,7 +4,7 @@ layout: default
 <section class="section-image">
 
     {% if page.img %}
-    	<div class="image">
+    	<div class="image {% for cat in page.categories %}{{ cat }} {% endfor %}">
 			<img src="../assets/{{ page.img }}" alt="{{ site.author | escape }}, {{ page.title | escape }}, {{ page.year }}" />
 		</div>
     {% endif %}
