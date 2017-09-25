@@ -1,0 +1,12 @@
+---
+layout:			writing
+title:			Something Sorta Real
+date:			2015-07-15 11:43:56 -0500
+show_date:		true
+categories: 	writing
+publisher:		The Underground
+publisher_url:	http://www.underscoretheatre.org/category/blog/
+published_url:	http://www.underscoretheatre.org/marble-ga-something-sorta-real/
+read_more:
+---
+From the beginning, Marble, GA is naked and unafraid — was knowledge the sin, or was it shame? — and the audience is in on the conceit. “[P]eople are supposed to just take it for what it is,” says the ringmaster, “this difficult-to-decipher, hard-to-follow thing . . . right in front of them.” It’s less novel and more poem, “beautiful and pointless,” in the words of poet and critic David Orr. The tangle of characters and vignettes is loosely tied to the guidestones, but in the end the monument is a foil to explore ourselves: our wonders, our regrets, our loves, our fears, and the beautiful reality of living.
