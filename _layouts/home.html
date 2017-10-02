@@ -44,6 +44,13 @@ layout: default
         </h2>
       </div>
     {% endfor %}
+    {% for announcement in site.announcements %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ announcement.url | relative_url }}">{{ announcement.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
     {% for post in site.posts %}
       <div>
         <h2>

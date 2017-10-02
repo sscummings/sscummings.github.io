@@ -48,6 +48,13 @@
 		display: flex;
 		justify-content: space-between;
 
+		&.align-center {
+			align-items: center;
+			.post-header {
+				margin-bottom: $grid-gutter-width/2;
+			}
+		}
+
 		.post-header {
 			width: calc(42% - #{$grid-gutter-width} / 2);
 		}
