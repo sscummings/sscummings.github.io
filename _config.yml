@@ -25,7 +25,8 @@ collections:
   design:
     output: true
   # - dev
-  # - events
+  events:
+    output: true
   photography:
     output: true
   writing:
