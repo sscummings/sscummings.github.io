@@ -3,7 +3,7 @@ layout:			writing
 title:			Something Sorta Real
 date:			2015-07-15 11:43:56 -0500
 show_date:		true
-categories: 	writing
+categories: 	[writing, theatre, blog]
 publisher:		The Underground
 publisher_url:	http://www.underscoretheatre.org/category/blog/
 published_url:	http://www.underscoretheatre.org/marble-ga-something-sorta-real/

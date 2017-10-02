@@ -21,6 +21,12 @@ layout: default
           {{ page.date | date: date_format }}
         </time>
       {% endif %}
+
+      {% comment %} ###
+        {% for category in page.categories %}
+          {{ category }}
+        {% endfor %}
+      {% endcomment %}
     </p>
   </div>
 

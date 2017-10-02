@@ -3,7 +3,7 @@ layout:			writing
 title:			Face to Face
 date:			2011-12-22 11:43:56 -0500
 show_date:		true
-categories: 	writing
+categories: 	[writing, review, art, published, weekly]
 publisher:		Reno News & Review
 publisher_url:	https://www.newsreview.com/reno/
 published_url:	https://www.newsreview.com/reno/face-to-face/content?oid=4658631

@@ -3,7 +3,7 @@ layout:			writing
 title:			Oil Spell
 date:			2012-06-14 11:43:56 -0500
 show_date:		true
-categories: 	writing
+categories: 	[writing, review, art, published, weekly]
 publisher:		Reno News & Review
 publisher_url:	https://www.newsreview.com/reno/
 published_url:	https://www.newsreview.com/reno/oil-spell/content?oid=6302377
