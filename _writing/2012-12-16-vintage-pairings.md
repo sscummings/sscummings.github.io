@@ -1,5 +1,4 @@
 ---
-layout:			writing
 title:			Vintage Pairings
 date:			2012-12-16 11:43:56 -0500
 show_date:		true

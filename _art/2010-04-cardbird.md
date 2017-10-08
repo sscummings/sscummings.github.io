@@ -1,8 +1,8 @@
 ---
-layout: 	image
 title:  	Cardbird (for Brancusi)
+slug:		cardbird-for-brancusi
 date:   	2010-05-15 11:43:56 -0500
-categories: art
+categories: art, sculpture
 img:		art/2010-06-cardbird.jpg
 year:		2010
 medium:		cardboard
