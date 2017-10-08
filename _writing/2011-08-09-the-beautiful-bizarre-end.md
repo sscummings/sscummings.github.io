@@ -1,5 +1,4 @@
 ---
-layout:			writing
 title:			The Beautiful, Bizarre End
 date:			2011-08-09 11:43:56 -0500
 show_date:		true

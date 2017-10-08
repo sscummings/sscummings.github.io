@@ -33,6 +33,33 @@ collections:
   writing:
     output: true
 
+defaults:
+  - scope:
+      path: ""
+      type: "announcements"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "art"
+    values:
+      layout: "image"
+  - scope:
+      path: ""
+      type: "design"
+    values:
+      layout: "image"
+  - scope:
+      path: ""
+      type: "photography"
+    values:
+      layout: "image"
+  - scope:
+      path: ""
+      type: "writing"
+    values:
+      layout: "writing"
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values

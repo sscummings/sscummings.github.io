@@ -1,5 +1,4 @@
 ---
-layout:			writing
 title:			Face to Face
 date:			2011-12-22 11:43:56 -0500
 show_date:		true

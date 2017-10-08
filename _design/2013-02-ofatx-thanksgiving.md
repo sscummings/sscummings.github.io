@@ -1,5 +1,4 @@
 ---
-layout: 	image
 title:  	A Happy Thanksgiving from OFA-TX
 date:   	2013-11-28 11:43:56 -0500
 categories: illustration

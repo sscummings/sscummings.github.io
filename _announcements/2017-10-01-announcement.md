@@ -1,5 +1,4 @@
 ---
-layout:			event
 layout_align:	align-center
 title:			Lorem ipsum announcement.
 date:			2017-10-01 10:35:00 -0500
