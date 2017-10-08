@@ -58,6 +58,8 @@
     padding: 0;
     li {
       position: relative;
+      display: inline-block;
+
       a,
       a:visited {
         display: block;
@@ -69,6 +71,7 @@
           content: ' ▾';
         }
       } // Dropdown list
+      
       ul li {
         min-width: 190px;
         a {
