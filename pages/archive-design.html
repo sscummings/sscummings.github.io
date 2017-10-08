@@ -1,0 +1,16 @@
+---
+layout: default
+title: Design
+permalink: /design/
+---
+<section class="archive-design">
+  
+    {% for post in site.design %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
+
+</section>

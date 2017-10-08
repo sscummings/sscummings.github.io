@@ -1,0 +1,16 @@
+---
+layout: default
+title: Art
+permalink: /art/
+---
+<section class="archive-art">
+  
+    {% for post in site.art %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
+
+</section>
