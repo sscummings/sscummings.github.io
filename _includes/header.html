@@ -1,10 +1,34 @@
 <header class="site-header" role="banner">
 
   <div class="container-fluid">
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
   
+    <nav class="site-nav">
+      <div class="nav-wrapper">
+        <ul class="nav-list" style="display: none;">
+          {% for item in site.nav %}
+            <li><a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="nav-open">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+    </nav>
+
+  </div>
+</header>
+
+
+
+
+{% comment %}
+# # # # # # #
+    {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+    
+    ...
+
     {% if page_paths %}
       <nav class="site-nav">
         <div class="nav-wrapper">
@@ -22,5 +46,5 @@
         </div>
       </nav>
     {% endif %}
-  </div>
-</header>
+# # # # # # #
+{% endcomment %}
