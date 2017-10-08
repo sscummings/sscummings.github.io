@@ -23,6 +23,7 @@ collections:
     output: true
   art:
     output: true
+    permalink: /:collection/:year-:slug
   design:
     output: true
   # - dev
