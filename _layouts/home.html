@@ -4,7 +4,9 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading"><span>hello_</span></h1>
+  <div class="intro">
+    <h1 class="page-heading"><a href="/who">hello<span>_</span></a></h1>
+  </div>
 
   <div class="grid">
 
@@ -12,7 +14,7 @@ layout: default
       {% for post in item.docs %}
         {% if post.featured == true %}
           <div class="item-square {{ post.collection }} featured">
-            <a class="bg-img" href="/{{ post.collection }}" style="background-image: url('../assets/{{ post.img }}');">
+            <a class="bg-img" href="{{ post.url }}" style="background-image: url('../assets/{{ post.img }}');">
                 <span class="collection">{{ post.collection }}</span>
                 <span class="preview">{{ post.content | strip_html }}</span>
             </a>
