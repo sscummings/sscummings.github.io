@@ -3,12 +3,12 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{% if page.classes %}{{ page.classes }}{% else %}body-{{ page.title | slugify }}{% endif %}">
 
     {% include header.html %}
 
     <main class="page-content" aria-label="Content">
-      <div class="container">
+      <div class="{% if page.container %}{{ page.container }}{% else %}container{% endif %}">
         {{ content }}
       </div>
     </main>

@@ -1,4 +1,5 @@
 ---
+homepage:	true
 title:  	Cardbird (for Brancusi)
 slug:		cardbird-for-brancusi
 date:   	2010-05-15 11:43:56 -0500

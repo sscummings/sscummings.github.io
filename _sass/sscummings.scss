@@ -73,15 +73,17 @@ $header-height: 55px;
   font-size: $base-font-size * $ratio;
 }
 
-// Import
+// Import globals
 @import
   "sscummings/base",
-  "sscummings/layout"
+  "sscummings/layout",
+  "sscummings/global"
 ;
 
 // Import partials
 @import
   "sscummings/partials/header",
+  "sscummings/partials/home",
   "sscummings/partials/footer",
   "sscummings/partials/event",
   "sscummings/partials/image",

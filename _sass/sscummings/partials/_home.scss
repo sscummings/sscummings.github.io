@@ -1,0 +1,157 @@
+/**
+ * Homepage
+ */
+
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	$collection-font-size: 13.7vh;
+
+	.item-square {
+		a {
+			display: block;
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+			position: relative;
+			overflow: hidden;
+
+			&:after {
+				content: " ";
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: -5%;
+				left: -5%;
+				width: 110%;
+				height: 110%;
+				opacity: .85;
+				transition: all .3s ease;
+			}
+
+			.collection {
+				color: $bg-color;
+				position: absolute;
+				z-index: 2;
+				left: 10%;
+				bottom: 10%;
+				font-size: $collection-font-size;
+				line-height: 1;
+				opacity: 0;
+				transition: all .3s ease;
+			}
+
+			.preview {
+				font-size: 5.75vw;
+				width: 220%;
+				color: $bg-color;
+				position: absolute;
+				top: -8%;
+				left: -4%;
+				line-height: 1.05;
+				z-index: 2;
+				opacity: 1;
+				pointer-events: none;
+				transition: all .3s ease;
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+				.collection {
+					opacity: 1;
+				}
+				.preview {
+					opacity: 0;
+				}
+			}
+		}
+
+		&.art {
+			a:after {
+				background-color: $m;
+			}
+		}
+
+		&.design {
+			a:after {
+				background-color: $c;
+			}
+		}
+
+		&.photography {
+			.collection {
+				display: none;
+			}
+			a {
+				&:after {
+					background-color: $y;
+				}
+				&:before {
+					color: $bg-color;
+					position: absolute;
+					z-index: 2;
+					left: 10%;
+					bottom: 10%;
+					font-size: $collection-font-size;
+					opacity: 0;
+					content: "photo graphy";
+					line-height: 1;
+					transition: all .3s ease;
+				}
+				&:hover:before {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.writing {
+			a:after {
+				background-color: rgba($k, .3);
+			}
+			a:hover .collection {
+				color: $bg-color;
+			}
+		}
+	}
+
+
+	h1 {
+		display: inline-block;
+		margin-bottom: 0;
+		font-size: 100px;
+		color: $bg-color;
+		line-height: 1;
+		height: 140px;
+		background-color: lighten($gray, 30%);
+		padding: .2em .3em;
+		box-sizing: border-box;
+	}
+
+	.grid {
+		margin-left: $grid-gutter-width;
+		width: calc(100vh - (#{$grid-gutter-width}*2));
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+
+		.featured {
+			display: none;
+		}
+
+		.item-square {
+			width: calc(50% - (#{$grid-gutter-width}/2));
+			margin-bottom: $grid-gutter-width;
+
+			&:last-of-type,
+			&:nth-last-of-type(2) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}

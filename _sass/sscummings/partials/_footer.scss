@@ -5,6 +5,10 @@
 .site-footer {
   padding: 0 0 $grid-gutter-width;
 
+  .no-footer & {
+  	display: none;
+  }
+
 	.page-link {
 		color: $text-color;
 		text-transform: lowercase;
