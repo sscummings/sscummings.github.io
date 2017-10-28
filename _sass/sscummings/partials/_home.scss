@@ -7,6 +7,7 @@
 	$collection-font-size-xs: 27vw;
 	$collection-font-size-sm: 13.7vw;
 	$collection-font-size-md: 13.7vh;
+	$collection-font-size-lg: 98px;
 
 	.item-square {
 		a {
@@ -130,7 +131,7 @@
 				color: $bg-color;
 				padding: .2em .3em;
 				box-sizing: border-box;
-				background-color: lighten($gray, 30%);
+				background-color: $white;
 				text-decoration: none;
 
 				/* Standard syntax */
@@ -227,9 +228,6 @@
 
 
 	@include mq-up($md-up) {
-		display: flex;
-		justify-content: center;
-		align-items: stretch;
 
 		.item-square {
 			a .collection,
@@ -241,19 +239,35 @@
 		.intro {
 
 			h1 {
-				font-size: 100px;
-				height: 140px;
+				font-size: 80px;
+				height: 100px;
 				position: sticky;
 				top: $grid-gutter-width;
 			}
 		}
 
 		.grid {
-			margin-left: $grid-gutter-width;
-			width: calc(100vh - (#{$grid-gutter-width}*2));
 
 			.item-square {
 				width: calc(50% - (#{$grid-gutter-width}/2));
+			}
+		}
+	}
+
+
+	@include mq-up($lg-up) {
+
+		.item-square {
+			a .collection,
+			&.photography a:before {
+				font-size: $collection-font-size-lg;
+			}
+		}
+
+		.grid {
+
+			.item-square {
+				width: calc(25% - (#{$grid-gutter-width}/2));
 			}
 		}
 	}
