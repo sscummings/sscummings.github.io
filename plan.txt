@@ -1,0 +1,72 @@
+86.5 hrs
+
+13 hrs/week
+M-F 1.5 hr=7.5 hrs
+Sat/Sun 5.5 total
+
+9/10 (ish) - MAKE PLAN. (Thanks, Jen.)
+
+Week 1
+9/11 - 9/17
+- {# Approximate layout of homepage - 2 hrs #}
+- {# Bootstrap, yes or no? - .5 hrs #}
+- {# Social share, yes or no? .5 hrs #}
+- {# ** Font selected #}
+- {# Collect one photograph from Hillary for Florida flickr - .5 hrs #}
+- {# Design/develop individual art post type - 8 hrs #}
+
+
+Week 2
+9/18 - 9/24
+- {# Design/develop individual writing post type - 5 hrs #}
+- {# Design/develop individual photography post type - 3 #}
+- {# Design/develop individual design post type - 3 #}
+- {# Collect art images from tumblr - 2 hrs #}
+- {# Collect writing clips - 2 hrs #}
+- {# ** Collect art images from tumblr - 1 hr FINISH #}
+
+
+Week 3
+9/25 - 10/1
+- {# Design/develop individual announcement post type - 3 #}
+- {# Design/develop individual show/event post type - 3 #}
+- {# Collect photography from Hillary for Florida flickr - 1 hr #}
+
+
+Week 4
+10/2 - 10/8
+- {# Design/develop homepage - 8 hrs #}
+- {# Collect photography from Hillary for Florida flickr - 4 hrs FINISH #}
+- {# www redirect? - 15 min ~3hrs~ #}
+
+
+Week 5
+10/9 - 10/15
+- Design/develop archive of art post type - 8 hrs
+- Design/develop archive of writing post type - 3 hrs
+- Responsive nav
+
+
+Week 6
+10/16 - 10/22
+- Design/develop archive of photography post type - 8 hrs
+- Design/develop archive of design post type - 5 hrs
+
+
+Week 7
+10/23 - 10/29
+- Design/develop archive of announcement post type - 3 hrs
+- Design/develop archive of show/event post type - 3 hrs
+- Design/develop 404 page - 3 hrs
+- Decide on contact link - 1 hr
+
+
+Buffer
+10/30 - 11/1
+- FINISH
+- LAUNCH
+
+
+Enhancements
+- Design/develop individual dev post type (maybe) - 5
+- Design/develop archive of dev post type (maybe) - 3 hrs
