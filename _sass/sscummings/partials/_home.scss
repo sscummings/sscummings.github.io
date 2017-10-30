@@ -6,8 +6,8 @@
 
 	$collection-font-size-xs: 27vw;
 	$collection-font-size-sm: 13.7vw;
-	$collection-font-size-md: 13.7vh;
-	$collection-font-size-lg: 98px;
+	$collection-font-size-md: 110px;
+	$collection-font-size-lg: 90px;
 
 	.item-square {
 		a {
@@ -185,6 +185,9 @@
 
 
 	@include mq-up($sm-up) {
+		width: 558px;
+		margin-left: auto;
+		margin-right: auto;
 
 		.item-square {
 			a .collection,
@@ -196,7 +199,7 @@
 		.intro {
 
 			h1 {
-				font-size: $collection-font-size-sm*.75;
+				font-size: 80px;
 			}
 		}
 
@@ -240,9 +243,8 @@
 
 			h1 {
 				font-size: 80px;
-				height: 100px;
 				position: sticky;
-				top: $grid-gutter-width;
+				// top: $grid-gutter-width;
 			}
 		}
 
@@ -256,6 +258,7 @@
 
 
 	@include mq-up($lg-up) {
+		width: 100%;
 
 		.item-square {
 			a .collection,
@@ -264,10 +267,17 @@
 			}
 		}
 
+		.intro {
+
+			h1 {
+				margin-bottom: $grid-gutter-width;
+			}
+		}
+
 		.grid {
 
 			.item-square {
-				width: calc(25% - (#{$grid-gutter-width}/2));
+				width: calc((100% - #{$grid-gutter-width}*3)/4);
 			}
 		}
 	}
