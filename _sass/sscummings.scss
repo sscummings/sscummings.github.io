@@ -83,9 +83,14 @@ $header-height: 55px;
 // Import partials
 @import
   "sscummings/partials/header",
-  "sscummings/partials/home",
-  "sscummings/partials/footer",
-  "sscummings/partials/event",
-  "sscummings/partials/image",
-  "sscummings/partials/writing"
+  "sscummings/partials/footer"
+;
+
+// Import templates
+@import
+  "sscummings/templates/home",
+  "sscummings/templates/archive-art",
+  "sscummings/templates/single-event",
+  "sscummings/templates/single-image",
+  "sscummings/templates/single-writing"
 ;

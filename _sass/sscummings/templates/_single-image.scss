@@ -1,0 +1,11 @@
+.section-image {
+
+	.image {
+		text-align: center;
+
+		img {
+			padding: 0 0 $grid-gutter-width;
+			max-height: 86vh;
+		}
+	}
+}

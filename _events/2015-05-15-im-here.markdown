@@ -1,5 +1,4 @@
 ---
-layout:			event
 title:			I'm here.
 date:			2015-04-22 11:43:56 -0500
 event_date:		May 15th, 2015
