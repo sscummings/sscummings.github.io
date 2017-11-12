@@ -3,14 +3,53 @@ layout: default
 title: Art
 permalink: /art/
 ---
-<section class="archive-art">
-  
+<div class="archive-art">
+
     {% for post in site.art %}
-      <div>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </div>
+    	<section class="art-section section-image" id="{{ post.year }}-{{ post.slug }}">
+		    <div class="art-preview">
+
+		    	<div class="image-wrapper">
+				    {% if post.img %}
+				    	<div class="image {% for cat in post.categories %}{{ cat }} {% endfor %}">
+							<img src="../assets/{{ post.img }}" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+						</div>
+				    {% endif %}
+
+				    <div class="image-details">
+					    {% if post.title %}
+					    	<h1 class="image-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
+					    {% endif %}
+					    {% if post.year %}
+					    	<span>{{ post.year }}</span>
+					    {% endif %}
+					    {% if post.city %}
+					    	<span>{{ post.city | escape }}</span>
+					    {% endif %}
+					    {% if post.state %}
+					    	<span>{{ post.state | escape }}</span>
+					    {% endif %}
+					    {% if post.country %}
+					    	<span>{{ post.country | escape }}</span>
+					    {% endif %}
+					</div>
+				</div>
+			</div>
+    		<div class="next-prev">
+			    {% if post.previous.url %}
+			    	{% capture prev_link %}{{ post.previous.year }}-{{ post.previous.slug }}{% endcapture %}
+			    	<a href="#{{ prev_link }}"><i class="fa fa-chevron-up"></i></a>
+			  	{% else %}
+			    	<a href="#" class="no-link"><i class="fa fa-chevron-up"></i></a>
+			  	{% endif %}
+			    {% if post.next.url %}
+			    	{% capture next_link %}{{ post.next.year }}-{{ post.next.slug }}{% endcapture %}
+			    	<a href="#{{ next_link }}"><i class="fa fa-chevron-down"></i></a>
+			  	{% else %}
+			    	<a href="#" class="no-link"><i class="fa fa-chevron-down"></i></a>
+			  	{% endif %}
+			</div>
+		</section>
     {% endfor %}
 
-</section>
+</div>

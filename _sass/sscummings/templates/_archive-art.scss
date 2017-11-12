@@ -1,3 +1,140 @@
 .archive-art {
 
+	.image-title a {
+		color: $text-color;
+	}
+
+	.art-section {
+
+		.next-prev {
+			a {
+				text-decoration: none;
+				height: 50px;
+				color: $white;
+				font-size: 50px;
+				opacity: .5;
+
+				&:hover {
+					opacity: .8;
+				}
+
+				&.no-link {
+					opacity: 0;
+					pointer-events: none;
+				}
+			}
+		}
+
+		.art-preview {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		@include mq-down($md-down) {
+			position: relative;
+			.next-prev {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding-bottom: $grid-gutter-width/2;
+				a {
+					display: inline-block;
+					height: 50px;
+					font-size: 50px;
+					margin-left: .3em;
+				}
+			}
+			.art-preview {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+
+				.image {
+					img {
+						max-height: calc(#{$img-max-height} - 50px - #{$grid-gutter-width}/2);
+					}
+				}
+			}
+			&:first-child {
+				.art-preview {
+					margin-top: calc(-1*(#{$header-height} + #{$grid-gutter-width}));
+					.art-preview {
+						padding-top: $header-height;
+					}
+				}
+			}
+		}
+
+		@include mq-down($sm-down) {
+			position: relative;
+			.next-prev {
+				padding-bottom: $grid-gutter-width/4;
+				a {
+					height: 40px;
+					font-size: 40px;
+				}
+			}
+			.art-preview {
+				.image {
+					img {
+						max-height: calc(#{$img-max-height} - 40px);
+					}
+				}
+			}
+		}
+
+		@include mq-down($xs-down) {
+			position: relative;
+			.next-prev {
+				padding-bottom: $grid-gutter-width/4;
+				a {
+					height: 30px;
+					font-size: 30px;
+				}
+			}
+			.art-preview {
+				.image {
+					img {
+						max-height: calc(#{$img-max-height} - 30px);
+					}
+				}
+			}
+		}
+
+		@include mq-up($lg-up) {
+			display: flex;
+			align-items: center;
+			min-height: 100vh;
+
+			&:first-child {
+				margin-top: calc(-1*(#{$header-height} + #{$grid-gutter-width}));
+				.art-preview {
+					padding-top: $header-height;
+				}
+			}
+
+			.next-prev {
+				padding-right: $grid-gutter-width;
+				height: $img-max-height;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: flex-end;
+				align-items: flex-end;
+				order: 1;
+				width: 50px;
+
+				a {
+					display: block;
+					width: 100%;
+					height: 50px;
+					font-size: 50px;
+				}
+			}
+
+			.art-preview {
+				order: 2;
+			}
+		}
+	}
 }
