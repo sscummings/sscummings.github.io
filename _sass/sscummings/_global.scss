@@ -3,3 +3,24 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 }
+
+.image-details {
+	font-family: $font-mono;
+
+	.image-title {
+		font-size: $base-font-size;
+	}
+
+	.image-title,
+	span {
+		display: inline;
+		margin-bottom: 0;
+
+		&:after {
+			content: ".";
+			display: inline;
+			margin-left: .1em;
+			margin-right: .5em;
+		}
+	}
+}
