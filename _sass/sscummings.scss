@@ -77,9 +77,13 @@ $img-max-height:  86vh;
 // Import globals
 @import
   "sscummings/base",
-  "sscummings/layout",
-  "sscummings/global",
-  "sscummings/icomoon"
+  "sscummings/layout"
+;
+
+// Import globals
+@import
+  "sscummings/globals/global",
+  "sscummings/globals/icomoon",
 ;
 
 // Import partials
