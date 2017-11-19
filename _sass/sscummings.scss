@@ -90,13 +90,15 @@ $img-max-height:  86vh;
 // Import partials
 @import
   "sscummings/partials/header",
-  "sscummings/partials/footer"
+  "sscummings/partials/footer",
+  "sscummings/partials/scroll-section"
 ;
 
 // Import templates
 @import
   "sscummings/templates/home",
   "sscummings/templates/archive-art",
+  "sscummings/templates/archive-writing",
   "sscummings/templates/single-event",
   "sscummings/templates/single-image",
   "sscummings/templates/single-writing"

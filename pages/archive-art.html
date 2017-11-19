@@ -6,7 +6,7 @@ permalink: /art/
 <div class="archive-art">
 
     {% for post in site.art %}
-    	<section class="art-section section-image {% if forloop.first == true %}active{% endif %}" id="{{ post.year }}-{{ post.slug }}">
+    	<section class="art-section section-image scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.year }}-{{ post.slug }}">
 		    <div class="art-preview">
 
 		    	<div class="image-wrapper">
@@ -42,20 +42,7 @@ permalink: /art/
 					</div>
 				</div>
 			</div>
-    		<div class="next-prev">
-			    {% if post.previous.url %}
-			    	{% capture prev_link %}{{ post.previous.year }}-{{ post.previous.slug }}{% endcapture %}
-			    	<a href="#{{ prev_link }}"><i class="fa fa-chevron-up"></i></a>
-			  	{% else %}
-			    	<a href="#" class="no-link"><i class="fa fa-chevron-up"></i></a>
-			  	{% endif %}
-			    {% if post.next.url %}
-			    	{% capture next_link %}{{ post.next.year }}-{{ post.next.slug }}{% endcapture %}
-			    	<a href="#{{ next_link }}"><i class="fa fa-chevron-down"></i></a>
-			  	{% else %}
-			    	<a href="#" class="no-link"><i class="fa fa-chevron-down"></i></a>
-			  	{% endif %}
-			</div>
+			{% include partial-next-prev.html %}
 		</section>
     {% endfor %}
 
