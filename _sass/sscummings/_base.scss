@@ -108,10 +108,8 @@ blockquote {
  * Container
  */
 .container {
-  width: -webkit-calc(100% - (#{$grid-gutter-width} * 2));
-  width:         calc(100% - (#{$grid-gutter-width} * 2));
-  max-width: -webkit-calc(#{$content-width} - (#{$grid-gutter-width} * 2));
-  max-width:         calc(#{$content-width} - (#{$grid-gutter-width} * 2));
+  width:  100%;
+  max-width:  $content-width;
   margin-right: auto;
   margin-left: auto;
   padding-right: $grid-gutter-width;
@@ -119,17 +117,12 @@ blockquote {
   @extend %clearfix;
 
   @include mq-down($md-down) {
-    width: -webkit-calc(100% - (#{$grid-gutter-width} * 2));
-    width:         calc(100% - (#{$grid-gutter-width} * 2));
-    max-width: -webkit-calc(100% - (#{$grid-gutter-width}));
-    max-width:         calc(100% - (#{$grid-gutter-width}));
+    max-width:  100%;
     padding-right: $grid-gutter-width;
     padding-left: $grid-gutter-width;
   }
 
   @include mq-down($xs-down) {
-    width: -webkit-calc(100% - (#{$grid-gutter-width}));
-    width:         calc(100% - (#{$grid-gutter-width}));
     padding-right: $grid-gutter-width / 2;
     padding-left: $grid-gutter-width / 2;
   }
@@ -139,10 +132,8 @@ blockquote {
  * Container Fluid
  */
 .container-fluid {
-  width: -webkit-calc(#{$content-width-fluid} - (#{$grid-gutter-width} * 2));
-  width:         calc(#{$content-width-fluid} - (#{$grid-gutter-width} * 2));
-  max-width: -webkit-calc(100% - (#{$grid-gutter-width} * 2));
-  max-width:         calc(100% - (#{$grid-gutter-width} * 2));
+  width:  100%;
+  max-width:  $content-width-fluid;
   margin-right: auto;
   margin-left: auto;
   padding-right: $grid-gutter-width;
@@ -150,19 +141,12 @@ blockquote {
   @extend %clearfix;
 
   @include mq-down($md-down) {
-    width: -webkit-calc(100% - (#{$grid-gutter-width} * 2));
-    width:         calc(100% - (#{$grid-gutter-width} * 2));
-    max-width: -webkit-calc(100% - (#{$grid-gutter-width} * 2));
-    max-width:         calc(100% - (#{$grid-gutter-width} * 2));
+    max-width:  100%;
     padding-right: $grid-gutter-width;
     padding-left: $grid-gutter-width;
   }
 
   @include mq-down($xs-down) {
-    width: -webkit-calc(100% - (#{$grid-gutter-width}));
-    width:         calc(100% - (#{$grid-gutter-width}));
-    max-width: -webkit-calc(100% - (#{$grid-gutter-width}));
-    max-width:         calc(100% - (#{$grid-gutter-width}));
     padding-right: $grid-gutter-width / 2;
     padding-left: $grid-gutter-width / 2;
   }
