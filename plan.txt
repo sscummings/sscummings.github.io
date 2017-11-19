@@ -42,15 +42,15 @@ Week 4
 
 Week 5
 10/9 - 10/15
-- Design/develop archive of art post type - 8 hrs
-- Design/develop archive of writing post type - 3 hrs
-- Responsive nav
+- {# Design/develop archive of art post type - 8 hrs #}
+- {# Design/develop archive of writing post type - 3 hrs #}
 
 
 Week 6
 10/16 - 10/22
 - Design/develop archive of photography post type - 8 hrs
 - Design/develop archive of design post type - 5 hrs
+- Responsive nav
 
 
 Week 7
