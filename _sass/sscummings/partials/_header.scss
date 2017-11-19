@@ -6,6 +6,8 @@
   min-height: $header-height;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1000;
 
   .no-header & {
     display: none;
