@@ -3,7 +3,7 @@ title:			The Beautiful, Bizarre End
 date:			2011-08-09 11:43:56 -0500
 show_date:		true
 categories: 	[writing, review, art, blog]
-publisher:		GO SEE ART
+publisher:		Go See Art
 publisher_url:	https://goseeart.blogspot.com/
 published_url:	https://goseeart.blogspot.com/2011/08/end.html
 read_more:
