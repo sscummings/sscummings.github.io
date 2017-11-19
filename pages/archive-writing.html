@@ -6,11 +6,10 @@ permalink: /writing/
 <section class="archive-writing">
   
     {% for post in site.writing %}
-      <div>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </div>
+    	<div class="writing-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.date | date: "%Y" }}-{{ post.slug }}">
+    		{% include post-writing.html %}
+			{% include partial-next-prev.html %}
+    	</div>
     {% endfor %}
 
 </section>

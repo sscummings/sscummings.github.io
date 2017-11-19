@@ -1,0 +1,42 @@
+<section class="single-writing">
+
+  <div class="post-header">
+    <h1 class="post-title"><span><span>{{ post.title | escape }}</span></span></h1>
+    <p class="post-meta">
+      {% if post.publisher %}
+        <cite class="publisher">
+          {% if post.published_url %}
+            <a href="{{ post.published_url }}" target="_blank">{{ post.publisher }}</a>
+          {% else %}
+            {{ post.publisher }}
+          {% endif %}
+        </cite>
+      {% endif %}
+      {% if post.show_date == true %}
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.sscummings.date_format | default: "%-d %B %Y" %}
+          {{ post.date | date: date_format }}
+        </time>
+      {% endif %}
+
+      {% comment %} ###
+        {% for category in post.categories %}
+          {{ category }}
+        {% endfor %}
+      {% endcomment %}
+    </p>
+  </div>
+
+  <div class="writing-preview">
+    {{ post.content }}
+
+    {% if post.published_url %}
+      <div class="read-more">
+        <a href="{{ post.published_url }}" target="_blank" class="read-more">
+          {% if post.read_more %}{{ post.read_more }}{% else %}Read more{% endif %}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+</section>
