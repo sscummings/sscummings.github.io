@@ -1,16 +1,21 @@
 ---
-layout: default
-title: Photography
-permalink: /photography/
+layout:     default
+title:      Photography
+permalink:  /photography/
+container:  container-fluid
 ---
 <section class="archive-photography">
   
     {% for post in site.photography %}
-      <div>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </div>
+    	<div class="image {% for cat in post.categories %}{{ cat }} {% endfor %}">
+    		{% comment %} ## Progressive image setup ## {% endcomment %}
+    		<a href="../assets/{{ post.img }}" class="progressive replace">
+			 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+			</a>
+		</div>
+		{% comment %}
+    	    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+		{% endcomment %}
     {% endfor %}
 
 </section>
