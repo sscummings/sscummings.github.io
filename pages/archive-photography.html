@@ -7,15 +7,56 @@ container:  container-fluid
 <section class="archive-photography">
   
     {% for post in site.photography %}
-    	<div class="image {% for cat in post.categories %}{{ cat }} {% endfor %}">
-    		{% comment %} ## Progressive image setup ## {% endcomment %}
-    		<a href="../assets/{{ post.img }}" class="progressive replace">
+    	<div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
+
+        {% comment %} ## Basic image
+            <img src="../assets/{{ post.img }}" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+        {% endcomment %}
+
+    	{% comment %} ## Progressive image setup ## {% endcomment %}
+    	<a href="../assets/{{ post.img }}" class="progressive replace">
 			 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
 			</a>
+
+      {% assign page = post %}
+      {% include partial-image-details.html %}
+            
 		</div>
 		{% comment %}
     	    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 		{% endcomment %}
+    {% endfor %}
+
+
+    {% for post in site.photography %}
+        <div class="lightbox" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
+
+          <div class="container">
+
+            <div class="image-wrapper">
+                <i class="fa fa-close lightbox-close"></i>
+
+                <div class="image">
+                  <a href="../assets/{{ post.img }}" class="progressive replace">
+                      <img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+                  </a>
+                </div>
+                
+                {% assign page = post %}{% assign image_details_class = "lightbox-details" %}
+                {% include partial-image-details.html %}
+
+                {% unless forloop.first %}
+                  <i class="fa fa-chevron-left lightbox-prev lightbox-open parent-close" data-target="#{{ prev.date | date: '%Y-%m-%d' }}-{{ prev.slug }}"></i>
+                {% endunless %}
+                {% assign prev = post %}
+                {% assign next = site.photography[forloop.index] %}
+                {% unless forloop.last %}
+                  <i class="fa fa-chevron-right lightbox-next lightbox-open parent-close" data-target="#{{ next.date | date: '%Y-%m-%d' }}-{{ next.slug }}"></i>
+                {% endunless %}
+            </div>
+          </div>
+
+        </div>
     {% endfor %}
 
 </section>
