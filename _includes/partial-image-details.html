@@ -1,0 +1,26 @@
+<div class="image-details {{ image_details_class }}">
+    {% if page.title %}
+    	<h1 class="image-title">{% if page.caption %}{{ page.caption }}{% else %}{{ page.title | escape }}{% endif %}</h1>
+    {% endif %}
+    {% if page.year %}
+    	<span>{{ page.year }}</span>
+    {% endif %}
+    {% if page.city %}
+    	<span>{{ page.city | escape }}</span>
+    {% endif %}
+    {% if page.state %}
+    	<span>{{ page.state | escape }}</span>
+    {% endif %}
+    {% if page.country %}
+    	<span>{{ page.country | escape }}</span>
+    {% endif %}
+
+    {% comment %}
+	    {% if page.size %}
+	    	<span>{{ page.size | escape }}</span>
+	    {% endif %}
+	    {% if page.medium %}
+	    	<span>{{ page.medium | escape }}</span>
+	    {% endif %}
+    {% endcomment %}
+</div>
