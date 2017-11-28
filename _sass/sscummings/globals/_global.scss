@@ -9,6 +9,11 @@
 
 	.image-title {
 		font-size: $base-font-size;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 
 	.image-title,

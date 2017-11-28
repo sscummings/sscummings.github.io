@@ -1,26 +1,30 @@
 <div class="image-details {{ image_details_class }}">
-    {% if page.title %}
-    	<h1 class="image-title">{% if page.caption %}{{ page.caption }}{% else %}{{ page.title | escape }}{% endif %}</h1>
+    {% if post.title %}
+        {% if title_link == true %}
+        	<h1 class="image-title"><a href="{{ post.url | relative_url }}">{% if post.caption %}{{ post.caption }}{% else %}{{ post.title | escape }}{% endif %}</a></h1>
+        {% else %}
+            <h1 class="image-title">{% if post.caption %}{{ post.caption }}{% else %}{{ post.title | escape }}{% endif %}</h1>
+        {% endif %}
     {% endif %}
-    {% if page.year %}
-    	<span>{{ page.year }}</span>
+    {% if post.year %}
+    	<span>{{ post.year }}</span>
     {% endif %}
-    {% if page.city %}
-    	<span>{{ page.city | escape }}</span>
+    {% if post.city %}
+    	<span>{{ post.city | escape }}</span>
     {% endif %}
-    {% if page.state %}
-    	<span>{{ page.state | escape }}</span>
+    {% if post.state %}
+    	<span>{{ post.state | escape }}</span>
     {% endif %}
-    {% if page.country %}
-    	<span>{{ page.country | escape }}</span>
+    {% if post.country %}
+    	<span>{{ post.country | escape }}</span>
     {% endif %}
 
     {% comment %}
-	    {% if page.size %}
-	    	<span>{{ page.size | escape }}</span>
+	    {% if post.size %}
+	    	<span>{{ post.size | escape }}</span>
 	    {% endif %}
-	    {% if page.medium %}
-	    	<span>{{ page.medium | escape }}</span>
+	    {% if post.medium %}
+	    	<span>{{ post.medium | escape }}</span>
 	    {% endif %}
     {% endcomment %}
 </div>

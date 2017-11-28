@@ -23,23 +23,8 @@ permalink: /art/
 						</div>
 				    {% endif %}
 
-				    <div class="image-details">
-					    {% if post.title %}
-					    	<h1 class="image-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
-					    {% endif %}
-					    {% if post.year %}
-					    	<span>{{ post.year }}</span>
-					    {% endif %}
-					    {% if post.city %}
-					    	<span>{{ post.city | escape }}</span>
-					    {% endif %}
-					    {% if post.state %}
-					    	<span>{{ post.state | escape }}</span>
-					    {% endif %}
-					    {% if post.country %}
-					    	<span>{{ post.country | escape }}</span>
-					    {% endif %}
-					</div>
+					{% assign title_link = true %}
+					{% include partial-image-details.html %}
 				</div>
 			</div>
 
