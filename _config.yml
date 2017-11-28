@@ -52,6 +52,11 @@ defaults:
       layout: "single-image"
   - scope:
       path: ""
+      type: "events"
+    values:
+      layout: "single-event"
+  - scope:
+      path: ""
       type: "photography"
     values:
       layout: "single-image"
