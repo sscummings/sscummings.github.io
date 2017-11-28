@@ -6,7 +6,7 @@ permalink: /writing/
 <section class="archive-writing">
   
     {% for post in site.writing %}
-    	<div class="writing-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.date | date: "%Y" }}-{{ post.slug }}">
+    	<div class="writing-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
     		{% include post-writing.html %}
 
     		{% assign post_type = site.writing %}

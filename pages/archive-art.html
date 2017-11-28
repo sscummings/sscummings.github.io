@@ -29,6 +29,10 @@ permalink: /art/
 			</div>
 
 			{% assign post_type = site.art %}
+    		{% assign prev_date = prev.date | date: "%Y" %}
+    		{% assign next = post_type[forloop.index] %}
+    		{% assign next_date = next.date | date: "%Y" %}
+    		
 			{% include partial-next-prev.html %}
 		</section>
     {% endfor %}
