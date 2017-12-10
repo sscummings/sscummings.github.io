@@ -89,8 +89,8 @@ $img-max-height:  86vh;
 
 // Import partials
 @import
-  "sscummings/partials/header",
   "sscummings/partials/footer",
+  "sscummings/partials/header",
   "sscummings/partials/lightbox",
   "sscummings/partials/scroll-section"
 ;
@@ -99,6 +99,7 @@ $img-max-height:  86vh;
 @import
   "sscummings/templates/home",
   "sscummings/templates/archive-art",
+  "sscummings/templates/archive-design",
   "sscummings/templates/archive-events",
   "sscummings/templates/archive-photography",
   "sscummings/templates/archive-writing",
