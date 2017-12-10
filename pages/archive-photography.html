@@ -28,35 +28,8 @@ container:  container-fluid
     {% endfor %}
 
 
-    {% for post in site.photography %}
-        <div class="lightbox" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
-
-          <div class="container">
-
-            <div class="image-wrapper">
-                <i class="fa fa-close lightbox-close"></i>
-
-                <div class="image">
-                  <a href="../assets/{{ post.img }}" class="progressive replace">
-                      <img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
-                  </a>
-                </div>
-                
-                {% assign page = post %}{% assign image_details_class = "lightbox-details" %}
-                {% include partial-image-details.html %}
-
-                {% unless forloop.first %}
-                  <i class="fa fa-chevron-left lightbox-prev lightbox-open parent-close" data-target="#{{ prev.date | date: '%Y-%m-%d' }}-{{ prev.slug }}"></i>
-                {% endunless %}
-                {% assign prev = post %}
-                {% assign next = site.photography[forloop.index] %}
-                {% unless forloop.last %}
-                  <i class="fa fa-chevron-right lightbox-next lightbox-open parent-close" data-target="#{{ next.date | date: '%Y-%m-%d' }}-{{ next.slug }}"></i>
-                {% endunless %}
-            </div>
-          </div>
-
-        </div>
-    {% endfor %}
+    {% assign post_collection = site.photography %}
+    {% assign date_format = '%Y-%m-%d' %}
+    {% include partial-lightbox.html %}
 
 </section>
