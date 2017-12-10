@@ -2,9 +2,9 @@
   {% if post.homepage == true %}
       <div class="item-square {{ post.collection }}">
         <a href="/{{ post.collection }}" {% if post.img %}class="bg-img" style="background-image: url('../assets/{{ post.img }}');"{% endif %}>
-            <span class="collection">{{ post.collection }}</span>
             <span class="preview">{{ post.content | strip_html }}</span>
         </a>
+        <span class="collection">{{ post.collection }}</span>
       </div>
   {% endif %}
 {% endfor %}

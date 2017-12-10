@@ -3,13 +3,28 @@
  */
 
 .home {
+	overflow: hidden;
 
-	$collection-font-size-xs: 27vw;
-	$collection-font-size-sm: 13.7vw;
-	$collection-font-size-md: 110px;
-	$collection-font-size-lg: 90px;
+	$collection-font-size-xs: 37vw;
+	$collection-font-size-sm: 200px;
+	$collection-font-size-md: 200px;
+	$collection-font-size-lg: 200px;
 
 	.item-square {
+		position: relative;
+
+		.collection {
+			color: $bg-color;
+			position: absolute;
+			z-index: 2;
+			left: 10%;
+			bottom: 10%;
+			font-size: $collection-font-size-xs;
+			line-height: 0.62;
+			opacity: 0;
+			transition: all .3s ease;
+			pointer-events: none;
+		}
 		a {
 			display: block;
 			width: 100%;
@@ -31,28 +46,17 @@
 				transition: all .3s ease;
 			}
 
-			.collection {
-				color: $bg-color;
-				position: absolute;
-				z-index: 2;
-				left: 10%;
-				bottom: 10%;
-				font-size: $collection-font-size-xs;
-				line-height: 1;
-				opacity: 0;
-				transition: all .3s ease;
-			}
-
 			.preview {
 				font-size: 5.75vw;
 				width: 220%;
 				color: $bg-color;
 				position: absolute;
-				top: -8%;
-				left: -4%;
-				line-height: 1.05;
+				top: -14%;
+				left: -14%;
+				line-height: 0.9;
 				z-index: 2;
-				opacity: 1;
+				// opacity: 1;
+				opacity: 0;
 				pointer-events: none;
 				transition: all .3s ease;
 			}
@@ -61,13 +65,13 @@
 				&:after {
 					opacity: .85;
 				}
-				.collection {
-					opacity: 1;
-				}
 				.preview {
 					opacity: 0;
 				}
 			}
+		}
+		a:hover + .collection {
+			opacity: 1;
 		}
 
 		&.art {
@@ -80,31 +84,39 @@
 			a:after {
 				background-color: $m;
 			}
+
+			.collection {
+				letter-spacing: -0.025em;
+			}
 		}
 
 		&.photography {
-			.collection {
-				display: none;
-			}
+			// .collection {
+			// 	display: none;
+			// }
 			a {
 				&:after {
 					background-color: $y;
 				}
-				&:before {
-					color: $bg-color;
-					position: absolute;
-					z-index: 2;
-					left: 10%;
-					bottom: 10%;
-					font-size: $collection-font-size-xs;
-					opacity: 0;
-					content: "photo graphy";
-					line-height: 1;
-					transition: all .3s ease;
-				}
+				// &:before {
+				// 	color: $bg-color;
+				// 	position: absolute;
+				// 	z-index: 2;
+				// 	left: 10%;
+				// 	bottom: 10%;
+				// 	font-size: $collection-font-size-xs;
+				// 	opacity: 0;
+				// 	content: "photo graphy";
+				// 	line-height: 1;
+				// 	transition: all .3s ease;
+				// }
 				&:hover:before {
 					opacity: 1;
 				}
+			}
+
+			.collection {
+				letter-spacing: -0.03em;
 			}
 		}
 
@@ -112,7 +124,15 @@
 			a:after {
 				background-color: rgba($k, .3);
 			}
-			a:hover .collection {
+			a:hover {
+				&:after {
+					opacity: 1;
+				}
+				.preview {
+					opacity: 0.2;
+				}
+			}
+		}
 				color: $bg-color;
 			}
 		}
@@ -123,7 +143,7 @@
 		h1 {
 			display: inline-block;
 			margin-bottom: $grid-gutter-width;
-			font-size: $collection-font-size-xs;
+			font-size: 32vw;
 			line-height: 1;
 
 			a {
@@ -167,9 +187,10 @@
 		padding: 0 $grid-gutter-width/2;
 
 		.item-square {
-			a .collection,
+			.collection,
 			&.photography a:before {
 				opacity: 1;
+				font-size: $collection-font-size-xs;
 			}
 		}
 
@@ -190,7 +211,7 @@
 		margin-right: auto;
 
 		.item-square {
-			a .collection,
+			.collection,
 			&.photography a:before {
 				font-size: $collection-font-size-sm;
 			}
@@ -233,7 +254,7 @@
 	@include mq-up($md-up) {
 
 		.item-square {
-			a .collection,
+			.collection,
 			&.photography a:before {
 				font-size: $collection-font-size-md;
 			}
@@ -249,6 +270,10 @@
 		}
 
 		.grid {
+			&:last-of-type,
+			&:nth-last-of-type(2) {
+				margin-bottom: 0;
+			}
 
 			.item-square {
 				width: calc(50% - (#{$grid-gutter-width}/2));
@@ -261,7 +286,7 @@
 		width: 100%;
 
 		.item-square {
-			a .collection,
+			.collection,
 			&.photography a:before {
 				font-size: $collection-font-size-lg;
 			}
@@ -275,9 +300,15 @@
 		}
 
 		.grid {
-
 			.item-square {
 				width: calc((100% - #{$grid-gutter-width}*3)/4);
+
+				&:last-of-type,
+				&:nth-last-of-type(2) {
+					margin-bottom: $grid-gutter-width;
+				}
+			}
+		}
 			}
 		}
 	}
