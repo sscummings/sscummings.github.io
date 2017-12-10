@@ -187,15 +187,15 @@
           case 37: // left
             $('.lightbox.open').find('.lightbox-prev').trigger('click');
           break;
-          case 38: // up
-            $('.lightbox.open').find('.lightbox-prev').trigger('click');
-          break;
+          // case 38: // up
+          //   $('.lightbox.open').find('.lightbox-prev').trigger('click');
+          // break;
           case 39: // right
             $('.lightbox.open').find('.lightbox-next').trigger('click');
           break;
-          case 40: // down
-            $('.lightbox.open').find('.lightbox-next').trigger('click');
-          break;
+          // case 40: // down
+          //   $('.lightbox.open').find('.lightbox-next').trigger('click');
+          // break;
 
           default: return; // exit this handler for other keys
       }
