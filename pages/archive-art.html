@@ -11,7 +11,7 @@ permalink: /art/
 
 		    	<div class="image-wrapper">
 				    {% if post.img %}
-				    	<div class="image {% for cat in post.categories %}{{ cat }} {% endfor %}">
+				    	<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %}">
 				    		{% comment %} ## Progressive image setup ## {% endcomment %}
 				    		<a href="../assets/{{ post.img }}" class="progressive replace">
 							 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
