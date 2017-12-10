@@ -8,15 +8,18 @@ layout: default
     <h1 class="page-heading"><a href="/who">hello<span>_</span></a></h1>
   </div>
 
-  <div class="grid">
-
+  <div class="outer-grid {% for item in site.collections %} {% for post in item.docs %}{% if post.featured == true %}has-featured{% endif %}{% endfor %}{% endfor %}">
     {% for item in site.collections %}
       {% for post in item.docs %}
         {% if post.featured == true %}
-          <div class="item-square {{ post.collection }} featured">
+          <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
             <a class="bg-img" href="{{ post.url }}" style="background-image: url('../assets/{{ post.img }}');">
-                <span class="collection">{{ post.collection }}</span>
-                <span class="preview">{{ post.content | strip_html }}</span>
+                <span class="title">{{ post.title }}</span>
+                <span class="more"><i class="fa fa-chevron-right"></i></span>
+                {% comment %}
+                  <span class="collection">{{ post.collection }}</span>
+                  <span class="preview">{{ post.content | strip_html }}</span>
+                {% endcomment %}
             </a>
           </div>
           {% assign featured = post.collection %}
@@ -24,14 +27,17 @@ layout: default
       {% endfor %}
     {% endfor %}
 
-    {% include collection-preview.html collection=site.art %}
+    <div class="grid">
 
-    {% include collection-preview.html collection=site.design %}
+      {% include collection-preview.html collection=site.art %}
 
-    {% include collection-preview.html collection=site.photography %}
+      {% include collection-preview.html collection=site.design %}
 
-    {% include collection-preview.html collection=site.writing %}
+      {% include collection-preview.html collection=site.photography %}
 
+      {% include collection-preview.html collection=site.writing %}
+
+    </div>
   </div>
 
 </div>

@@ -133,8 +133,90 @@
 				}
 			}
 		}
+
+		&.featured {
+			margin-bottom: $grid-gutter-width;
+
+			.title {
 				color: $bg-color;
+				font-size: 10vw;
+				line-height: 1;
+				display: block;
+				position: absolute;
+				width: 90%;
+				left: 5%;
+				top: 5%;
+				z-index: 2;
 			}
+
+			.more {
+				color: $bg-color;
+				position: absolute;
+				z-index: 2;
+				right: 5%;
+				bottom: 5%;
+				text-transform: lowercase;
+				font-size: 5vw;
+				letter-spacing: .02em;
+				opacity: 0;
+				transition: all .3s ease;
+
+				.fa-chevron-right {
+					position: relative;
+					top: .1em;
+					font-size: .8em;
+				}
+			}
+
+			a:after {
+				background-color: $k;
+				opacity: .85;
+			}
+
+			&.announcements,
+			&.events {
+				.more:before {
+					content: "Learn more ";
+				}
+			}
+
+			a:hover {
+				&:after {
+					opacity: 1;
+					background-color: $k;
+				}
+				.more {
+					opacity: 1;
+				}
+			}
+
+			//
+			// WIP In case I want to feature specific images
+			//
+				&.collection-art,
+				&.collection-photography,
+				&.collection-design {
+					filter: grayscale(30%);
+					.title {
+						opacity: 0;
+						transition: all .3s ease;
+					}
+					a:after {
+						opacity: .1;
+						background-color: $w;
+						// background-color: $k;
+					}
+
+					a:hover {
+						.title {
+							opacity: 1;
+						}
+						&:after {
+							opacity: .4;
+							background-color: $k;
+						}
+					}
+				}
 		}
 	}
 
@@ -215,6 +297,14 @@
 			&.photography a:before {
 				font-size: $collection-font-size-sm;
 			}
+			&.featured {
+				.title {
+					font-size: 60px;
+				}
+				.more {
+					font-size: 30px;
+				}
+			}
 		}
 
 		.intro {
@@ -290,6 +380,14 @@
 			&.photography a:before {
 				font-size: $collection-font-size-lg;
 			}
+			&.featured {
+				.title {
+					font-size: 50px;
+				}
+				.more {
+					font-size: 25px;
+				}
+			}
 		}
 
 		.intro {
@@ -309,6 +407,19 @@
 				}
 			}
 		}
+
+		.outer-grid.has-featured {
+			display: flex;
+			justify-content: space-between;
+
+			.featured,
+			.grid {
+				width: calc(50% - #{$grid-gutter-width}/2);
+			}
+			.grid {
+				.item-square {
+					width: calc(50% - #{$grid-gutter-width}/2);
+				}
 			}
 		}
 	}
