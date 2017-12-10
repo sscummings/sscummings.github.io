@@ -1,0 +1,21 @@
+---
+layout: default
+title: Announcements
+permalink: /announcements/
+---
+<section class="archive-events archive-announcements">
+  
+    {% for post in site.announcements %}
+    	<div class="event-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.event_date | date: '%Y-%m-%d' }}-{{ post.slug }}">
+    		{% include post-event.html %}
+
+    		{% assign post_type = site.announcements %}
+    		{% assign prev_date = prev.event_date | date: "%Y-%m-%d" %}
+    		{% assign next = post_type[forloop.index] %}
+    		{% assign next_date = next.event_date | date: "%Y-%m-%d" %}
+
+			{% include partial-next-prev.html %}
+    	</div>
+    {% endfor %}
+
+</section>
