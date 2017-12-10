@@ -148,6 +148,11 @@
                 e.target.alt = pImg.alt || '';
                 item.removeChild(pImg);
                 e.target.classList.remove('reveal');
+
+                // MODIFICATION: Set width of lightbox image wrapper to match image width
+                var imgWidth = $(this).width();
+                // var imgWidth = $(this).get(0).naturalWidth;
+                $(this).parents('.lightbox-image-wrapper').css('width', imgWidth);
               }
 
             });
@@ -167,7 +172,9 @@
     (function($) { // Begin jQuery
       $(".lightbox-open").click(function() {
           var target = $(this).data("target");
+          // var imgWidth = $(target).find('img').get(0).naturalWidth;
           $(target).addClass('open');
+          // $(target).find('.image-wrapper').css('width', imgWidth);
       })
       $(".lightbox-close").click(function() {
           $(".lightbox").removeClass('open');
