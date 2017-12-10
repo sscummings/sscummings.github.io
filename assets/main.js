@@ -47,6 +47,25 @@
 
 
 //
+// Arrow keys for art archive
+//
+// (function($) { // Begin jQuery
+//   $(document).keydown(function(e) {
+//       switch(e.which) {
+//           case 38: // up
+//             $('.scroll-section.active').find('.prev-link').trigger('click');
+//           break;
+//           case 40: // down
+//             $('.scroll-section.active').find('.next-link').trigger('click');
+//           break;
+
+//           default: return; // exit this handler for other keys
+//       }
+//   });
+// })(jQuery);
+
+
+//
 // Lazy load images
 // ADAPTED FROM: https://www.sitepoint.com/how-to-build-your-own-progressive-image-loader/
 //
