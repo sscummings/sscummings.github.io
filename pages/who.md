@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Who?
+title: who?
 permalink: /who/
 ---
 
