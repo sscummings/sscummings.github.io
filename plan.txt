@@ -48,21 +48,22 @@ Week 5
 
 Week 6
 10/16 - 10/22
-- Design/develop archive of photography post type - 8 hrs
-- Design/develop archive of design post type - 5 hrs
-- Responsive nav
+- {# Design/develop archive of photography post type - 8 hrs #}
+- {# Design/develop archive of design post type - 5 hrs #}
+- {# Responsive nav #}
 
 
 Week 7
 10/23 - 10/29
-- Design/develop archive of announcement post type - 3 hrs
-- Design/develop archive of show/event post type - 3 hrs
-- Design/develop 404 page - 3 hrs
-- Decide on contact link - 1 hr
+- {# Design/develop archive of announcement post type - 3 hrs #}
+- {# Design/develop archive of show/event post type - 3 hrs #}
+- {# Design/develop 404 page - 20 min ~3hrs~ #}
+- {# Decide on contact link - 1 hr #}
 
 
 Buffer
 10/30 - 11/1
+- {# Make sure SASS works across browsers: `-webkit`, `-moz`, `-ms`, etc. #}
 - FINISH
 - LAUNCH
 
