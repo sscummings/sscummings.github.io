@@ -14,10 +14,6 @@
 			width: 100%;
 			display: flex;
 			justify-content: center;
-
-			.image-wrapper {
-				width: 100%;
-			}
 		}
 
 		@include mq-down($md-down) {
@@ -58,6 +54,9 @@
 
 		@include mq-down($xs-down) {
 			.art-preview {
+				.image-wrapper {
+					width: 100%;
+				}
 				.image {
 					img {
 						max-height: calc(#{$img-max-height} - 30px);
