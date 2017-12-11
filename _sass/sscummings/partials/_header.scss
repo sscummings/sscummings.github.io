@@ -22,10 +22,16 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    text-decoration: none;
+    transition: all .3s ease;
 
     &,
     &:visited {
       color: $text-color;
+    }
+
+    &:hover {
+      opacity: .8;
     }
   }
 
@@ -98,6 +104,14 @@
       li {
         position: relative;
 
+        a {
+          transition: all .3s ease;
+
+          &:hover {
+            opacity: .8;
+          }
+        }
+
         a,
         a:visited {
           display: block;
@@ -163,6 +177,11 @@
       cursor: pointer;
       width: $nav-height;
       height: $nav-height;
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .8;
+      }
 
       span,
       span:before,
