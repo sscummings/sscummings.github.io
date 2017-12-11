@@ -25,6 +25,7 @@
 				.image {
 					img {
 						max-height: calc(#{$img-max-height} - 50px - #{$grid-gutter-width}/2);
+						width: auto;
 						margin-left: auto;
 						margin-right: auto;
 					}
@@ -45,6 +46,7 @@
 				.image {
 					img {
 						max-height: calc(#{$img-max-height} - 40px);
+						width: auto;
 					}
 				}
 			}
@@ -55,6 +57,7 @@
 				.image {
 					img {
 						max-height: calc(#{$img-max-height} - 30px);
+						width: auto;
 					}
 				}
 			}
