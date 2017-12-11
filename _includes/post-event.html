@@ -1,0 +1,34 @@
+<section class="single-event {% if post.layout_align %}{{ post.layout_align }}{% endif %}">
+
+  <div class="post-header">
+    <h1 class="post-title"><span><span>{{ post.title | escape }}</span></span></h1>
+    <div class="post-meta">
+      {% if post.event_date %}
+        <time class="date">
+          {{ post.event_date | date: "%B %-d, %Y" }} {% if post.event_time %}- {{ post.event_time }}{% endif %}
+        </time>
+      {% endif %}
+      {% if post.event_address or post.event_location %}
+        <address class="">
+          {% if post.event_location %}
+            <span class="location">{{ post.event_location }}</span>
+          {% endif %}
+          {% if post.event_address %}
+            <span class="address">{{ post.event_address }}</span>
+          {% endif %}
+        </address>
+      {% endif %}
+
+      {% comment %} ###
+        {% for category in post.categories %}
+          {{ category }}
+        {% endfor %}
+      {% endcomment %}
+    </div>
+  </div>
+
+  <div class="event-details">
+    {{ post.content }}
+  </div>
+
+</section>

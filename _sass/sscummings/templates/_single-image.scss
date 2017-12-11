@@ -1,0 +1,17 @@
+.section-image {
+
+	.image {
+		text-align: center;
+
+		img {
+			padding: 0 0 $grid-gutter-width;
+			max-height: $img-max-height;
+		}
+	}
+}
+
+.single-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

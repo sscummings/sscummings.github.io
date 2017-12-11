@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section class="section-image single-image">
+
+	<div class="image-wrapper">
+	    {% if page.img %}
+	    	<div class="image {% for cat in page.categories %}{{ cat }} {% endfor %}">
+				<img src="../assets/{{ page.img }}" alt="{{ site.author | escape }}, {{ page.title | escape }}, {{ page.year }}" />
+			</div>
+	    {% endif %}
+
+        {% assign post = page %}
+        {% include partial-image-details.html %}
+	</div>
+</section>

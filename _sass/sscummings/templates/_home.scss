@@ -1,0 +1,427 @@
+/**
+ * Homepage
+ */
+
+.home {
+	overflow: hidden;
+
+	$collection-font-size-xs: 37vw;
+	$collection-font-size-sm: 200px;
+	$collection-font-size-md: 200px;
+	$collection-font-size-lg: 200px;
+
+	.item-square {
+		position: relative;
+
+		.collection {
+			color: $bg-color;
+			position: absolute;
+			z-index: 2;
+			left: 10%;
+			bottom: 10%;
+			font-size: $collection-font-size-xs;
+			line-height: 0.62;
+			opacity: 0;
+			transition: all .3s ease;
+			pointer-events: none;
+		}
+		a {
+			display: block;
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+			position: relative;
+			overflow: hidden;
+
+			&:after {
+				content: " ";
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: -5%;
+				left: -5%;
+				width: 110%;
+				height: 110%;
+				opacity: 1;
+				transition: all .3s ease;
+			}
+
+			.preview {
+				font-size: 5.75vw;
+				width: 220%;
+				color: $bg-color;
+				position: absolute;
+				top: -14%;
+				left: -14%;
+				line-height: 0.9;
+				z-index: 2;
+				// opacity: 1;
+				opacity: 0;
+				pointer-events: none;
+				transition: all .3s ease;
+			}
+
+			&:hover {
+				&:after {
+					opacity: .85;
+				}
+				.preview {
+					opacity: 0;
+				}
+			}
+		}
+		a:hover + .collection {
+			opacity: 1;
+		}
+
+		&.art {
+			a:after {
+				background-color: $c;
+			}
+		}
+
+		&.design {
+			a:after {
+				background-color: $m;
+			}
+
+			.collection {
+				letter-spacing: -0.025em;
+			}
+		}
+
+		&.photography {
+			// .collection {
+			// 	display: none;
+			// }
+			a {
+				&:after {
+					background-color: $y;
+				}
+				// &:before {
+				// 	color: $bg-color;
+				// 	position: absolute;
+				// 	z-index: 2;
+				// 	left: 10%;
+				// 	bottom: 10%;
+				// 	font-size: $collection-font-size-xs;
+				// 	opacity: 0;
+				// 	content: "photo graphy";
+				// 	line-height: 1;
+				// 	transition: all .3s ease;
+				// }
+				&:hover:before {
+					opacity: 1;
+				}
+			}
+
+			.collection {
+				letter-spacing: -0.03em;
+			}
+		}
+
+		&.writing {
+			a:after {
+				background-color: rgba($k, .3);
+			}
+			a:hover {
+				&:after {
+					opacity: 1;
+				}
+				.preview {
+					opacity: 0.2;
+				}
+			}
+		}
+
+		&.featured {
+			margin-bottom: $grid-gutter-width;
+
+			.title {
+				color: $bg-color;
+				font-size: 10vw;
+				line-height: 1;
+				display: block;
+				position: absolute;
+				width: 90%;
+				left: 5%;
+				top: 5%;
+				z-index: 2;
+			}
+
+			.more {
+				color: $bg-color;
+				position: absolute;
+				z-index: 2;
+				right: 5%;
+				bottom: 5%;
+				text-transform: lowercase;
+				font-size: 5vw;
+				letter-spacing: .02em;
+				opacity: 0;
+				transition: all .3s ease;
+
+				.fa-chevron-right {
+					position: relative;
+					top: .1em;
+					font-size: .8em;
+				}
+			}
+
+			a:after {
+				background-color: $k;
+				opacity: .85;
+			}
+
+			&.announcements,
+			&.events {
+				.more:before {
+					content: "Learn more ";
+				}
+			}
+
+			a:hover {
+				&:after {
+					opacity: 1;
+					background-color: $k;
+				}
+				.more {
+					opacity: 1;
+				}
+			}
+
+			//
+			// WIP In case I want to feature specific images
+			//
+				&.collection-art,
+				&.collection-photography,
+				&.collection-design {
+					filter: grayscale(30%);
+					.title {
+						opacity: 0;
+						transition: all .3s ease;
+					}
+					a:after {
+						opacity: .1;
+						background-color: $w;
+						// background-color: $k;
+					}
+
+					a:hover {
+						.title {
+							opacity: 1;
+						}
+						&:after {
+							opacity: .4;
+							background-color: $k;
+						}
+					}
+				}
+		}
+	}
+
+	.intro {
+
+		h1 {
+			display: inline-block;
+			margin-bottom: $grid-gutter-width;
+			font-size: 32vw;
+			line-height: 1;
+
+			a {
+				display: inline-block;
+				color: $bg-color;
+				padding: .2em .3em;
+				box-sizing: border-box;
+				background-color: $white;
+				text-decoration: none;
+
+				/* Standard syntax */
+				@keyframes cursor {
+				    0%		{oapcity: 1;}
+				    50%		{opacity: 0;}
+				    100%	{opacity: 1;}
+				}
+				&:hover {
+					span {
+						// opacity: 0;
+						animation-name: cursor;
+    					animation-duration: .2s;
+					}
+				}
+			}
+		}
+	}
+
+	.grid {
+
+		.item-square {
+			margin-bottom: $grid-gutter-width;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+	@include mq-down($xs-down) {
+		padding: 0 $grid-gutter-width/2;
+
+		.item-square {
+			.collection,
+			&.photography a:before {
+				opacity: 1;
+				font-size: $collection-font-size-xs;
+			}
+		}
+
+		.intro {
+			max-width: 100%;
+			overflow: hidden;
+			h1 a {
+				padding-left: calc((100vw - #{$grid-gutter-width}/2)*.1);
+				padding-right: calc((100vw - #{$grid-gutter-width}/2)*.1);
+			}
+		}
+	}
+
+
+	@include mq-up($sm-up) {
+		width: 558px;
+		margin-left: auto;
+		margin-right: auto;
+
+		.item-square {
+			.collection,
+			&.photography a:before {
+				font-size: $collection-font-size-sm;
+			}
+			&.featured {
+				.title {
+					font-size: 60px;
+				}
+				.more {
+					font-size: 30px;
+				}
+			}
+		}
+
+		.intro {
+
+			h1 {
+				font-size: 80px;
+			}
+		}
+
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: flex-start;
+			width: 100%;
+
+			.item-square {
+				width: calc(50% - (#{$grid-gutter-width}/2));
+
+				&:last-of-type,
+				&:nth-last-of-type(2) {
+					margin-bottom: 0;
+				}
+
+				&.featured {
+					width: 100%;
+
+					a:after {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+
+	@include mq-up($md-up) {
+
+		.item-square {
+			.collection,
+			&.photography a:before {
+				font-size: $collection-font-size-md;
+			}
+		}
+
+		.intro {
+
+			h1 {
+				font-size: 80px;
+				position: sticky;
+				// top: $grid-gutter-width;
+			}
+		}
+
+		.grid {
+			&:last-of-type,
+			&:nth-last-of-type(2) {
+				margin-bottom: 0;
+			}
+
+			.item-square {
+				width: calc(50% - (#{$grid-gutter-width}/2));
+			}
+		}
+	}
+
+
+	@include mq-up($lg-up) {
+		width: 100%;
+
+		.item-square {
+			.collection,
+			&.photography a:before {
+				font-size: $collection-font-size-lg;
+			}
+			&.featured {
+				.title {
+					font-size: 50px;
+				}
+				.more {
+					font-size: 25px;
+				}
+			}
+		}
+
+		.intro {
+
+			h1 {
+				margin-bottom: $grid-gutter-width;
+			}
+		}
+
+		.grid {
+			.item-square {
+				width: calc((100% - #{$grid-gutter-width}*3)/4);
+
+				&:last-of-type,
+				&:nth-last-of-type(2) {
+					margin-bottom: $grid-gutter-width;
+				}
+			}
+		}
+
+		.outer-grid.has-featured {
+			display: flex;
+			justify-content: space-between;
+
+			.featured,
+			.grid {
+				width: calc(50% - #{$grid-gutter-width}/2);
+			}
+			.grid {
+				.item-square {
+					width: calc(50% - #{$grid-gutter-width}/2);
+				}
+			}
+		}
+	}
+
+}

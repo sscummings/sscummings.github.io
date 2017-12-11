@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="intro">
+    <h1 class="page-heading"><a href="/who">hello<span>_</span></a></h1>
+  </div>
+
+  <div class="outer-grid {% for item in site.collections %} {% for post in item.docs %}{% if post.featured == true %}has-featured{% endif %}{% endfor %}{% endfor %}">
+    {% for item in site.collections %}
+      {% for post in item.docs %}
+        {% if post.featured == true %}
+          <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
+            <a class="bg-img" href="{{ post.url }}" style="background-image: url('../assets/{{ post.img }}');">
+                <span class="title">{{ post.title }}</span>
+                <span class="more"><i class="fa fa-chevron-right"></i></span>
+                {% comment %}
+                  <span class="collection">{{ post.collection }}</span>
+                  <span class="preview">{{ post.content | strip_html }}</span>
+                {% endcomment %}
+            </a>
+          </div>
+          {% assign featured = post.collection %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="grid">
+
+      {% include collection-preview.html collection=site.art %}
+
+      {% include collection-preview.html collection=site.design %}
+
+      {% include collection-preview.html collection=site.photography %}
+
+      {% include collection-preview.html collection=site.writing %}
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  {% comment %}
+  # # # # # # #
+    {{ content }}
+
+    ...
+
+    {% for event in site.events %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
+    {% for announcement in site.announcements %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ announcement.url | relative_url }}">{{ announcement.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
+
+    ...
+
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    
+    {% for post in site.posts %}
+      <div>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </div>
+    {% endfor %}
+  # # # # # # #
+  {% endcomment %}

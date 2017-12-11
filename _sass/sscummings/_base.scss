@@ -1,0 +1,164 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $grid-gutter-width / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 0;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  // &:visited {
+  //   color: darken($link-color, 10%);
+  // }
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $gray;
+  border-left: 4px solid $white;
+  padding-left: $grid-gutter-width / 2;
+  @include relative-font-size(1.125);
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/*
+ * Container
+ */
+.container {
+  width:  100%;
+  max-width:  $content-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  @extend %clearfix;
+
+  @include mq-down($md-down) {
+    max-width:  100%;
+    padding-right: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+  }
+
+  @include mq-down($xs-down) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+/*
+ * Container Fluid
+ */
+.container-fluid {
+  width:  100%;
+  max-width:  $content-width-fluid;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  @extend %clearfix;
+
+  @include mq-down($md-down) {
+    max-width:  100%;
+    padding-right: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+  }
+
+  @include mq-down($xs-down) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

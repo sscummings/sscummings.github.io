@@ -1,0 +1,35 @@
+---
+layout:     default
+title:      Photography
+permalink:  /photography/
+container:  container-fluid
+---
+<section class="archive-photography">
+  
+    {% for post in site.photography %}
+    	<div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
+
+        {% comment %} ## Basic image
+            <img src="../assets/{{ post.img }}" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+        {% endcomment %}
+
+    	{% comment %} ## Progressive image setup ## {% endcomment %}
+    	<a href="../assets/{{ post.img }}" class="progressive replace">
+			 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+			</a>
+
+      {% assign title_link = true %}
+      {% include partial-image-details.html %}
+            
+		</div>
+		{% comment %}
+    	    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+		{% endcomment %}
+    {% endfor %}
+
+
+    {% assign post_collection = site.photography %}
+    {% assign date_format = '%Y-%m-%d' %}
+    {% include partial-lightbox.html %}
+
+</section>

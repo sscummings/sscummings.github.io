@@ -1,0 +1,94 @@
+title: sscummings
+author: Stephen Cummings
+email: sscummings@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  I made these things for you.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://stephencummings.us" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  sscummings
+instagram_username:  sssscummings
+twitter_username: sssscummings
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+  - octopress-autoprefixer
+exclude:
+  - Gemfile
+  - Gemfile.lock
+permalink: /:year/:month/:title.html
+collections:
+  announcements:
+    output: true
+  art:
+    output: true
+    permalink: /:collection/:year-:title
+  design:
+    output: true
+  # - dev
+  events:
+    output: true
+  photography:
+    output: true
+  writing:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "announcements"
+    values:
+      layout: "single-event"
+  - scope:
+      path: ""
+      type: "art"
+    values:
+      layout: "single-image"
+  - scope:
+      path: ""
+      type: "design"
+    values:
+      layout: "single-image"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "single-event"
+  - scope:
+      path: ""
+      type: "photography"
+    values:
+      layout: "single-image"
+  - scope:
+      path: ""
+      type: "writing"
+    values:
+      layout: "single-writing"
+
+nav:
+  - item:
+    title: Art
+    url: /art/
+  - item:
+    title: Design
+    url: /design/
+  - item:
+    title: Photography
+    url: /photography/
+  - item:
+    title: Writing
+    url: /writing/
+  - item:
+    title: Who?
+    url: /who/
+
+
+
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.

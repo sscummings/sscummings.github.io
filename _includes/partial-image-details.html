@@ -1,0 +1,30 @@
+<div class="image-details {{ image_details_class }}">
+    {% if post.title %}
+        {% if title_link == true %}
+        	<h1 class="image-title"><a href="{{ post.url | relative_url }}">{% if post.caption %}{{ post.caption }}{% else %}{{ post.title | escape }}{% endif %}</a></h1>
+        {% else %}
+            <h1 class="image-title">{% if post.caption %}{{ post.caption }}{% else %}{{ post.title | escape }}{% endif %}</h1>
+        {% endif %}
+    {% endif %}
+    {% if post.year %}
+    	<span>{{ post.year }}</span>
+    {% endif %}
+    {% if post.city %}
+    	<span>{{ post.city | escape }}</span>
+    {% endif %}
+    {% if post.state %}
+    	<span>{{ post.state | escape }}</span>
+    {% endif %}
+    {% if post.country %}
+    	<span>{{ post.country | escape }}</span>
+    {% endif %}
+
+    {% comment %}
+	    {% if post.size %}
+	    	<span>{{ post.size | escape }}</span>
+	    {% endif %}
+	    {% if post.medium %}
+	    	<span>{{ post.medium | escape }}</span>
+	    {% endif %}
+    {% endcomment %}
+</div>

@@ -1,0 +1,41 @@
+.bg-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.image-details {
+	font-family: $font-mono;
+
+	.image-title {
+		font-size: $base-font-size;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	.image-title,
+	span {
+		display: inline;
+		margin-bottom: 0;
+
+		&:after {
+			content: ".";
+			display: inline;
+			margin-left: .1em;
+			margin-right: .5em;
+		}
+
+		&:last-child {
+			&:after {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.lightbox-details {
+		color: rgba($white, .8);
+	}
+}
