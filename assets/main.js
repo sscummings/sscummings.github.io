@@ -1,8 +1,7 @@
 //
 // Expand/collapse nav
 //
-(function($) { // Begin jQuery
-  $(function() { // DOM ready
+var expandCollapseNav = function() {
     // Toggle open and close nav styles on click
     $('#nav-toggle').click(function() {
       $('nav ul').slideToggle();
@@ -12,15 +11,14 @@
     $('#nav-toggle').on('click', function() {
       this.classList.toggle('active');
     });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+};
 
 
 //
 // Add class to div while scrolling past
 // ADAPTED FROM: http://jsfiddle.net/tovic/vVaat/light/
 //
-(function($) { // Begin jQuery
+var activateScrollSections = function() {
   function isScrolledIntoView(elem) {
       var $window = $(window),
           docViewTop = $window.scrollTop(),
@@ -43,7 +41,7 @@
       });
 
   });
-})(jQuery); // end jQuery
+};
 
 
 //
@@ -69,7 +67,7 @@
 // Lazy load images
 // ADAPTED FROM: https://www.sitepoint.com/how-to-build-your-own-progressive-image-loader/
 //
-(function($) { // Begin jQuery
+var lazyLoadImages = function() {
   // progressive-image.js
   if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
 
@@ -159,14 +157,14 @@
     }
 
   }, false);
-})(jQuery);
+};
 
 //
 // Lightbox
 // Adapted from: https://stackoverflow.com/questions/38615852/set-display-of-div-by-using-the-data-target-attribute
 // https://jsfiddle.net/nw3m7g2r/1/
 //
-(function($) { // Begin jQuery
+var theLightbox = function() {
   $(".lightbox-open").click(function() {
       var target = $(this).data("target");
       // var imgWidth = $(target).find('img').get(0).naturalWidth;
@@ -201,4 +199,12 @@
       }
       e.preventDefault(); // prevent the default action (scroll / move caret)
   });
-})(jQuery);
+};
+
+
+jQuery(document).ready(function() {
+    expandCollapseNav();
+    activateScrollSections();
+    lazyLoadImages();
+    theLightbox();
+});
