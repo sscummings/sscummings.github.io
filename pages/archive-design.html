@@ -39,10 +39,21 @@ permalink: /design/
     </div>
   
     <div class="collection-section">
-        <h2>Patronage</h2>
+        <h2>Gina Ortiz Jones</h2>
         <div class="collection-wrapper">
             {% for post in site.design %}
-                {% if post.categories contains "patronage" %}
+                {% if post.categories contains "gina ortiz jones" %}
+                    {% include partial-design-img.html %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+  
+    <div class="collection-section">
+        <h2>Tech for Campaigns - Karen Settlemoir Berg</h2>
+        <div class="collection-wrapper">
+            {% for post in site.design %}
+                {% if post.categories contains "karen settlemoir berg" %}
                     {% include partial-design-img.html %}
                 {% endif %}
             {% endfor %}
