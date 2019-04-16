@@ -1,5 +1,5 @@
 ---
-featured:		true
+featured:		false
 title:			Pop Up Art Show
 date:			2019-04-08 16:00:00 -0500
 event_date:		2019-04-13
