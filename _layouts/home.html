@@ -11,13 +11,45 @@ layout: default
 
   {% for item in site.collections %}
     {% for post in item.docs %}
+      {% if post.homeMix == true %}
+        {% assign outerGridClass = 'has-featured' %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% for item in site.collections %}
+    {% for post in item.docs %}
       {% if post.featured == true %}
         {% assign outerGridClass = 'has-featured' %}
       {% endif %}
     {% endfor %}
   {% endfor %}
 
+  {% capture home_mix %}
+    {% for item in site.collections %}
+      {% for post in item.docs %}
+        {% if post.homeMix == true %}
+          <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
+            <a class="bg-img" href="/{{ post.collection }}" style="background-image: url('../assets/{{ post.img }}');">
+                <span class="title">{{ post.title }}</span>
+                <span class="more">More {{ post.collection }} <i class="fa fa-chevron-right"></i></span>
+                {% comment %}
+                  <span class="collection">{{ post.collection }}</span>
+                  <span class="preview">{{ post.content | strip_html }}</span>
+                {% endcomment %}
+            </a>
+          </div>
+          {% if forloop.last == false %}:::{% endif%}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endcapture %}
+  {% assign home_mix_array = home_mix | split: ':::'%}
+
   <div class="outer-grid {{ outerGridClass }}">
+  
+    {% assign no_mix = null %}
+    
     {% for item in site.collections %}
       {% for post in item.docs %}
         {% if post.featured == true %}
@@ -32,9 +64,14 @@ layout: default
             </a>
           </div>
           {% assign featured = post.collection %}
+          {% assign no_mix = true %}
         {% endif %}
       {% endfor %}
     {% endfor %}
+
+    {% if no_mix != true %}
+      {{ home_mix_array[0] }}
+    {% endif %}
 
     <div class="grid">
 

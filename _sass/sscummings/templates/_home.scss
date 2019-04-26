@@ -202,8 +202,8 @@
 						transition: all .3s ease;
 					}
 					a:after {
-						opacity: .1;
-						background-color: $w;
+						opacity: 0;
+						background-color: $k;
 						// background-color: $k;
 					}
 
