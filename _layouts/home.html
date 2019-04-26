@@ -8,7 +8,16 @@ layout: default
     <h1 class="page-heading"><a href="/who">hello<span>_</span></a></h1>
   </div>
 
-  <div class="outer-grid {% for item in site.collections %} {% for post in item.docs %}{% if post.featured == true %}has-featured{% endif %}{% endfor %}{% endfor %}">
+
+  {% for item in site.collections %}
+    {% for post in item.docs %}
+      {% if post.featured == true %}
+        {% assign outerGridClass = 'has-featured' %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <div class="outer-grid {{ outerGridClass }}">
     {% for item in site.collections %}
       {% for post in item.docs %}
         {% if post.featured == true %}
