@@ -196,7 +196,7 @@
 				&.collection-art,
 				&.collection-photography,
 				&.collection-design {
-					filter: grayscale(30%);
+					// filter: grayscale(30%);
 					.title {
 						opacity: 0;
 						transition: all .3s ease;
