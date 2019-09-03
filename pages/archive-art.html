@@ -5,7 +5,9 @@ permalink: /art/
 ---
 <div class="archive-art">
 
-    {% for post in site.art %}
+    {% assign sorted_art = (site.art | sort: 'date') | reverse %}
+
+    {% for post in sorted_art %}
     	<section class="art-section section-image scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.year }}-{{ post.slug }}">
 		    <div class="art-preview">
 
@@ -28,7 +30,7 @@ permalink: /art/
 				</div>
 			</div>
 
-			{% assign post_type = site.art %}
+			{% assign post_type = sorted_art %}
     		{% assign prev_date = prev.date | date: "%Y" %}
     		{% assign next = post_type[forloop.index] %}
     		{% assign next_date = next.date | date: "%Y" %}

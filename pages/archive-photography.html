@@ -5,8 +5,10 @@ permalink:  /photography/
 container:  container-fluid
 ---
 <section class="archive-photography">
-  
-    {% for post in site.photography %}
+    
+    {% assign sorted_photography = (site.photography | sort: 'date') | reverse %}
+
+    {% for post in sorted_photography %}
     	<div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
 
         {% comment %} ## Basic image
@@ -28,7 +30,7 @@ container:  container-fluid
     {% endfor %}
 
 
-    {% assign post_collection = site.photography %}
+    {% assign post_collection = sorted_photography %}
     {% assign date_format = '%Y-%m-%d' %}
     {% include partial-lightbox.html %}
 

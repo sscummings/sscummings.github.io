@@ -4,34 +4,14 @@ title: Design
 permalink: /design/
 ---
 <section class="archive-design">
+
+    {% assign sorted_design = (site.design | sort: 'date') | reverse %}
   
     <div class="collection-section">
-        <h2>OFA - Texas</h2>
+        <h2>Tech for Campaigns - Karen Settlemoir Berg</h2>
         <div class="collection-wrapper">
             {% for post in site.design %}
-                {% if post.categories contains "ofa-tx" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Charlie Crist for Governor</h2>
-        <div class="collection-wrapper">
-            {% for post in site.design %}
-                {% if post.categories contains "charlie crist for governor" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Duplicity Ensemble</h2>
-        <div class="collection-wrapper">
-            {% for post in site.design %}
-                {% if post.categories contains "duplicity ensemble" %}
+                {% if post.categories contains "karen settlemoir berg" %}
                     {% include partial-design-img.html %}
                 {% endif %}
             {% endfor %}
@@ -50,17 +30,39 @@ permalink: /design/
     </div>
   
     <div class="collection-section">
-        <h2>Tech for Campaigns - Karen Settlemoir Berg</h2>
+        <h2>Duplicity Ensemble</h2>
         <div class="collection-wrapper">
             {% for post in site.design %}
-                {% if post.categories contains "karen settlemoir berg" %}
+                {% if post.categories contains "duplicity ensemble" %}
+                    {% include partial-design-img.html %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+  
+    <div class="collection-section">
+        <h2>Charlie Crist for Governor</h2>
+        <div class="collection-wrapper">
+            {% for post in site.design %}
+                {% if post.categories contains "charlie crist for governor" %}
+                    {% include partial-design-img.html %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+  
+    <div class="collection-section">
+        <h2>OFA - Texas</h2>
+        <div class="collection-wrapper">
+            {% for post in site.design %}
+                {% if post.categories contains "ofa-tx" %}
                     {% include partial-design-img.html %}
                 {% endif %}
             {% endfor %}
         </div>
     </div>
 
-    {% assign post_collection = site.design %}
+    {% assign post_collection = sorted_design %}
     {% assign date_format = '%Y' %}
     {% include partial-lightbox.html %}
 

@@ -4,12 +4,14 @@ title: Writing
 permalink: /writing/
 ---
 <section class="archive-writing">
+
+    {% assign sorted_writing = (site.writing | sort: 'date') | reverse %}
   
-    {% for post in site.writing %}
+    {% for post in sorted_writing %}
     	<div class="writing-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
     		{% include post-writing.html %}
 
-    		{% assign post_type = site.writing %}
+    		{% assign post_type = sorted_writing %}
 			{% include partial-next-prev.html %}
     	</div>
     {% endfor %}

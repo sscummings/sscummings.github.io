@@ -4,8 +4,10 @@ title: Events
 permalink: /events/
 ---
 <section class="archive-events">
+
+    {% assign sorted_events = (site.events | sort: 'date') | reverse %}
   
-    {% for post in site.events %}
+    {% for post in sorted_events %}
     	<div class="event-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.event_date | date: '%Y-%m-%d' }}-{{ post.slug }}">
     		{% include post-event.html %}
 
