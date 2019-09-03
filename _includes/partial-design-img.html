@@ -1,10 +1,17 @@
 <div class="image-wrapper grid-image">
-	<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y' }}-{{ post.slug }}">
 
-		{% comment %} ## Progressive image setup ## {% endcomment %}
-		<a href="../assets/{{ post.img }}" class="progressive replace">
-		 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
-		</a>
-	    
+	{% comment %} ## Progressive & lightbox image setup ##
+		<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y' }}-{{ post.slug }}">
+
+			<a href="../assets/{{ post.img }}" class="progressive replace">
+			 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+			</a>
+
+		</div>
+	{% endcomment %}
+
+	{% comment %} ## Image only setup ## {% endcomment %}
+	<div class="image">
+		<img src="../assets/{{ post.img }}" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
 	</div>
 </div>
