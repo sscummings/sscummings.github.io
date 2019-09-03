@@ -6,7 +6,7 @@ container:  container-fluid
 ---
 <section class="archive-photography">
     
-    {% assign sorted_photography = (site.photography | sort: 'date') | reverse %}
+    {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
 
     {% for post in sorted_photography %}
     	<div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">

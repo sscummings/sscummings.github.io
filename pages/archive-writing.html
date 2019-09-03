@@ -5,7 +5,7 @@ permalink: /writing/
 ---
 <section class="archive-writing">
 
-    {% assign sorted_writing = (site.writing | sort: 'date') | reverse %}
+    {% assign sorted_writing = site.writing | sort: 'date' | reverse %}
   
     {% for post in sorted_writing %}
     	<div class="writing-post scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
