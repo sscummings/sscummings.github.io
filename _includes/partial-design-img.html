@@ -1,4 +1,4 @@
-<div class="image-wrapper grid-image">
+<div class="image-wrapper grid-image {{ grid_image_classes }}">
 
 	{% comment %} ## Progressive & lightbox image setup ##
 		<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y' }}-{{ post.slug }}">

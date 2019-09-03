@@ -9,12 +9,14 @@ permalink: /design/
   
     <div class="collection-section">
         <h2>Tech for Campaigns - Karen Settlemoir Berg</h2>
-        <div class="collection-wrapper">
+        <div class="collection-wrapper grid-xs">
+            {% assign grid_image_classes = "grid-image-half-mobile" %}
             {% for post in site.design %}
                 {% if post.categories contains "karen settlemoir berg" %}
                     {% include partial-design-img.html %}
                 {% endif %}
             {% endfor %}
+            {% assign grid_image_classes = null %}
         </div>
     </div>
   
@@ -43,11 +45,13 @@ permalink: /design/
     <div class="collection-section">
         <h2>Charlie Crist for Governor</h2>
         <div class="collection-wrapper">
+            {% assign grid_image_classes = "grid-image-wide" %}
             {% for post in site.design %}
                 {% if post.categories contains "charlie crist for governor" %}
                     {% include partial-design-img.html %}
                 {% endif %}
             {% endfor %}
+            {% assign grid_image_classes = null %}
         </div>
     </div>
   
