@@ -17,7 +17,7 @@ container:  container-fluid
 
     	{% comment %} ## Progressive image setup ## {% endcomment %}
     	<a href="../assets/{{ post.img }}" class="progressive replace">
-			 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+			 	<img src="../assets/progressive.gif" class="preview" alt="{{ post.caption | escape }}. Photo by {{ site.author | escape }}, {{ post.year }}" />
 			</a>
 
       {% assign title_link = true %}
@@ -32,6 +32,7 @@ container:  container-fluid
 
     {% assign post_collection = sorted_photography %}
     {% assign date_format = '%Y-%m-%d' %}
+    {% assign image_type = "photography" %}
     {% include partial-lightbox.html %}
 
 </section>
