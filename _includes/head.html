@@ -3,8 +3,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title | escape }}{% if page.title %} | {{ page.title | escape | downcase }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% capture page_title %}{{ site.author | escape }}{% if page.title %} | {{ page.title | escape }}{% endif %}{% endcapture %}
+
+  {% assign page_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
+
+  {% if page.meta_image %}
+    {% assign meta_image = page.meta_image %}
+  {% else %}
+    {% assign meta_image = "photography/20180923-lasvegas-03.jpg" %}
+  {% endif %}
+
+  <!-- General meta -->
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+
+  <!-- Facebook meta -->
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:description" content="{{ page_description }}" />
+  <meta property="og:url" content="{{ meta_url }}" />
+  <meta property="og:image" content="https://www.stephencummings.us/assets/{{ meta_image }}" />
+  <meta property="og:image:secure_url" content="https://www.stephencummings.us/assets/{{ meta_image }}" />
+
+  <!-- Twitter meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="{{ page_description }}" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:image" content="https://www.stephencummings.us/assets/{{ meta_image }}" />
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
