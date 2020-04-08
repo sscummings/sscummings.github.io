@@ -9,6 +9,19 @@ meta_image: design/2015-duplicity-04-meta.png
     {% assign sorted_design = site.design | sort: 'date' | reverse %}
   
     <div class="collection-section">
+        <h2>Golden State Opportunity</h2>
+        <div class="collection-wrapper">
+            {% assign grid_image_classes = "grid-image-wide" %}
+            {% for post in site.design %}
+                {% if post.categories contains "caleitc4me" %}
+                    {% include partial-design-img.html %}
+                {% endif %}
+            {% endfor %}
+            {% assign grid_image_classes = null %}
+        </div>
+    </div>
+  
+    <div class="collection-section">
         <h2>Gina Ortiz Jones</h2>
         <div class="collection-wrapper">
             {% for post in site.design %}
