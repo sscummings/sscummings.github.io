@@ -29,3 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Octopress Autoprefixer
 gem 'octopress-autoprefixer'
+
+gem "webrick", "~> 1.8"
