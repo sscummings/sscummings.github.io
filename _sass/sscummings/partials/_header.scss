@@ -8,10 +8,6 @@
   align-items: center;
   position: relative;
   z-index: 1001;
-  
-	@include mq-down($xs-down) {
-		padding: 0 $grid-gutter-width/2;
-  }
 
   .no-header & {
     display: none;

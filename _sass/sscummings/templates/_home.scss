@@ -5,7 +5,7 @@
 .home {
 	overflow: hidden;
 
-	$collection-font-size-xs: 16vw;
+	$collection-font-size-xs: 15.5vw;
 	$collection-font-size-sm: 110px;
 	$collection-font-size-md: 120px;
 	$collection-font-size-lg: 90px;
@@ -279,7 +279,6 @@
 	}
 
 	@include mq-down($xs-down) {
-		padding: 0 $grid-gutter-width/2;
 		.item-square {
 			.collection,
 			&.photography a:before {
