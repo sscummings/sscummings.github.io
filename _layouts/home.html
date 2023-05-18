@@ -4,31 +4,18 @@ layout: default
 
 <div class="home">
 
+  {% comment %}
   <div class="intro">
-    <h1 class="page-heading"><a href="/who">hello<span>_</span></a></h1>
+    <h1 class="page-heading"><span style="display:inline-block;">Stephen Cummings</span></h1>
   </div>
-
-
-  {% for item in site.collections %}
-    {% for post in item.docs %}
-      {% if post.homeMix == true %}
-        {% assign outerGridClass = 'has-featured' %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-
-  {% for item in site.collections %}
-    {% for post in item.docs %}
-      {% if post.featured == true %}
-        {% assign outerGridClass = 'has-featured' %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+  {% endcomment %}
 
   {% capture home_mix %}
     {% for item in site.collections %}
       {% for post in item.docs %}
         {% if post.homeMix == true %}
+          <img src="../assets/{{ post.img }}" alt="{{ post.caption }}" />
+          {% comment %}
           <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
             <a class="bg-img" href="/{{ post.collection }}" style="background-image: url('../assets/{{ post.img }}');">
                 <span class="title">{{ post.title }}</span>
@@ -39,6 +26,7 @@ layout: default
                 {% endcomment %}
             </a>
           </div>
+          {% endcomment %}
           {% if forloop.last == false %}:::{% endif%}
         {% endif %}
       {% endfor %}
@@ -70,7 +58,16 @@ layout: default
     {% endfor %}
 
     {% if no_mix != true %}
+      {{ home_mix_array[1] }}
+      {{ home_mix_array[5] }}
+      {{ home_mix_array[8] }}
+      {{ home_mix_array[3] }}
       {{ home_mix_array[0] }}
+      {{ home_mix_array[7] }}
+      {{ home_mix_array[2] }}
+      {{ home_mix_array[9] }}
+      {{ home_mix_array[4] }}
+      {{ home_mix_array[6] }}
     {% endif %}
 
     <div class="grid">
