@@ -1,5 +1,6 @@
 ---
 layout: default
+container: "container-fluid"
 ---
 
 <div class="home">
@@ -58,18 +59,21 @@ layout: default
     {% endfor %}
 
     {% if no_mix != true %}
-      {{ home_mix_array[1] }}
-      {{ home_mix_array[5] }}
+      {{ home_mix_array[2] }}
+      {{ home_mix_array[6] }}
+      {{ home_mix_array[11] }}
       {{ home_mix_array[8] }}
       {{ home_mix_array[3] }}
-      {{ home_mix_array[0] }}
-      {{ home_mix_array[7] }}
-      {{ home_mix_array[2] }}
-      {{ home_mix_array[9] }}
+      {{ home_mix_array[5] }}
       {{ home_mix_array[4] }}
-      {{ home_mix_array[6] }}
+      {{ home_mix_array[9] }}
+      {{ home_mix_array[10] }}
+      {{ home_mix_array[1] }}
+      {{ home_mix_array[7] }}
+      {{ home_mix_array[0] }}
     {% endif %}
 
+    {% comment %}
     <div class="grid">
 
       {% include collection-preview.html collection=site.art %}
@@ -81,6 +85,7 @@ layout: default
       {% include collection-preview.html collection=site.writing %}
 
     </div>
+    {% endcomment %}
   </div>
 
 </div>

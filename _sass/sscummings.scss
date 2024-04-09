@@ -14,7 +14,7 @@ $base-line-height: 1.5 !default;
 $grid-gutter-width:     30px !default;
 
 $black:		#000000;
-$gray:      #777777;
+$gray:      #525252;
 $gray-dark:	#444444;
 $white:		#ffffff;
 
@@ -25,12 +25,12 @@ $k:     black;
 $w:     white;
 
 $text-color:    $gray !default;
-$bg-color:		#ededed !default;
+$bg-color:		$white !default;
 $link-color:	$m !default;
 $link-hover:	darken($link-color, 10%) !default;
 
 // Width of the content area
-$content-width:       1100px !default;
+$content-width:       1200px !default;
 $content-width-fluid: 1600px !default;
 
 // Breakpoints

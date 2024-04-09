@@ -239,9 +239,15 @@
 
 	.outer-grid {
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
-		gap: 30px;
+		gap: $grid-gutter-width/2;
+		flex-wrap: wrap;
+		
+		a[data-lightbox] {
+			width: calc(100%/2 - $grid-gutter-width/2 * 1 / 2);
+			display: block;
+			cursor: zoom-in;
+		}
 	}
 
 	.grid {
@@ -289,7 +295,6 @@
 
 
 	@include mq-up($sm-up) {
-		width: 558px;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -311,6 +316,10 @@
 
 
 	@include mq-up($md-up) {
+
+		.outer-grid > a[data-lightbox] {
+			width: calc(100%/3 - 15px * 2 / 3);
+		}
 
 		.item-square {
 			.collection,
