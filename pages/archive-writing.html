@@ -5,6 +5,9 @@ permalink: /writing/
 meta_image: photography/20150703-duplicityensemble-01.jpg
 ---
 <section class="archive-writing">
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title | escape }}</h1>
+	</header>
 
     {% assign sorted_writing = site.writing | sort: 'date' | reverse %}
   

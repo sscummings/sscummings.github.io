@@ -6,6 +6,9 @@ container:  container-fluid
 meta_image: photography/20180923-lasvegas-03.jpg
 ---
 <section class="archive-photography">
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title | escape }}</h1>
+	</header>
     
     {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
 
