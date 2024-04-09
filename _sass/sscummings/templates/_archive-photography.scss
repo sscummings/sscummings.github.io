@@ -1,7 +1,10 @@
 .archive-photography {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 
 	.image {
-		margin-bottom: $grid-gutter-width;
+		margin-bottom: $grid-gutter-width/2;
 
 		.progressive {
 			width: 100%;
@@ -11,18 +14,17 @@
 		}
 	}
 
-	// @include mq-down($xs-down) {
-	// 	.grid-image {
-	// 		.progressive {
-	// 			margin-bottom: $grid-gutter-width/2;
-	// 		}
-	// 	}
-	// }
+	.photo-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
 	.grid-image {
+		width: calc(50% - #{$grid-gutter-width}/2/2);
 
 		img {
-			cursor: pointer;
+			cursor: zoom-in;
 		}
 
 		.image-details {
@@ -30,28 +32,13 @@
 		}
 	}
 
-	@include mq-up($sm-up) {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		margin-left: -$grid-gutter-width/2;
-		margin-right: -$grid-gutter-width/2;
-
-		.grid-image {
-			width: calc(50% - #{$grid-gutter-width});
-			margin-left: $grid-gutter-width/2;
-			margin-right: $grid-gutter-width/2;
-
-			.image-details {
-				display: none;
-			}
-		}
-	}
+	// @include mq-up($sm-up) {
+	// }
 
 	@include mq-up($md-up) {
 
 		.grid-image {
-			width: calc(100%/3 - #{$grid-gutter-width});
+			width: calc(100%/3 - #{$grid-gutter-width}/2*2/3);
 		}
 	}
 }

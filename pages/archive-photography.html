@@ -12,24 +12,24 @@ meta_image: photography/20180923-lasvegas-03.jpg
     
     {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
 
-    {% for post in sorted_photography %}
-    	<div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %} lightbox-open" data-target="#{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}">
+    <div class="photo-grid">
+        {% for post in sorted_photography %}
+            <div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %}">
 
-        {% comment %} ## Basic image
-            <img src="../assets/{{ post.img }}" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
-        {% endcomment %}
+                {% comment %} ## Basic image
+                    <img src="../assets/{{ post.img }}" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+                {% endcomment %}
 
-            {% comment %} ## Progressive image setup ## {% endcomment %}
-            <a href="../assets/{{ post.img }}" class="progressive replace" data-lightbox="photos" data-title="{{ post.caption }}, {{ post.year }}">
-                <img src="../assets/progressive.gif" class="preview" alt="{{ post.caption | escape }}. Photo by {{ site.author | escape }}, {{ post.year }}" />
-            </a>
-            
-		</div>
-		{% comment %}
-    	    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-		{% endcomment %}
-    {% endfor %}
-
-
+                {% comment %} ## Progressive image setup w/ lightbox2 ## {% endcomment %}
+                <a href="../assets/{{ post.img }}" class="progressive replace" data-lightbox="photos" data-title="{{ post.caption }}, {{ post.year }}">
+                    <img src="../assets/progressive.gif" class="preview" alt="{{ post.caption | escape }}. Photo by {{ site.author | escape }}, {{ post.year }}" />
+                </a>
+                
+            </div>
+            {% comment %} ## Basic post link
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {% endcomment %}
+        {% endfor %}
+    </div>
 
 </section>
