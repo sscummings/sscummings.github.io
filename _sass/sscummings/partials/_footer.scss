@@ -6,16 +6,40 @@
   padding: 0 0 $grid-gutter-width;
 
   .no-footer & {
-  	display: none;
+	.footer-container {
+  		display: none;
+	}
+  }
+
+  .footer-nav {
+	display: flex;
+	justify-content: end;
+	gap: 2em;
+	padding: 0 0 2vw;
+	font-size: $nav-font-size;
   }
 
 	.page-link {
 		color: $text-color;
-		text-transform: lowercase;
 		display: inline-block;
-		font-size: 11px;
 		margin-right: .5em;
-		// font-family: $font-mono;
+	}
+}
+
+.footer-content {
+	padding: 4vw 0;
+}
+
+.footer-title {
+	color: $text-color;
+	text-decoration: none;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	display: inline-block;
+
+	&:hover {
+		color: $text-color;
+		text-decoration: none;
 	}
 }
 
