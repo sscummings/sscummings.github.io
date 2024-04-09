@@ -70,20 +70,17 @@ defaults:
 
 nav:
   - item:
-    title: Art
-    url: /art/
+    title: Photography
+    url: /photography/
   - item:
     title: Design
     url: /design/
   - item:
-    title: Photography
-    url: /photography/
+    title: Art
+    url: /art/
   - item:
-    title: Writing
-    url: /writing/
-  - item:
-    title: Who?
-    url: /who/
+    title: About
+    url: /about/
 
 
 

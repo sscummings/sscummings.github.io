@@ -3,11 +3,16 @@
  */
  
 .site-header {
-  min-height: $header-height;
+  // min-height: $header-height;
+  padding: 30px 0 10px;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 1001;
+  
+  @include mq-up($md-up) {
+    padding: 40px 0 10px;
+  }
 
   .no-header & {
     display: none;
@@ -17,7 +22,7 @@
   position: relative;
 
   .site-title {
-    @include relative-font-size(1.625);
+    @include relative-font-size(1.25);
     line-height: 1;
     // letter-spacing: -1px;
     margin-bottom: 0;
@@ -45,6 +50,7 @@
     display: flex;
     align-items: center;
     height: 28px;
+    font-size: $nav-font-size;
 
     .menu-icon {
       display: none;
@@ -53,7 +59,6 @@
     .page-link {
       color: $text-color;
       line-height: $base-line-height;
-      text-transform: lowercase;
     }
 
     // Nav variable
@@ -74,7 +79,7 @@
         overflow: hidden;
 
         .nav-list {
-          display: block;
+          display: none;
           padding: 55px 20px;
 
           li {
@@ -95,12 +100,16 @@
           height: 100vh;
           opacity: 1;
           .nav-list {
+            display: block !important;
           }
         }
       }
       
       @include mq-up($md-up) {
         display: inline-block;
+        .nav-list {
+          display: block !important;
+        }
       }
     }
     ul {
@@ -143,17 +152,13 @@
             opacity: .8;
           }
           &:last-child {
-            margin-right: 20px;
+            margin-right: -20px;
           }
         }
 
-        @include mq-up($lg-up) {
-          margin-right: 20px;
-
-          &:last-child {
-            margin-right: 35px;
-          }
-        }
+        // @include mq-up($lg-up) {
+        //   margin-right: 20px;
+        // }
 
         // Dropdown list
         ul li {
@@ -174,6 +179,10 @@
       right: 0;
       height: $nav-height;
       width: $nav-height;
+
+      @include mq-up($md-up) {
+        display: none;
+      }
     }
 
     #nav-toggle {

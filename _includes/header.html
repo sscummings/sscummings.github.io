@@ -5,7 +5,7 @@
   
     <nav class="site-nav">
       <div class="nav-wrapper">
-        <ul class="nav-list" style="display: none;">
+        <ul class="nav-list" style="">
           {% for item in site.nav %}
             <li><a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
           {% endfor %}
