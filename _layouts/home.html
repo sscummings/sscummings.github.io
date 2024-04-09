@@ -14,7 +14,7 @@ layout: default
     {% for item in site.collections %}
       {% for post in item.docs %}
         {% if post.homeMix == true %}
-          <img src="../assets/{{ post.img }}" alt="{{ post.caption }}" />
+          <a href="../assets/{{ post.img }}" data-lightbox="homepage" data-title="{{ post.caption }}, {{ post.year }}"><img src="../assets/{{ post.img }}" alt="{{ post.caption }}" /></a>
           {% comment %}
           <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
             <a class="bg-img" href="/{{ post.collection }}" style="background-image: url('../assets/{{ post.img }}');">

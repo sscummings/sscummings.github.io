@@ -1,0 +1,89 @@
+@import "sscummings/globals/icomoon";
+
+//
+// Customizations to Lightbox2
+//
+
+.lightbox {
+    height: calc(100vh - 60px*1.5) !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lightbox[style*="display: block;"],
+.lightbox[style*="display: flex;"] {
+    display: flex !important;
+}
+
+.lightbox .lb-image {
+    border: none;
+    border-radius: 0;
+}
+
+.lb-data .lb-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    @media screen and (max-width: 1160px) {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+$lightbox-nav-size: 50px;
+
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+    background: none;
+
+    &:after {
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: $lightbox-nav-size;
+        top: calc(50% - #{$lightbox-nav-size}/2);
+        color: #fff;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        width: $lightbox-nav-size*4/5;
+        height: $lightbox-nav-size*4/5;
+        line-height: 0.7;
+    }
+}
+
+.lb-nav a.lb-next:after {
+    content: $fa-angle-right;
+    right: -$lightbox-nav-size*4/5;
+    text-align: right;
+}
+.lb-nav a.lb-prev:after {
+    content: $fa-angle-left;
+    left: -$lightbox-nav-size*4/5;
+    text-align: left;
+}
+
+.lb-dataContainer {
+    padding-top: 15px;
+}
+
+.lb-data {
+    padding: 0;
+}
+
+.lb-data .lb-details {
+    width: 100%;
+    float: unset;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    line-height: 1.2 !important;
+}
+
+.lb-data .lb-caption {
+    line-height: 1.2 !important;
+}
+
+.lb-number {
+    min-width: 5em;
+    text-align: right;
+}

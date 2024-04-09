@@ -160,45 +160,17 @@ var lazyLoadImages = function() {
 };
 
 //
-// Lightbox
-// Adapted from: https://stackoverflow.com/questions/38615852/set-display-of-div-by-using-the-data-target-attribute
-// https://jsfiddle.net/nw3m7g2r/1/
+// Customize Lightbox2
 //
-var theLightbox = function() {
-  $(".lightbox-open").click(function() {
-      var target = $(this).data("target");
-      // var imgWidth = $(target).find('img').get(0).naturalWidth;
-      $(target).addClass('open');
-      // $(target).find('.image-wrapper').css('width', imgWidth);
+var customizeLightbox2 = function() {
+  lightbox.option({
+    'albumLabel': '%1 of %2',
+    'fadeDuration': 300,
+    'imageFadeDuration': 300,
+    'positionFromTop': 60,
+    'resizeDuration': 20,
+    'wrapAround': true,
   })
-  $(".lightbox-close").click(function() {
-      $(".lightbox").removeClass('open');
-  })
-  $(".parent-close").click(function() {
-      $(this).parents(".lightbox").removeClass('open');
-  })
-  $(document).keydown(function(e) {
-      switch(e.which) {
-          case 27: // esc key
-            $('.lightbox-close').trigger('click');
-          break;
-          case 37: // left
-            $('.lightbox.open').find('.lightbox-prev').trigger('click');
-          break;
-          // case 38: // up
-          //   $('.lightbox.open').find('.lightbox-prev').trigger('click');
-          // break;
-          case 39: // right
-            $('.lightbox.open').find('.lightbox-next').trigger('click');
-          break;
-          // case 40: // down
-          //   $('.lightbox.open').find('.lightbox-next').trigger('click');
-          // break;
-
-          default: return; // exit this handler for other keys
-      }
-      e.preventDefault(); // prevent the default action (scroll / move caret)
-  });
 };
 
 
@@ -206,5 +178,5 @@ jQuery(document).ready(function() {
     expandCollapseNav();
     activateScrollSections();
     lazyLoadImages();
-    theLightbox();
+    customizeLightbox2();
 });
