@@ -1,0 +1,19 @@
+{% if img_src == null %}
+    {% assign img_src = "../assets/" | append: post.img  %}
+{% endif %}
+{% if lightbox_name == null %}
+    {% assign lightbox_name = "lightbox"  %}
+{% endif %}
+
+<a
+    class="{{ link_classes }}"
+    data-lightbox="{{ lightbox_name }}"
+    data-title="{{ post.caption | escape }}, {{ post.year }}"
+    href="../assets/{{ post.img }}"
+>
+    <img
+        alt="{{ post.caption | escape }}"
+        class="{{ img_classes }}"
+        src="{{ img_src }}"
+    />
+</a>
