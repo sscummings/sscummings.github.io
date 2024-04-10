@@ -82,6 +82,7 @@ nav:
     title: About
     url: /about/
 
+include: ["_data"]
 
 
 

@@ -12,18 +12,23 @@ meta_image: photography/20180923-lasvegas-03.jpg
     
     {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
 
+    {% assign curated_photos = site.data.curated_photography %}
+
     {% assign link_classes = "progressive replace" %}
     {% assign img_classes = "preview" %}
     {% assign img_src = "../assets/progressive.gif" %}
     {% assign lightbox_name = "photography" %}
 
     <div class="photo-grid">
-        {% for post in sorted_photography %}
+        {% for post_url in curated_photos %}
+            {% assign post = site.photography | where: "url", post_url | first %}
+            {% if post %}
             <div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %}">
 
                 {% include photo-lightbox.html %}
                 
             </div>
+            {% endif %}
         {% endfor %}
     </div>
 
