@@ -32,7 +32,8 @@ body {
  * Page content
  */
 .page-content {
-  padding: $grid-gutter-width*1.5 0;
+  padding-top: clamp(30px, 5vw, 80px);
+  padding-bottom: clamp(30px, 5vw, 80px);
 }
 
 .page-heading {
@@ -59,8 +60,7 @@ body {
  * Posts
  */
 .post-header {
-  margin-bottom: $grid-gutter-width;
-  margin-bottom: 4vw;
+  margin-bottom: clamp(20px, 4vw, 50px);
 
   p {
     text-align: center;

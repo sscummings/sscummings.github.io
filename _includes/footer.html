@@ -7,10 +7,15 @@
         {% endif %}
         <p>Hi. Hello. Yes. I’m a photographer, designer, artist, etc., based in Brooklyn, NY. <br />Have a look around. I made these things for you.</p>
     </div>
-    <div class="footer-nav">
-        {% for item in site.nav %}
-          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-        {% endfor %}
+    <div class="footer-bottom">
+      <div class="footer-nav">
+          {% for item in site.nav %}
+            <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          {% endfor %}
+      </div>
+      <div class="footer-fineprint">
+        <p>&copy; {{ site.time | date: '%Y' }} Stephen Cummings
+      </div>
     </div>
 
 </footer>

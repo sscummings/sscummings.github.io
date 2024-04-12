@@ -3,7 +3,7 @@
  */
 
 .site-footer {
-  padding: 0 0 $grid-gutter-width;
+  padding-bottom: clamp(30px, 5vw, 40px);
 
   .no-footer & {
 	.footer-container {
@@ -11,23 +11,53 @@
 	}
   }
 
-  .footer-nav {
-	display: flex;
-	justify-content: end;
-	gap: 2em;
-	padding: 0 0 2vw;
-	font-size: $nav-font-size;
-  }
+	.footer-bottom {
+		display: flex;
+		flex-direction: column;
+		font-size: $nav-font-size;
+
+		@include mq-up($md-up) {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			gap: 4em;
+		}
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin-bottom: 80px;
+		@include relative-font-size(1);
+		text-align: center;
+
+		@include mq-up($sm-up) {
+			flex-direction: row;
+			gap: 2.5em;
+			margin-bottom: 60px;
+			font-size: $nav-font-size;
+		}
+		@include mq-up($md-up) {
+			margin-bottom: 0;
+			display: block;
+		}
+	}
 
 	.page-link {
 		color: $text-color;
-		display: inline-block;
-		margin-right: .5em;
+		@include mq-up($md-up) {
+			padding: 0 20px;
+
+			&:last-child {
+				margin-right: -20px;
+			}
+		}
 	}
 }
 
 .footer-content {
-	padding: 4vw 0;
+	padding-top: clamp(20px, 4vw, 20px);
+	padding-bottom: clamp(40px, 10vw, 90px);
 }
 
 .footer-title {
