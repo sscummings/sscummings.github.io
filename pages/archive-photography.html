@@ -3,11 +3,13 @@ layout:     default
 title:      Photography
 permalink:  /photography/
 container:  container-fluid
-meta_image: photography/20180923-lasvegas-03.jpg
+classes:    dark
+meta_image: photography/20191115-concord-03.jpg
 ---
 <section class="archive-photography">
 	<header class="post-header">
 		<h1 class="post-title">{{ page.title | escape }}</h1>
+        <p>Capturing campaigns, causes, art, and life.</p>
 	</header>
     
     {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
@@ -20,15 +22,15 @@ meta_image: photography/20180923-lasvegas-03.jpg
     {% assign lightbox_name = "photography" %}
 
     <div class="photo-grid">
-        {% for post_url in curated_photos %}
-            {% assign post = site.photography | where: "url", post_url | first %}
-            {% if post %}
-            <div class="image grid-image {% for cat in post.categories %}{{ cat }} {% endfor %}">
-
-                {% include photo-lightbox.html %}
-                
+        {% for group in curated_photos %}
+            <div class="grid-group {{ group.layout }}">
+                {% for post_url in group.posts %}
+                    {% assign post = site.photography | where: "url", post_url | first %}
+                    {% if post %}
+                        {% include photo-grid-image.html %}
+                    {% endif %}
+                {% endfor %}
             </div>
-            {% endif %}
         {% endfor %}
     </div>
 

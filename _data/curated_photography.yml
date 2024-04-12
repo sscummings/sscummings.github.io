@@ -1,3 +1,51 @@
-- /photography/2018-09-23-lasvegas-03
-- /photography/2018-09-23-lasvegas-02
-- /photography/2022-10-21-manhattan-01
+# Note: Ensure all groups have the correct number of posts ...
+# ... otherwise layout display could break
+#
+#
+# Available layouts:
+# -----------------
+# "one-and-two"
+# "one-over-two"
+# "three-over-one"
+# "two-and-one"
+# "two-by-two"
+#
+#
+- name: "When We All Vote"
+  layout: "one-and-two"
+  posts:
+    - /photography/2018-09-23-lasvegas-03
+    - /photography/2018-09-23-lasvegas-02
+    - /photography/2018-09-23-lasvegas-01
+- name: "Cory Booker"
+  layout: "three-over-one"
+  posts:
+    - /photography/2019-11-15-concord-01
+    - /photography/2019-11-15-concord-02
+    - /photography/2019-11-15-concord-03
+    - /photography/2019-11-15-concord-04
+- name: "Katie Hobbs"
+  layout: "two-and-one"
+  posts:
+    - /photography/2021-11-06-phoenix-01
+    - /photography/2021-11-06-phoenix-03
+    - /photography/2021-11-06-phoenix-04
+- name: "Hillary for Florida"
+  layout: "two-by-two"
+  posts:
+    - /photography/2016-07-22-tampa-04
+    - /photography/2016-07-23-fiu-02
+    - /photography/2016-11-01-DaytonaBeach-06
+    - /photography/2016-10-26-tampa-01
+- name: "Hana Sio"
+  layout: "one-and-two"
+  posts:
+    - /photography/2023-12-02-brooklyn-01
+    - /photography/2023-12-02-brooklyn-02
+    - /photography/2023-12-02-brooklyn-03
+- name: "Karaoke"
+  layout: "one-over-two"
+  posts:
+    - /photography/2022-10-21-manhattan-01
+    - /photography/2023-12-31-manhattan-01
+    - /photography/2023-12-31-manhattan-02

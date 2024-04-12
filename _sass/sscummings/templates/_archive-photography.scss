@@ -3,9 +3,10 @@
 	flex-wrap: wrap;
 	justify-content: flex-start;
 
-	.image {
-		margin-bottom: $grid-gutter-width/2;
+	$grid-gap-mobile: $grid-gutter-width/3;
+	$grid-gap: $grid-gutter-width/2;
 
+	.image {
 		.progressive {
 			width: 100%;
 			height: 0;
@@ -14,31 +15,137 @@
 		}
 	}
 
+	.grid-image img {
+		cursor: zoom-in;
+		object-fit: cover;
+	}
+
 	.photo-grid {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		> * {
+			margin-bottom: $grid-gap-mobile;
+
+			@include mq-up($sm-up) {
+				margin-bottom: $grid-gap;
+			}
+		}
+		
+		> .grid-image {
+			width: calc(50% - #{$grid-gap-mobile}/2);
+
+			@include mq-up($sm-up) {
+				width: calc(50% - #{$grid-gap}/2);
+			}
+
+			@include mq-up($md-up) {
+				width: calc(100%/3 - #{$grid-gap}*2/3);
+			}
+		}
 	}
 
-	.grid-image {
-		width: calc(50% - #{$grid-gutter-width}/2/2);
-
-		img {
-			cursor: zoom-in;
-		}
-
-		.image-details {
-			display: none;
-		}
-	}
 
 	// @include mq-up($sm-up) {
 	// }
 
-	@include mq-up($md-up) {
 
-		.grid-image {
-			width: calc(100%/3 - #{$grid-gutter-width}/2*2/3);
+	//
+	// group layout variations
+	//
+	.grid-group {
+		display: grid;
+		gap: $grid-gap-mobile;
+		grid-template-rows: auto;
+
+		@include mq-up($sm-up) {
+			gap: $grid-gap;
 		}
+
+		> * {
+			width: 100%;
+		}
+	
+		*:first-child {
+			grid-area: first;
+		}
+		*:nth-child(2) {
+			grid-area: second;
+		}
+		*:nth-child(3) {
+			grid-area: third;
+		}
+		*:nth-child(4) {
+			grid-area: fourth;
+		}
+		*:nth-child(5) {
+			grid-area: fifth;
+		}
+		*:nth-child(6) {
+			grid-area: sixth;
+		}
+	}
+	.one-and-two {
+		grid-template-areas: 
+		  "first first"
+		  "second third";
+		
+		@include mq-up($md-up) {
+			grid-template-areas: 
+			  "first first second"
+			  "first first third";
+
+			*:first-child {
+				a {
+					padding-bottom: 0;
+					height: 100%;
+					display: flex;
+					align-items: stretch;
+				}
+			}
+		}
+	}
+	.one-over-two {
+		grid-template-areas: 
+		  "first first"
+		  "second third";
+	}
+	.three-over-one {
+		grid-template-areas: 
+		  "first first"
+		  "second third"
+		  "fourth fourth";
+		
+		@include mq-up($md-up) {
+			grid-template-areas: 
+			  "first second third"
+			  "fourth fourth fourth";
+		}
+	}
+	.two-and-one {
+		grid-template-areas: 
+		  "first second"
+		  "third third";
+		
+		@include mq-up($md-up) {
+			grid-template-areas: 
+			  "first third third"
+			  "second third third";
+
+			*:nth-child(3) {
+				a {
+					padding-bottom: 0;
+					height: 100%;
+					display: flex;
+					align-items: stretch;
+				}
+			}
+		}
+	}
+	.two-by-two {
+		grid-template-areas: 
+		  "first second"
+		  "third fourth";
 	}
 }
