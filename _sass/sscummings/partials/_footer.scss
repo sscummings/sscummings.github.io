@@ -53,6 +53,13 @@
 			}
 		}
 	}
+
+	.dark & {
+		.page-link {
+			color: $dark-mode-text-color;
+
+		}
+	}
 }
 
 .footer-content {
@@ -70,6 +77,10 @@
 	&:hover {
 		color: $text-color;
 		text-decoration: none;
+	}
+
+	.dark & {
+		color: $dark-mode-text-color;
 	}
 }
 

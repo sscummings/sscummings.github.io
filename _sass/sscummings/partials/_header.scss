@@ -237,4 +237,19 @@
     }
   }
 
+  .dark & {
+    .site-title {
+      &,
+      &:visited {
+        color: $dark-mode-text-color;
+      }
+    }
+
+    .site-nav {
+      .page-link {
+        color: $dark-mode-text-color;
+      }
+    }
+  }
+
 }

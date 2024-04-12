@@ -17,6 +17,7 @@ $grid-gutter-width:     30px !default;
 $black:		#000000;
 $gray:      #525252;
 $gray-dark:	#444444;
+$light-gray: #E0E0E0;
 $white:		#ffffff;
 
 $c:			cyan;
@@ -26,6 +27,7 @@ $k:     black;
 $w:     white;
 
 $text-color:    $gray !default;
+$dark-mode-text-color:  $light-gray !default;
 $bg-color:		$white !default;
 $link-color:	$m !default;
 $link-hover:	darken($link-color, 10%) !default;
