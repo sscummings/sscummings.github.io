@@ -18,6 +18,8 @@ $black:		#000000;
 $gray:      #525252;
 $gray-dark:	#444444;
 $light-gray: #E0E0E0;
+$lightest-gray: #FAFAFA;
+$darkest-gray:  #1A1A1A;
 $white:		#ffffff;
 
 $c:			cyan;
@@ -48,6 +50,8 @@ $lg-up:   $md-down + 1px !default;
 // Layout
 $header-height: 80px;
 $img-max-height:  86vh;
+$section-padding: clamp(40px, 5vw, 80px);
+$page-padding-top: clamp(30px, 5vw, 80px);
 
 // Use media queries like this:
 // @include mq-down($sm-down) {

@@ -2,93 +2,61 @@
 layout: default
 title: Design
 permalink: /design/
+container:  none
 meta_image: design/2015-duplicity-04-meta.png
 ---
 <section class="archive-design">
-	<header class="post-header">
-		<h1 class="post-title">{{ page.title | escape }}</h1>
-        <p>I help organizations and individuals bring their ideas to life.</p>
-	</header>
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+            <p>I help organizations and individuals bring their ideas to life.</p>
+        </header>
+    </div>
 
     {% assign sorted_design = site.design | sort: 'date' | reverse %}
-  
-    <div class="collection-section">
-        <h2>Golden State Opportunity</h2>
-        <div class="collection-wrapper">
-            {% assign grid_image_classes = "grid-image-wide" %}
-            {% for post in site.design %}
-                {% if post.categories contains "caleitc4me" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-            {% assign grid_image_classes = null %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Gina Ortiz Jones</h2>
-        <div class="collection-wrapper">
-            {% for post in site.design %}
-                {% if post.categories contains "gina ortiz jones" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Tech for Campaigns - Karen Settlemoir Berg</h2>
-        <div class="collection-wrapper grid-xs">
-            {% assign grid_image_classes = "grid-image-half-mobile" %}
-            {% for post in site.design %}
-                {% if post.categories contains "karen settlemoir berg" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-            {% assign grid_image_classes = null %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Duplicity Ensemble</h2>
-        <div class="collection-wrapper">
-            {% for post in site.design %}
-                {% if post.categories contains "duplicity ensemble" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>Charlie Crist for Governor</h2>
-        <div class="collection-wrapper">
-            {% assign grid_image_classes = "grid-image-wide" %}
-            {% for post in site.design %}
-                {% if post.categories contains "charlie crist for governor" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-            {% assign grid_image_classes = null %}
-        </div>
-    </div>
-  
-    <div class="collection-section">
-        <h2>OFA - Texas</h2>
-        <div class="collection-wrapper">
-            {% for post in site.design %}
-                {% if post.categories contains "ofa-tx" %}
-                    {% include partial-design-img.html %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
 
-    {% assign post_collection = sorted_design %}
-    {% assign date_format = '%Y' %}
-
-    {% comment %}
-        {% include partial-lightbox.html %}
-    {% endcomment %}
+    {% assign curated_design = site.data.curated_design %}
+  
+    {% for group in curated_design %}
+        <div class="collection-section" style="background-color: {{ group.background }};">
+            {% if group.name %}
+                <div class="container">
+                    <div class="design-group-heading">
+                        <h2>{{ group.name | escape }}</h2>
+                        {% if group.intro %}
+                            <p>{{ group.intro }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="container-fluid">
+                <div class="design-group {{ group.layout }}">
+                    {% for post_url in group.posts %}
+                        {% assign post = site.design | where: "url", post_url | first %}
+                        {% if post %}
+                            {% include partial-design-img.html %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    
+    <div class="end-section">
+        <div class="container">
+            <div class="design-group-heading text-center">
+                <h2>Design with purpose</h2>
+                <p>I work with organizations big and small to tell stories and drive change. <a href="/about">Get in touch</a> and let’s work together.</p>    
+            </div>
+            <ul class="design-clients">
+                <li><img alt="La Tribuna" src="../assets/design/logo-latribuna-01.png" /></li>
+                <li><img alt="FWD.us" src="../assets/design/logo-fwdus-01.png" /></li>
+                <li><img alt="Bill and Melinda Gates Foundation" src="../assets/design/logo-gatesfoundation-01.png" /></li>
+                <li><img alt="Tech for Campaigns" src="../assets/design/logo-tfc-01.png" /></li>
+                <li><img alt="Feeding America Action" src="../assets/design/logo-feedingamericaaction-01.png" /></li>
+                <li><img alt="NextGen Policy" src="../assets/design/logo-nextgenpolicy-01.png" /></li>
+            </ul>
+        </div>
+    </div>
 
 </section>

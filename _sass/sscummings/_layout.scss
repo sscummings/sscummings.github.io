@@ -32,8 +32,8 @@ body {
  * Page content
  */
 .page-content {
-  padding-top: clamp(30px, 5vw, 80px);
-  padding-bottom: clamp(30px, 5vw, 80px);
+  padding-top: $page-padding-top;
+  padding-bottom: $section-padding;
 }
 
 .page-heading {
@@ -103,4 +103,8 @@ body {
       @include relative-font-size(1.125);
     }
   }
+}
+
+.text-center {
+  text-align: center;
 }
