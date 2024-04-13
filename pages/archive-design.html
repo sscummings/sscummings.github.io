@@ -30,7 +30,15 @@ meta_image: design/2015-duplicity-04-meta.png
                 </div>
             {% endif %}
             <div class="container-fluid">
-                <div class="design-group {{ group.layout }}">
+                <div class="design-group group-static {{ group.layout }}">
+                    {% for post_url in group.posts %}
+                        {% assign post = site.design | where: "url", post_url | first %}
+                        {% if post %}
+                            {% include partial-design-img.html %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="design-group design-carousel {{ group.layout }}">
                     {% for post_url in group.posts %}
                         {% assign post = site.design | where: "url", post_url | first %}
                         {% if post %}

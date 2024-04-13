@@ -173,10 +173,24 @@ var customizeLightbox2 = function() {
   })
 };
 
+//
+// Design carousel
+//
+var designCarousel = function() {
+  $('.design-carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // Add more configuration options as needed
+  });
+};
+
 
 jQuery(document).ready(function() {
     expandCollapseNav();
     activateScrollSections();
     lazyLoadImages();
     customizeLightbox2();
+    designCarousel();
 });
