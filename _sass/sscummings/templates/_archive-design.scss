@@ -25,7 +25,7 @@
 
 
 	.design-group-heading {
-		margin-bottom: 50px;
+		margin-bottom: clamp(30px, 4vw, 50px);
 	}
 
 	h2 {
@@ -39,49 +39,196 @@
 	}
 
 	.design-group {
-		display: flex;
-		justify-content: space-between;
-
 		$box-shadow-size: 10px 10px 0;
 
-		.grid-image {
-			margin-right: 10px;
+		.grid-image .image {
 			box-shadow: $box-shadow-size $gray;
 			outline: 1px solid $light-gray;
 			border-radius: 10px;
 			overflow: hidden;
-			margin-bottom: 20px;
 		}
 
 		&.nextgenamerica {
-			.grid-image {
+			.grid-image .image {
 				box-shadow: $box-shadow-size #8630AA;
 				outline-color: rgba(#8630AA, 0.2);
-				width: 20.4%;
-
-				&:first-child {
-					width: 30%;
-				}
+			}
+			.slick-dots button {
+				border-color: #8630AA;
+			}
+			.slick-dots .slick-active button {
+				background-color: #8630AA;
 			}
 		}
 
 		&.caleitc {
-			.grid-image {
+			.grid-image .image {
 				box-shadow: $box-shadow-size #1E76BB;
 				outline-color: rgba(#1E76BB, 0.2);
-				width: 40%;
-
-				&:nth-child(3) {
-					width: 13.9%;
-				}
+			}
+			.slick-dots button {
+				border-color: #1E76BB;
+			}
+			.slick-dots .slick-active button {
+				background-color: #1E76BB;
 			}
 		}
 
 		&.feedingamericaaction {
-			.grid-image {
+			.grid-image .image {
 				box-shadow: $box-shadow-size #DE7C00;
 				outline-color: rgba(#DE7C00, 0.2);
-				width: 31.4%;
+			}
+			.slick-dots button {
+				border-color: #DE7C00;
+			}
+			.slick-dots .slick-active button {
+				background-color: #DE7C00;
+			}
+		}
+
+		&.group-static {
+			display: none;
+	
+			@include mq-up($sm-up) {
+				display: flex;
+				justify-content: space-between;
+				
+				.grid-image {
+					margin-right: 10px;
+					margin-bottom: 20px;
+					display: none;
+				}
+
+				&.nextgenamerica {
+					.grid-image {
+						&:first-child {
+							display: block;
+							width: 38.9%;
+						}
+						&:nth-child(2) {
+							display: block;
+							width: 26.5%;
+						}
+						&:nth-child(4) {
+							display: block;
+							width: 26.5%;
+						}
+					}
+				}
+		
+				&.caleitc {
+					.grid-image {
+						&:first-child {
+							display: block;
+							width: 70.2%;
+						}
+						&:nth-child(3) {
+							display: block;
+							width: 24.6%;
+						}
+					}
+				}
+		
+				&.feedingamericaaction {
+					.grid-image {
+						width: 47.4%;
+
+						&:first-child {
+							display: block;
+						}
+						&:nth-child(2) {
+							display: block;
+						}
+					}
+				}
+			}
+	
+			@include mq-up($md-up) {
+				.grid-image {
+					display: block;
+				}
+
+				&.nextgenamerica {
+					.grid-image {
+						width: 20.4%;
+		
+						&:first-child {
+							width: 30%;
+						}
+						&:nth-child(2) {
+							width: 20.4%;
+						}
+						&:nth-child(4) {
+							width: 20.4%;
+						}
+					}
+				}
+		
+				&.caleitc {
+					.grid-image {
+						width: 40%;
+						
+						&:first-child {
+							width: 40%;
+						}
+						&:nth-child(3) {
+							width: 14.0%;
+						}
+					}
+				}
+		
+				&.feedingamericaaction {
+					.grid-image {
+						width: 31.4%;
+					}
+				}
+			}
+		}
+	}
+
+	.design-carousel {
+		width: calc(100% + #{$grid-gutter-width}*2);
+		margin-left: -$grid-gutter-width;
+		margin-right: -$grid-gutter-width;
+		
+		@include mq-up($sm-up) {
+			display: none;
+		}
+
+		.grid-image {
+			padding: 0 $grid-gutter-width/2;
+			padding-top: 1px;
+			padding-bottom: 11px;
+		}
+
+		.slick-arrow {
+			display: none !important;
+		}
+
+		.slick-dots {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			margin-top: $grid-gutter-width;
+			gap: $grid-gutter-width/2;
+
+			button {
+				border-radius: 50%;
+				width: 16px;
+				height: 16px;
+				padding: 0;
+				font-size: 1px;
+				color: transparent;
+				border: 2px solid $gray;
+				cursor: pointer;
+				background-color: transparent;
+			}
+
+			.slick-active button {
+				background-color: $gray;
 			}
 		}
 	}

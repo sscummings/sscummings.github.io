@@ -178,10 +178,13 @@ var customizeLightbox2 = function() {
 //
 var designCarousel = function() {
   $('.design-carousel').slick({
-    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,
+    centerMode: true,
+    centerPadding: '60px',
+    dots: true,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    slidesToShow: 1,
     // Add more configuration options as needed
   });
 };
