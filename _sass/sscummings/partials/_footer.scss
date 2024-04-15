@@ -30,8 +30,6 @@
 		flex-direction: column;
 		gap: 1em;
 		margin-bottom: 80px;
-		@include relative-font-size(1);
-		text-align: center;
 
 		@include mq-up($sm-up) {
 			flex-direction: row;
@@ -74,7 +72,13 @@
 }
 
 .footer-content {
-	padding-bottom: clamp(40px, 10vw, 90px);
+	padding-bottom: clamp(40px, 8vw, 90px);
+
+	.footer-content-break {
+		@include mq-down($xs-down) {
+			display: none;
+		}
+	}
 }
 
 .footer-title {
