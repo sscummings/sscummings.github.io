@@ -31,7 +31,7 @@ $w:     white;
 $text-color:    $gray !default;
 $dark-mode-text-color:  $light-gray !default;
 $bg-color:		$white !default;
-$link-color:	$m !default;
+$link-color:	$text-color !default;
 $link-hover:	darken($link-color, 10%) !default;
 
 // Width of the content area

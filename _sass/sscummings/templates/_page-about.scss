@@ -47,14 +47,18 @@
 
 .about-contact {
     list-style: none;
-    margin-top: 1.5em;
+    margin-top: 1em;
     line-height: 2.5;
+
+    @include mq-up($lg-up) {
+        margin-top: 1.25em;
+    }
     
     li {
         display: inline;
 
         &:not(:last-child) {
-            margin-right: 1.5em;
+            margin-right: 1em;
         }
     }
 }

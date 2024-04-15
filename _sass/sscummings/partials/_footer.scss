@@ -47,6 +47,13 @@
 
 	.page-link {
 		color: $text-color;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+            text-underline-offset: 0.3em;
+		}
+
 		@include mq-up($md-up) {
 			padding: 0 20px;
 

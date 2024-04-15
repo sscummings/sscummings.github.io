@@ -119,9 +119,9 @@
       li {
         position: relative;
 
-        a {
-          transition: all .3s ease;
-        }
+        // a {
+        //   transition: all .3s ease;
+        // }
 
         a,
         a:visited {
@@ -149,7 +149,8 @@
             padding: 0 20px;
           }
           a:hover {
-            opacity: .8;
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
           }
           &:last-child {
             margin-right: -20px;
