@@ -11,7 +11,7 @@
 	@include mq-up($md-up) {
         flex-direction: row-reverse;
         align-items: center;
-        gap: clamp($grid-gutter-width, 5.5vw, 70px);
+        gap: clamp($grid-gutter-width, 5vw, 60px);
     }
 }
 
