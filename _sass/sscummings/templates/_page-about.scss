@@ -1,0 +1,60 @@
+// .about-page {
+// }
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: $grid-gutter-width;
+    padding-top: calc(#{$section-padding} * 0.5);
+    padding-bottom: calc(#{$section-padding} * 0.5);
+
+	@include mq-up($md-up) {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: clamp($grid-gutter-width, 5.5vw, 70px);
+    }
+}
+
+.about-image {
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+
+	@include mq-up($md-up) {
+        min-width: clamp(240px, 29vw, 340px);
+    }
+	@include mq-up($lg-up) {
+        min-width: 340px;
+    }
+}
+
+.about-content {
+    h2 {
+        @include relative-font-size(2);
+        line-height: 1.2;
+      
+        @include mq-up($lg-up) {
+            @include relative-font-size(2.625);
+        }
+    }
+
+    p {
+        @include mq-up($lg-up) {
+            @include relative-font-size(1.25);
+        }
+    }
+}
+
+.about-contact {
+    list-style: none;
+    margin-top: 1.5em;
+    line-height: 2.5;
+    
+    li {
+        display: inline;
+
+        &:not(:last-child) {
+            margin-right: 1.5em;
+        }
+    }
+}
