@@ -181,7 +181,7 @@ var designCarousel = function() {
     adaptiveHeight: true,
     autoplay: false,
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '40px',
     dots: true,
     slidesToScroll: 1,
     slidesToShow: 1,
