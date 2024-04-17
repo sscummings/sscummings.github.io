@@ -111,6 +111,27 @@
 		  "first first"
 		  "second third";
 	}
+	.seventy-thirty-over-two {
+		grid-template-areas: 
+		  "first first"
+		  "second second"
+		  "third fourth";
+		
+		@include mq-up($md-up) {
+			grid-template-areas: 
+			  "first first first first second second"
+			  "third third third fourth fourth fourth";
+
+			*:first-child {
+				a {
+					padding-bottom: 0;
+					height: 100%;
+					display: flex;
+					align-items: stretch;
+				}
+			}
+		}
+	}
 	.three-over-one {
 		grid-template-areas: 
 		  "first first"

@@ -37,6 +37,37 @@
     - /photography/2016-07-23-fiu-02
     - /photography/2016-11-01-DaytonaBeach-06
     - /photography/2016-10-26-tampa-01
+- name: "El Pueblo Ecuatoriano"
+  layout: "one-and-two"
+  posts:
+    - /photography/2019-10-13-madrid-03
+    - /photography/2019-10-13-madrid-02
+    - /photography/2019-10-13-madrid-04
+- name: "Movement for Black Lives"
+  layout: "one-over-two"
+  posts:
+    - /photography/2020-06-06-phoenix-01
+    - /photography/2020-06-06-phoenix-02
+    - /photography/2021-04-15-phoenix-01
+- name: "Climate Strike"
+  layout: "one-and-two"
+  posts:
+    - /photography/2019-09-20-amsterdam-03
+    - /photography/2019-09-27-thehague-03
+    - /photography/2019-09-20-amsterdam-02
+- name: "Women's March"
+  layout: "two-and-one"
+  posts:
+    - /photography/2021-10-02-phoenix-01
+    - /photography/2021-10-02-phoenix-02
+    - /photography/2021-10-02-phoenix-03
+- name: "Portraits"
+  layout: "seventy-thirty-over-two"
+  posts:
+    - /photography/2023-03-11-brooklyn-01
+    - /photography/2023-02-15-phil-01
+    - /photography/2023-03-10-brooklyn-01
+    - /photography/2023-02-16-manhattan-01
 - name: "Hana Sio"
   layout: "one-and-two"
   posts:
@@ -47,5 +78,5 @@
   layout: "one-over-two"
   posts:
     - /photography/2022-10-21-manhattan-01
-    - /photography/2023-12-31-manhattan-01
     - /photography/2023-12-31-manhattan-02
+    - /photography/2023-12-31-manhattan-01
