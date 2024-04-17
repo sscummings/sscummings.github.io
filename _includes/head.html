@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% capture page_title %}{{ site.author | downcase | escape }}{% if page.title %} | {{ page.title | escape | downcase }}{% endif %}{% endcapture %}
+  {% capture page_title %}{{ site.author | escape }}{% if page.title %} | {{ page.title | escape }}{% endif %}{% endcapture %}
 
   {% assign page_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
 
