@@ -74,6 +74,11 @@
     - /photography/2023-12-02-brooklyn-01
     - /photography/2023-12-02-brooklyn-02
     - /photography/2023-12-02-brooklyn-03
+- name: "NYC Photo Stroll"
+  layout: "two"
+  posts:
+    - /photography/2023-02-19-brooklyn-01
+    - /photography/2023-05-28-manhattan-01
 - name: "Karaoke"
   layout: "one-over-two"
   posts:

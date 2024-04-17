@@ -144,6 +144,10 @@
 			  "fourth fourth fourth";
 		}
 	}
+	.two {
+		grid-template-areas: 
+		  "first second";
+	}
 	.two-and-one {
 		grid-template-areas: 
 		  "first second"
