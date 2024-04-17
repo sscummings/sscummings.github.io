@@ -117,7 +117,7 @@
 		  "second second"
 		  "third fourth";
 		
-		@include mq-up($md-up) {
+		@include mq-up($sm-up) {
 			grid-template-areas: 
 			  "first first first first second second"
 			  "third third third fourth fourth fourth";
