@@ -44,7 +44,7 @@
 
     p {
         @include mq-up($lg-up) {
-            @include relative-font-size(1.125);
+            @include relative-font-size(1.25);
         }
     }
 }
