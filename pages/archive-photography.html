@@ -2,15 +2,18 @@
 layout:     default
 title:      Photography
 permalink:  /photography/
-container:  container-fluid
+container:  none
 classes:    dark
 meta_image: photography/20191115-concord-03.jpg
 ---
 <section class="archive-photography">
-	<header class="post-header">
-		<h1 class="post-title">{{ page.title | escape }}</h1>
-        <p>Capturing campaigns, causes, creativity, and everything else.</p>
-	</header>
+
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+            <p>Capturing campaigns, causes, creativity, and more.</p>
+        </header>
+    </div>
     
     {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
 
@@ -24,17 +27,28 @@ meta_image: photography/20191115-concord-03.jpg
 
     {% assign lightbox_name = "photography" %}
 
-    <div class="photo-grid">
-        {% for group in curated_photos %}
-            <div class="grid-group {{ group.layout }}">
-                {% for post_url in group.posts %}
-                    {% assign post = site.photography | where: "url", post_url | first %}
-                    {% if post %}
-                        {% include photo-grid-image.html %}
-                    {% endif %}
-                {% endfor %}
+    <div class="container-fluid">
+        <div class="photo-grid">
+            {% for group in curated_photos %}
+                <div class="grid-group {{ group.layout }}">
+                    {% for post_url in group.posts %}
+                        {% assign post = site.photography | where: "url", post_url | first %}
+                        {% if post %}
+                            {% include photo-grid-image.html %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="end-section">
+        <div class="container">
+            <div class="design-group-heading text-center">
+                <h2>Photography from the heart of the action</h2>
+                <p>Front and center or behind the scenes, I'm there to capture the critical moments. <a href="/about">Contact me</a> to cover your next event.</p>    
             </div>
-        {% endfor %}
+        </div>
     </div>
 
 </section>
