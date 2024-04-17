@@ -181,6 +181,13 @@
 		width: calc(100% + #{$grid-gutter-width});
 		margin-left: -$grid-gutter-width/2;
 		margin-right: -$grid-gutter-width/2;
+
+		@include mq-down($xs-down) {
+			.image.set-mobile-size {
+				height: 0;
+				padding-bottom: 225%;
+			}
+		}
 		
 		@include mq-up($sm-up) {
 			display: none;
