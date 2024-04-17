@@ -54,6 +54,15 @@ body {
   @include relative-font-size(1.5);
 }
 
+.end-section {
+  width: 100%;
+  padding-top: $section-padding;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 /**
@@ -68,12 +77,13 @@ body {
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.25);
   line-height: 1;
   text-align: center;
+  margin-bottom: 0.2em;
 
-  @include mq-down($md-down) {
-    @include relative-font-size(2.25);
+  @include mq-up($lg-up) {
+    @include relative-font-size(2.625);
   }
 }
 

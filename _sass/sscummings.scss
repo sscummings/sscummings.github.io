@@ -7,7 +7,7 @@ $font-mono:	'Inconsolata', monospace;
 
 // $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-family: $font-sans;
-$base-font-size:   16px !default;
+$base-font-size:   18px !default;
 $nav-font-size: $base-font-size*0.875;
 $base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
@@ -15,9 +15,10 @@ $base-line-height: 1.5 !default;
 $grid-gutter-width:     30px !default;
 
 $black:		#000000;
+$light-black: #080808;
 $gray:      #525252;
 $gray-dark:	#444444;
-$light-gray: #E0E0E0;
+$light-gray: #C0C0C0;
 $lightest-gray: #FAFAFA;
 $darkest-gray:  #1A1A1A;
 $white:		#ffffff;
