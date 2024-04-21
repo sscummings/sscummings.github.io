@@ -9,4 +9,5 @@ medium:
 city:
 state:
 country:
+img_class:  set-mobile-size
 ---
