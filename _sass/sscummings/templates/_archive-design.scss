@@ -51,6 +51,19 @@
 			}
 		}
 
+		&.needtoimpeach {
+			.grid-image .image {
+				box-shadow: $box-shadow-size #D22A27;
+				outline-color: rgba(#D22A27, 0.2);
+			}
+			.slick-dots button {
+				border-color: #D22A27;
+			}
+			.slick-dots .slick-active button {
+				background-color: #D22A27;
+			}
+		}
+
 		&.caleitc {
 			.grid-image .image {
 				box-shadow: $box-shadow-size #1E76BB;
@@ -74,6 +87,19 @@
 			}
 			.slick-dots .slick-active button {
 				background-color: #DE7C00;
+			}
+		}
+
+		&.nextgenpolicy {
+			.grid-image .image {
+				box-shadow: $box-shadow-size #F04B23;
+				outline-color: rgba(#F04B23, 0.2);
+			}
+			.slick-dots button {
+				border-color: #F04B23;
+			}
+			.slick-dots .slick-active button {
+				background-color: #F04B23;
 			}
 		}
 
@@ -107,6 +133,19 @@
 					}
 				}
 		
+				&.needtoimpeach {
+					.grid-image {
+						&:first-child {
+							display: block;
+							width: 70.6%;
+						}
+						&:nth-child(3) {
+							display: block;
+							width: 24.5%;
+						}
+					}
+				}
+		
 				&.caleitc {
 					.grid-image {
 						&:first-child {
@@ -129,6 +168,19 @@
 						}
 						&:nth-child(2) {
 							display: block;
+						}
+					}
+				}
+		
+				&.nextgenpolicy {
+					.grid-image {
+						&:first-child {
+							display: block;
+							width: 70.5%;
+						}
+						&:nth-child(3) {
+							display: block;
+							width: 24.3%;
 						}
 					}
 				}
@@ -155,6 +207,19 @@
 					}
 				}
 		
+				&.needtoimpeach {
+					.grid-image {
+						width: 40%;
+						
+						&:first-child {
+							width: 40%;
+						}
+						&:nth-child(3) {
+							width: 13.9%;
+						}
+					}
+				}
+		
 				&.caleitc {
 					.grid-image {
 						width: 40%;
@@ -171,6 +236,19 @@
 				&.feedingamericaaction {
 					.grid-image {
 						width: 31.4%;
+					}
+				}
+		
+				&.nextgenpolicy {
+					.grid-image {
+						width: 40%;
+						
+						&:first-child {
+							width: 40%;
+						}
+						&:nth-child(3) {
+							width: 13.8%;
+						}
 					}
 				}
 			}
