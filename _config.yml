@@ -25,7 +25,6 @@ collections:
     output: true
   art:
     output: true
-    permalink: /:collection/:year-:title
   design:
     output: true
   # - dev

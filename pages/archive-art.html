@@ -10,8 +10,11 @@ meta_image: art/2009-01-still-life.jpg
 	</header>
 
     {% assign sorted_art = site.art | sort: 'date' | reverse %}
+    {% assign curated_art = site.data.curated_art %}
 
-    {% for post in sorted_art %}
+    {% for post_url in curated_art %}
+		{% assign post = site.art | where: "url", post_url | first %}
+		{% if post %}
     	<section class="art-section section-image scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.year }}-{{ post.slug }}">
 		    <div class="art-preview">
 
@@ -29,18 +32,13 @@ meta_image: art/2009-01-still-life.jpg
 						</div>
 				    {% endif %}
 
-					{% assign title_link = true %}
+					{% comment %}
 					{% include partial-image-details.html %}
+					{% endcomment %}
 				</div>
 			</div>
-
-			{% assign post_type = sorted_art %}
-    		{% assign prev_date = prev.date | date: "%Y" %}
-    		{% assign next = post_type[forloop.index] %}
-    		{% assign next_date = next.date | date: "%Y" %}
-    		
-			{% include partial-next-prev.html %}
 		</section>
+		{% endif %}
     {% endfor %}
 
 </div>
