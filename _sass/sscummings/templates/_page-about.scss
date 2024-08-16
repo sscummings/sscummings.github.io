@@ -47,6 +47,15 @@
             @include relative-font-size(1.25);
         }
     }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
+        }
+    }
 }
 
 .about-contact {
