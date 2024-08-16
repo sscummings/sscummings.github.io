@@ -11,22 +11,6 @@
     - /design/2021-09-22-nextgenamerica-02
     - /design/2021-09-22-nextgenamerica-03
     - /design/2021-09-22-nextgenamerica-04
-- name: "Need to Impeach"
-  intro: "Designing within a brand to send a message and build a movement."
-  layout: "needtoimpeach"
-  background: "#FDF2F2"
-  posts:
-    - /design/2019-02-25-needtoimpeach-02
-    - /design/2019-02-25-needtoimpeach-06
-    - /design/2019-05-21-needtoimpeach-01
-- name: "CalEITC4Me"
-  intro: "Design to educate and empower, from anywhere, on any device."
-  layout: "caleitc"
-  background: "#F7FCFC"
-  posts:
-    - /design/2019-12-20-caleitc4me-01
-    - /design/2019-12-20-caleitc4me-02
-    - /design/2019-12-20-caleitc4me-03
 - name: "Feeding America Action"
   intro: "Design for advocacy and impact, from the kitchen table to the halls of power."
   layout: "feedingamericaaction"
@@ -35,6 +19,14 @@
     - /design/2021-03-22-feedingamericaaction-01
     - /design/2021-03-22-feedingamericaaction-02
     - /design/2021-03-22-feedingamericaaction-03
+- name: "CalEITC4Me"
+  intro: "Design to educate and empower, from anywhere, on any device."
+  layout: "caleitc"
+  background: "#F7FCFC"
+  posts:
+    - /design/2019-12-20-caleitc4me-01
+    - /design/2019-12-20-caleitc4me-02
+    - /design/2019-12-20-caleitc4me-03
 - name: "NextGen Policy"
   intro: "Design to build partnerships, shape policy, and deliver progress."
   layout: "nextgenpolicy"
