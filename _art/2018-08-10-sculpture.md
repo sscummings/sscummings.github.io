@@ -2,7 +2,7 @@
 title:  	Sculpture (White)
 slug:		sculpture-white
 date:   	2018-08-10 11:43:56 -0500
-categories: [art, sculpture, vsc]
+categories: [art, sculpture, color, vsc, wood, found]
 img:		art/2018-10-johnson.jpg
 year:		2018
 medium:		found wood
