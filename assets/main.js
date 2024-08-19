@@ -189,6 +189,32 @@ var designCarousel = function() {
   });
 };
 
+//
+// Isotope with Filtering and Masonry Layout
+//
+var isotopeFilteringAndMasonry = function() {
+  console.log('isotope!');
+  
+  // Initialize Isotope
+  var $grid = $('.grid').imagesLoaded(function() {
+    $grid.isotope({
+      itemSelector: '.grid-item',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: '.grid-item',
+        // gutter: 10
+      }
+    });
+  });
+
+  // Filter items on button click
+  $('.filters').on('click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+};
+
+
 
 jQuery(document).ready(function() {
     expandCollapseNav();
@@ -196,4 +222,5 @@ jQuery(document).ready(function() {
     lazyLoadImages();
     customizeLightbox2();
     designCarousel();
+    isotopeFilteringAndMasonry();
 });

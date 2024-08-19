@@ -2,43 +2,89 @@
 layout: default
 title: Art
 permalink: /art/
+container:  none
 meta_image: art/2009-01-still-life.jpg
+include_isotope: true
 ---
 <div class="archive-art">
-	<header class="post-header">
-		<h1 class="post-title">{{ page.title | escape }}</h1>
-	</header>
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+			<!-- Filter buttons -->
+			<p class="filters">
+				<button data-filter=".sculpture">Sculpture</button>
+				<button data-filter=".paper">Paper</button>
+				<button data-filter=".color">Color</button>
+				<button data-filter=".found">Found</button>
+				<button data-filter=".landscape">Landscape</button>
+				<button data-filter="*">All</button>
+			</p>
+        </header>
+    </div>
 
     {% assign sorted_art = site.art | sort: 'date' | reverse %}
     {% assign curated_art = site.data.curated_art %}
 
-    {% for post_url in curated_art %}
-		{% assign post = site.art | where: "url", post_url | first %}
-		{% if post %}
-    	<section class="art-section section-image scroll-section {% if forloop.first == true %}active{% endif %}" id="{{ post.year }}-{{ post.slug }}">
-		    <div class="art-preview">
-
-		    	<div class="image-wrapper">
-				    {% if post.img %}
-				    	<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %}">
-				    		{% comment %} ## Progressive image setup ## {% endcomment %}
-				    		<a href="../assets/{{ post.img }}" class="progressive replace">
-							 	<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
-							</a>
+    <div class="container-fluid">
+		<!-- Grid wrapper -->
+		<div class="grid">
+			{% for item in curated_art %}
+				{% assign post = site.art | where: "url", item.post | first %}
+				{% if post %}
+					<div class="grid-item {% for cat in post.categories %}{{ cat }} {% endfor %} {{ item.gridSize }}">
+						<div class="image-wrapper">
 							{% comment %}
-								## Original image setup ##
-								<img src="../assets/{{ post.img }}" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+								<!-- debug -->
+								<div class="debug">
+									{{ item.name }}
+									{% for cat in post.categories %}{{ cat }}, {% endfor %}
+								</div>
+							{% endcomment %}
+
+							{% if post.img %}
+								<a
+									data-lightbox="art"
+									data-title="{{ post.title | escape }},
+										{{ post.year }}
+										{%- if post.city %}, {{ post.city }}{% endif -%}   
+										{%- if post.state %}, {{ post.state }}{% endif -%}
+										{%- if post.country %}, {{ post.country }}{% endif -%}"
+									href="../assets/{{ post.img }}"
+								>
+									<img
+										alt="Stephen Cummings, {{ post.title | escape }}, {{ post.year }}"
+										src="../assets/{{ post.img }}"
+									/>
+								</a>
+							{% endif %}
+
+							{% comment %}
+								<div class="image {% for cat in post.categories %}{{ cat | replace: ' ', '-' }} {% endfor %}">
+									{% comment %} ## Progressive image setup ## {% endcomment %}
+									<a href="../assets/{{ post.img }}" class="progressive replace">
+										<img src="../assets/progressive.gif" class="preview" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+									</a>
+									{% comment %}
+										## Original image setup ##
+										<img src="../assets/{{ post.img }}" alt="{{ site.author | escape }}, {{ post.title | escape }}, {{ post.year }}" />
+									{% endcomment %}
+								</div>
+								{% include partial-image-details.html %}
 							{% endcomment %}
 						</div>
-				    {% endif %}
-
-					{% comment %}
-					{% include partial-image-details.html %}
-					{% endcomment %}
-				</div>
-			</div>
-		</section>
-		{% endif %}
-    {% endfor %}
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+    
+    <div class="end-section">
+        <div class="container">
+            <div class="design-group-heading text-center">
+                <h2>An artist statement</h2>
+                <p>... is not my favorite thing. Let's just say I'm interested in the line between what is art and what is <em>not</em> art, between what is made and what is found, in finding beauty in unexpected places, and value in things that might otherwise be discarded. But that's just me. Mostly I hope you'll find something that catches your eye, and draw your own conclusions.</p>    
+            </div>
+        </div>
+    </div>
 
 </div>

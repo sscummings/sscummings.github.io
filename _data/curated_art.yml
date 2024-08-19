@@ -1,4 +1,116 @@
 #
 #
-- /art/2018-08-15-landscape
-- /art/2018-08-14-sculpture
+- name: "wood sculpture 01"
+  post: /art/2019-04-01-sculpture
+  gridSize: ""
+- name: "paper sculpture 01"
+  post: /art/2019-04-04-sculpture
+  gridSize: ""
+- name: "paper line drawing (circus)"
+  post: /art/2019-03-01-drawing
+  gridSize: ""
+- name: "found sculpture (landscape)"
+  post: /art/2018-08-15-landscape
+  gridSize: ""
+- name: "paper drawing (blue/yellow)"
+  post: /art/2018-04-02-drawing
+  gridSize: ""
+- name: "mountain (for ryna)"
+  post: /art/2019-04-02-sculpture
+  gridSize: ""
+- name: "sign sculpture 01"
+  post: /art/2015-04-01-sculpture
+  gridSize: ""
+- name: "green wood"
+  post: /art/2018-08-11-green-wood
+  gridSize: ""
+- name: "3"
+  post: /art/2018-08-14-sculpture
+  gridSize: ""
+- name: "paper drawing (red/yellow)"
+  post: /art/2018-08-05-drawing
+  gridSize: ""
+- name: "10"
+  post: /art/2015-04-02-sculpture
+  gridSize: ""
+- name: "big painting"
+  post: /art/2015-05-05-painting
+  gridSize: ""
+- name: "wood sculpture 03 (bird)"
+  post: /art/2019-04-03-sculpture
+  gridSize: ""
+- name: "9"
+  post: /art/2015-04-04-sculpture
+  gridSize: ""
+- name: "5"
+  post: /art/2018-08-10-sculpture
+  gridSize: ""
+- name: "17"
+  post: /art/2013-03-08-box-07
+  gridSize: ""
+- name: "small paper drawing (confetti)"
+  post: /art/2018-08-04-drawing
+  gridSize: ""
+# - name: "14"
+#   post: /art/2013-03-11-collage-03
+#   gridSize: ""
+- name: "15"
+  post: /art/2013-03-10-collage-02
+  gridSize: ""
+- name: "12"
+  post: /art/2013-03-13-collage-06
+  gridSize: ""
+- name: "21"
+  post: /art/2012-04-01-red
+  gridSize: ""
+- name: "20"
+  post: /art/2012-05-01-sculpture
+  gridSize: ""
+- name: "24"
+  post: /art/2012-01-01-stand
+  gridSize: ""
+- name: "22"
+  post: /art/2012-03-01-sea
+  gridSize: ""
+- name: "23"
+  post: /art/2012-02-01-forest
+  gridSize: ""
+- name: "19"
+  post: /art/2013-02-04-caballo
+  gridSize: ""
+- name: "25"
+  post: /art/2011-05-01-landscape
+  gridSize: ""
+- name: "37"
+  post: /art/2010-07-01-cardboard-05
+  gridSize: ""
+- name: "27"
+  post: /art/2011-03-01-bent
+  gridSize: ""
+- name: "28"
+  post: /art/2011-02-01-lick
+  gridSize: ""
+- name: "29"
+  post: /art/2011-01-01-pencil-sharpener
+  gridSize: ""
+- name: "31"
+  post: /art/2010-07-14-sec-rumsfeld
+  gridSize: ""
+- name: "26"
+  post: /art/2011-04-10-colors
+  gridSize: ""
+- name: "33"
+  post: /art/2010-07-12-riesling
+  gridSize: ""
+- name: "34"
+  post: /art/2010-07-10-steel
+  gridSize: ""
+- name: "39"
+  post: /art/2010-05-01-cardboard-03
+  gridSize: ""
+- name: "41"
+  post: /art/2010-03-01-cardboard-01
+  gridSize: ""
+- name: "47"
+  post: /art/2009-01-01-still-life
+  gridSize: ""

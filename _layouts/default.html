@@ -17,10 +17,15 @@
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
   <script src="/node_modules/slick-carousel/slick/slick.min.js"></script>
+
+  {% if page.include_isotope == true %}
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  {% endif %}
   
   <script src="/assets/main.js"></script>
 
