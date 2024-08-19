@@ -74,9 +74,9 @@ nav:
   - item:
     title: Design
     url: /design/
-  # - item:
-  #   title: Art
-  #   url: /art/
+  - item:
+    title: Artworks
+    url: /art/
   - item:
     title: About
     url: /about/
