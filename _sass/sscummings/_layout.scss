@@ -69,7 +69,9 @@ body {
  * Posts
  */
 .post-header {
-  margin-bottom: clamp(20px, 4vw, 50px);
+  margin: 0 auto clamp(20px, 4vw, 50px);
+  width: 800px;
+  max-width: 100%;
 
   p {
     text-align: center;

@@ -5,4 +5,5 @@
 layout: home
 # classes: no-footer
 container: container-fluid
+footerContent: true
 ---

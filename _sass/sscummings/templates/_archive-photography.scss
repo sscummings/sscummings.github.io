@@ -2,6 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	flex-direction: column;
 
 	$grid-gap-mobile: $grid-gutter-width/3;
 	$grid-gap: $grid-gutter-width/2;

@@ -1,5 +1,5 @@
 {% if img_src == null %}
-    {% assign img_src = "../assets/" | append: post.img  %}
+    {% assign img_src = "../../assets/" | append: post.img  %}
 {% endif %}
 {% if lightbox_name == null %}
     {% assign lightbox_name = "lightbox"  %}
@@ -13,7 +13,7 @@
         {%- if post.state %} {{ post.state }}, {% endif -%}
         {%- if post.country %} {{ post.country }}, {% endif -%}
         {{ post.year }}"
-    href="../assets/{{ post.img }}"
+    href="{{ img_src }}"
 >
     <img
         alt="{{ post.caption | escape }}"

@@ -1,0 +1,51 @@
+---
+layout:     default
+title:      We are briefly held
+permalink:  /photography/we-are-briefly-held/
+container:  none
+classes:    
+meta_image: photography/20191115-concord-03.jpg #change this
+---
+<section class="archive-photography">
+
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+        </header>
+    </div>
+    
+    {% assign sorted_photography = site.photography | sort: 'date' | reverse %}
+
+    {% assign curated_photos = site.data.photography_subway %}
+
+    {% comment %}
+    {% assign link_classes = "progressive replace" %}
+    {% assign img_classes = "preview" %}
+    {% assign img_src = "../assets/progressive.gif" %}
+    {% endcomment %}
+
+    {% assign lightbox_name = "photography" %}
+
+    <div class="container-fluid">
+        <div class="standard-grid">
+            {% for group in curated_photos %}
+                    {% for post_url in group.posts %}
+                        {% assign post = site.photography | where: "url", post_url | first %}
+                        {% if post %}
+                            {% include photo-grid-image.html %}
+                        {% endif %}
+                    {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="end-section">
+        <div class="container-medium">
+            <div class="design-group-heading text-left">
+                <h2>{{ site.data.photography_subway[0].blurbTitle }}</h2>
+                <p>{{ site.data.photography_subway[0].blurb }}</p>
+            </div>
+        </div>
+    </div>
+
+</section>

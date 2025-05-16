@@ -1,0 +1,13 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+- name: "Curious and About"
+  blurbTitle: "Artists at work"
+  blurb: "Choreographer Gianna Burright at work in New York, collaborating with musicians and dancers to practice their craft and create new works of art."
+  posts:
+    - /photography/2025-03-10-Gianna-9791
+    - /photography/2024-11-09-Gianna-2440
+    - /photography/2025-03-12-Gianna-4980
+    - /photography/2024-11-09-Gianna-2393
+    - /photography/2025-03-12-Gianna-0528
+    - /photography/2024-11-09-Gianna-9670

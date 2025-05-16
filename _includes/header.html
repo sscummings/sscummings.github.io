@@ -7,7 +7,18 @@
       <div class="nav-wrapper">
         <ul class="nav-list" style="">
           {% for item in site.nav %}
-            <li><a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
+            <li class="{% if item.children %}has-children{% endif %}">
+              <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {% if item.children %}
+                  <ul class="subnav">
+                    {% for child in item.children %}
+                      <li>
+                        <a class="page-link" href="{{ child.url | relative_url }}">{{ child.title | escape }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+              {% endif %}
+            </li>
           {% endfor %}
         </ul>
       </div>

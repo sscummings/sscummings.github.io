@@ -236,20 +236,6 @@
 		}
 	}
 
-
-	.outer-grid {
-		display: flex;
-		justify-content: space-between;
-		gap: $grid-gutter-width/2;
-		flex-wrap: wrap;
-		
-		a[data-lightbox] {
-			width: calc(100%/2 - $grid-gutter-width/2 * 1 / 2);
-			display: block;
-			cursor: zoom-in;
-		}
-	}
-
 	.grid {
 
 		.item-square {
@@ -316,10 +302,6 @@
 
 
 	@include mq-up($md-up) {
-
-		.outer-grid > a[data-lightbox] {
-			width: calc(100%/3 - 15px * 2 / 3);
-		}
 
 		.item-square {
 			.collection,

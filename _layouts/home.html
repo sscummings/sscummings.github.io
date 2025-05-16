@@ -2,6 +2,7 @@
 layout: default
 container: "container-fluid"
 ---
+<!-- See index.md for more page settings -->
 
 <div class="home">
 
@@ -38,43 +39,55 @@ container: "container-fluid"
   {% endcapture %}
   {% assign home_mix_array = home_mix | split: ':::'%}
 
-  <div class="outer-grid {{ outerGridClass }}">
-  
-    {% assign no_mix = null %}
-    
-    {% for item in site.collections %}
-      {% for post in item.docs %}
-        {% if post.featured == true %}
-          <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
-            <a class="bg-img" href="{{ post.url }}" style="background-image: url('../assets/{{ post.img }}');">
-                <span class="title">{{ post.title }}</span>
-                <span class="more"><i class="fa fa-chevron-right"></i></span>
-                {% comment %}
-                  <span class="collection">{{ post.collection }}</span>
-                  <span class="preview">{{ post.content | strip_html }}</span>
-                {% endcomment %}
-            </a>
-          </div>
-          {% assign featured = post.collection %}
-          {% assign no_mix = true %}
-        {% endif %}
-      {% endfor %}
+  <div class="standard-grid square-grid">
+
+    {% assign curated_photos = site.data.curated_homepage %}
+    {% for group in curated_photos %}
+            {% for post_url in group.posts %}
+                {% assign post = site.photography | where: "url", post_url | first %}
+                {% if post %}
+                    {% include photo-grid-image.html %}
+                {% endif %}
+            {% endfor %}
     {% endfor %}
 
-    {% if no_mix != true %}
-      {{ home_mix_array[2] }}
-      {{ home_mix_array[6] }}
-      {{ home_mix_array[11] }}
-      {{ home_mix_array[8] }}
-      {{ home_mix_array[3] }}
-      {{ home_mix_array[5] }}
-      {{ home_mix_array[4] }}
-      {{ home_mix_array[9] }}
-      {{ home_mix_array[10] }}
-      {{ home_mix_array[1] }}
-      {{ home_mix_array[7] }}
-      {{ home_mix_array[0] }}
-    {% endif %}
+    {% comment %}
+      {% assign no_mix = null %}
+      
+      {% for item in site.collections %}
+        {% for post in item.docs %}
+          {% if post.featured == true %}
+            <div class="item-square {{ post.collection }} collection-{{ post.collection }} {{ post.featured_subject }} featured">
+              <a class="bg-img" href="{{ post.url }}" style="background-image: url('../assets/{{ post.img }}');">
+                  <span class="title">{{ post.title }}</span>
+                  <span class="more"><i class="fa fa-chevron-right"></i></span>
+                  {% comment %}
+                    <span class="collection">{{ post.collection }}</span>
+                    <span class="preview">{{ post.content | strip_html }}</span>
+                  {% endcomment %}
+              </a>
+            </div>
+            {% assign featured = post.collection %}
+            {% assign no_mix = true %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      {% if no_mix != true %}
+        {{ home_mix_array[2] }}
+        {{ home_mix_array[6] }}
+        {{ home_mix_array[11] }}
+        {{ home_mix_array[8] }}
+        {{ home_mix_array[3] }}
+        {{ home_mix_array[5] }}
+        {{ home_mix_array[4] }}
+        {{ home_mix_array[9] }}
+        {{ home_mix_array[10] }}
+        {{ home_mix_array[1] }}
+        {{ home_mix_array[7] }}
+        {{ home_mix_array[0] }}
+      {% endif %}
+    {% endcomment %}
 
     {% comment %}
     <div class="grid">

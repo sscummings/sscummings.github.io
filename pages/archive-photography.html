@@ -1,6 +1,6 @@
 ---
 layout:     default
-title:      Photography
+title:      Photo Projects
 permalink:  /photography/
 container:  none
 classes:    
@@ -11,7 +11,6 @@ meta_image: photography/20191115-concord-03.jpg
     <div class="container">
         <header class="post-header">
             <h1 class="post-title">{{ page.title | escape }}</h1>
-            <p>Capturing campaigns, causes, creativity, and more.</p>
         </header>
     </div>
     
@@ -28,6 +27,31 @@ meta_image: photography/20191115-concord-03.jpg
     {% assign lightbox_name = "photography" %}
 
     <div class="container-fluid">
+        <div class="projects-grid three-projects">
+            {% for project in site.data.curated_projects %}
+                {% assign post = site.photography | where: "url", project.associatedPost | first %}
+                <div class="project-block">
+                    <a
+                        class="project-image"
+                        href="{{ project.link }}"
+                    >
+                        <img
+                            alt="{{ post.caption | escape }}"
+                            class="{{ img_classes }}"
+                            src="../../assets/{{ post.img }}"
+                        />
+                    </a>
+                    <a
+                        class="project-title"
+                        href="{{ project.link }}"
+                    >
+                        {{ project.name }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% comment %}
         <div class="photo-grid">
             {% for group in curated_photos %}
                 <div class="grid-group {{ group.layout }}">
@@ -40,8 +64,11 @@ meta_image: photography/20191115-concord-03.jpg
                 </div>
             {% endfor %}
         </div>
+        {% endcomment %}
+        
     </div>
     
+    {% comment %}
     <div class="end-section">
         <div class="container">
             <div class="design-group-heading text-center">
@@ -50,5 +77,6 @@ meta_image: photography/20191115-concord-03.jpg
             </div>
         </div>
     </div>
+    {% endcomment %}
 
 </section>

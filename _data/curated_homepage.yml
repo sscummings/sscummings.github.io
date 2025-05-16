@@ -1,0 +1,14 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+- name: "Homepage"
+  posts:
+    - /photography/2024-11-25-FreshPondRoad-20
+    - /photography/2022-06-01-whitefish-01
+    - /photography/2025-03-06-olympusxa-31
+    # - /photography/2025-04-04-yashica02-02
+    - /photography/2024-11-09-Gianna-9670
+    # - /photography/2018-09-23-lasvegas-03
+    - /photography/2023-11-08-tempe-12
+    - /photography/2024-09-20-ridgewood-05
+    # - /photography/2024-11-09-Gianna-2440

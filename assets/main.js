@@ -4,7 +4,7 @@
 var expandCollapseNav = function() {
     // Toggle open and close nav styles on click
     $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
+      $('nav ul.nav-list').slideToggle();
       $('.nav-wrapper').toggleClass('open');
     });
     // Hamburger to X toggle

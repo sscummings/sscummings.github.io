@@ -1,0 +1,16 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+- name: "Politics & Protest"
+  blurbTitle: "A world in flux"
+  blurb: "Over a decade working on, volunteering for, and turning my camera toward campaigns and causes reveals the frustrations, hopes, and resolve of people calling for change."
+  posts:
+    - /photography/2018-09-23-lasvegas-03
+    - /photography/2019-09-20-amsterdam-02
+    - /photography/2021-11-06-phoenix-04
+    # - /photography/2016-07-22-tampa-04
+    - /photography/2019-10-13-madrid-04
+    - /photography/2016-10-26-tampa-01
+    - /photography/2019-11-15-concord-02
+    # - /photography/2019-11-15-concord-04
+    # - /photography/2021-11-06-phoenix-04

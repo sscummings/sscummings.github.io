@@ -69,14 +69,21 @@ defaults:
 
 nav:
   - item:
-    title: Photography
+    title: Projects
     url: /photography/
-  - item:
-    title: Design
-    url: /design/
-  - item:
-    title: Artworks
-    url: /art/
+    children:
+      - item:
+        title: We are briefly held
+        url: /photography/we-are-briefly-held/
+      - item:
+        title: Curious and About
+        url: /photography/curious-and-about/
+      - item:
+        title: Walk
+        url: /photography/walk/
+      # - item:
+      #   title: Politics & Protest
+      #   url: /photography/politics-and-protest/
   - item:
     title: About
     url: /about/

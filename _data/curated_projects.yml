@@ -1,0 +1,16 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+
+- name: "We are briefly held"
+  link: "/photography/we-are-briefly-held/"
+  associatedPost: /photography/2025-02-25-yashica01-03
+- name: "Curious and About"
+  link: "/photography/curious-and-about/"
+  associatedPost: /photography/2025-03-10-Gianna-9791
+- name: "Walk"
+  link: "/photography/walk/"
+  associatedPost: /photography/2023-11-08-tempe-12
+# - name: "Politics & Protest"
+#   link: "/photography/politics-and-protest/"
+#   associatedPost: /photography/2018-09-23-lasvegas-03

@@ -1,0 +1,13 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+- name: "Walk"
+  blurbTitle: "Wherever I happen to be"
+  blurb: "I walk through a world filled with wonderful and surprising things. What better way to spend my days than by capturing and sharing these frames along the way?"
+  posts:
+    - /photography/2023-11-08-tempe-12
+    - /photography/2023-09-08-porto-12
+    - /photography/2023-11-08-tempe-09
+    - /photography/2024-09-20-ridgewood-05
+    - /photography/2024-09-20-ridgewood-11
+    - /photography/2023-08-30-porto-07
