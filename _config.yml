@@ -76,11 +76,14 @@ nav:
         title: We are briefly held
         url: /photography/we-are-briefly-held/
       - item:
+        title: Where the Cart is King
+        url: /photography/where-the-cart-is-king/
+      - item:
         title: Curious and About
         url: /photography/curious-and-about/
-      - item:
-        title: Walk
-        url: /photography/walk/
+      # - item:
+      #   title: Walk
+      #   url: /photography/walk/
       # - item:
       #   title: Politics & Protest
       #   url: /photography/politics-and-protest/
