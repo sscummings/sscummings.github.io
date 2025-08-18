@@ -174,4 +174,12 @@
 		  "first second"
 		  "third fourth";
 	}
+
+	a.project-image > img {
+		pointer-events: none;
+	}
+
+	a.project-image:hover + .project-title {
+		text-decoration: underline;
+	}
 }
