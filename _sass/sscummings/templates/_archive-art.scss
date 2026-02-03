@@ -8,6 +8,11 @@
 		row-gap: 0.75em;
 		column-gap: 3em;
 		flex-wrap: wrap;
+		margin-top: 1em;
+
+		@include mq-down($sm-down) {
+			column-gap: 0.75em;
+		}
 
 		button {
 			padding: 0;
@@ -19,7 +24,20 @@
 
 			&:hover {
 				text-decoration: underline;
-				text-underline-offset: 0.1em;
+				text-underline-offset: 0.3em;
+			}
+
+			@include mq-down($sm-down) {
+				border: 1px solid $text-color;
+				padding: 0.25em 0.9em;
+				border-radius: 1em;
+				transition: background-color 0.2s ease, color 0.2s ease;
+
+				&:hover {
+					text-decoration: none;
+					background-color: $text-color;
+					color: $bg-color;
+				}
 			}
 		}
 	}
