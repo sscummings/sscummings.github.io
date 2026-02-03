@@ -1,0 +1,67 @@
+---
+layout: default
+title: Background
+permalink: /background/
+meta_image: art/2019-sculpture-04.jpg
+excerpt: I've done a bunch of things, most of them in some way visual. Here's a little bit more of my background.
+container:  none
+classes:
+---
+
+<div class="background-page">
+
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+            <p>My path to photography wasn’t a straight line and I’m sure the path forward won’t be either. <br class="hidden-sm" />This is some of what I’ve been up to.</p>
+        </header>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="background-content">
+            {% for bg in site.data.background %}
+                {% capture block_img %}
+                    <div class="background-block-image-wrap">
+                        <img
+                            alt="{{ bg.imgAlt | escape }}"
+                            class="{{ img_classes }}"
+                            src="../../assets/{{ bg.img }}"
+                        />
+                    </div>
+                {% endcapture %}
+                <div class="background-block">
+                    {% if bg.link %}
+                        <a
+                            class="background-block-image image-radius-standard image-hover-zoom"
+                            href="{{ bg.link }}"
+                        >
+                            {{ block_img }}
+                        </a>
+                    {% else %}
+                        <div class="background-block-image image-radius-standard">
+                            {{ block_img }}
+                        </div>
+                    {% endif %}
+                    <div class="background-blurb">
+                        {% if bg.name %}
+                            <h2>{{ bg.name }}</h2>
+                        {% endif %}
+                        {% if bg.blurb %}
+                            <p>{{ bg.blurb }}</p>
+                        {% endif %}
+                        {% if bg.link and bg.linkText %}
+                            <a
+                                class="arrow-link"
+                                href="{{ bg.link }}"
+                            >
+                                <span>{{ bg.linkText }}</span>
+                                {% include icon-arrow_right.html %}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</div>

@@ -28,6 +28,32 @@ body {
   }
 }
 
+.hidden-lg {
+  display: none;
+
+  @include mq-down($md-down) {
+    display: revert;
+  }
+}
+
+.hidden-md {
+  @include mq-down($md-down) {
+    display: none;
+  }
+}
+
+.hidden-sm {
+  @include mq-down($sm-down) {
+    display: none;
+  }
+}
+
+.hidden-xs {
+  @include mq-down($xs-down) {
+    display: none;
+  }
+}
+
 /**
  * Page content
  */

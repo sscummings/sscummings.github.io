@@ -69,7 +69,7 @@ defaults:
 
 nav:
   - item:
-    title: Projects
+    title: Photography
     url: /photography/
     children:
       - item:
@@ -87,6 +87,16 @@ nav:
       # - item:
       #   title: Politics & Protest
       #   url: /photography/politics-and-protest/
+  - item:
+    title: Background
+    url: /background/
+    # children:
+    #   - item:
+    #     title: Art
+    #     url: /art/
+    #   - item:
+    #     title: Design & Dev
+    #     url: /design/
   - item:
     title: About
     url: /about/
