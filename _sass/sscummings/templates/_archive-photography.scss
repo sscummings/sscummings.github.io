@@ -17,7 +17,7 @@
 	}
 
 	.grid-image img {
-		cursor: zoom-in;
+		// cursor: zoom-in;
 		object-fit: cover;
 	}
 
@@ -177,9 +177,5 @@
 
 	a.project-image > img {
 		pointer-events: none;
-	}
-
-	a.project-image:hover + .project-title {
-		text-decoration: underline;
 	}
 }

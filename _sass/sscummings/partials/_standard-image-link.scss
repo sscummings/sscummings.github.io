@@ -1,0 +1,34 @@
+a.image-hover-zoom {
+    display: block;
+    overflow: hidden;
+    
+    img {
+        transition: transform 0.25s ease;
+    }
+    &:hover {
+        img {
+            transform: scale(102%);
+        }
+    }
+}
+
+.image-radius-standard {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+a.arrow-link {
+    display: inline-flex;
+    gap: 0.5em;
+    align-items: center;
+    transition: gap 0.1s ease;
+    text-decoration: none;
+
+    .icon {
+        line-height: 0.8;
+    }
+
+    &:hover {
+        gap: 0.55em;
+    }
+}

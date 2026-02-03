@@ -32,7 +32,7 @@ meta_image: photography/subway/20250223_cummings_Yashica_06.jpg
                 {% assign post = site.photography | where: "url", project.associatedPost | first %}
                 <div class="project-block">
                     <a
-                        class="project-image"
+                        class="project-image image-hover-zoom image-radius-standard"
                         href="{{ project.link }}"
                     >
                         <img
@@ -41,12 +41,15 @@ meta_image: photography/subway/20250223_cummings_Yashica_06.jpg
                             src="../../assets/{{ post.img }}"
                         />
                     </a>
-                    <a
-                        class="project-title"
-                        href="{{ project.link }}"
-                    >
-                        {{ project.name }}
-                    </a>
+                    <h3 class="project-title">
+                        <a
+                            class="arrow-link"
+                            href="{{ project.link }}"
+                        >
+                            <span>{{ project.name }}</span>
+                            {% include icon-arrow_right.html %}
+                        </a>
+                    </h3>
                 </div>
             {% endfor %}
         </div>

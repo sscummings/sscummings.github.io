@@ -12,7 +12,7 @@
     
     a[data-lightbox] {
         display: block;
-        cursor: zoom-in;
+        // cursor: zoom-in;
     }
 
     &.square-grid {
@@ -81,15 +81,8 @@
         }
     }
 
-    a.project-title {
-        display: block;
-        margin-top: 0.5em;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    .project-title {
+        margin: 0.5em $grid-gutter-width/2 0;
     }
 }
 
