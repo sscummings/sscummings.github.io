@@ -193,25 +193,40 @@ var designCarousel = function() {
 // Isotope with Filtering and Masonry Layout
 //
 var isotopeFilteringAndMasonry = function() {
-  console.log('isotope!');
-  
-  // Initialize Isotope
+
+  let grid = document.querySelector('.grid');
+
+  if (!grid) {
+    console.log('No isotope grid found');
+    return;
+  }
+
+  if (typeof $.fn.isotope === "undefined") {
+    console.log('Isotope not loaded');
+    return;
+  }
+
+  console.log('isotope init');
+
   var $grid = $('.grid').imagesLoaded(function() {
     $grid.isotope({
       itemSelector: '.grid-item',
       layoutMode: 'masonry',
       masonry: {
-        columnWidth: '.grid-item',
-        // gutter: 10
+        columnWidth: '.grid-item'
       }
     });
   });
 
-  // Filter items on button click
-  $('.filters').on('click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-  });
+  let filters = document.querySelector('.filters');
+
+  if (filters) {
+    $('.filters').on('click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    });
+  }
+
 };
 
 
