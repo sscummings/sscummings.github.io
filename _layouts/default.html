@@ -8,7 +8,7 @@
     {% include header.html %}
 
     <main class="page-content" aria-label="Content">
-      <div class="{% if page.container %}{{ page.container }}{% else %}container{% endif %}">
+      <div class="{{ page.container | default: layout.container | default: 'container' }}">
         {{ content }}
       </div>
     </main>
