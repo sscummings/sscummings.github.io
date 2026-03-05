@@ -229,13 +229,106 @@ var isotopeFilteringAndMasonry = function() {
 
 };
 
+//
+// Case Studies Lightbox
+//
+var caseStudiesLightbox = function () {
+
+  const lightbox = document.getElementById("case-study-lightbox");
+  if (!lightbox) return;
+
+  const slides  = [...lightbox.querySelectorAll(".cs-slide")];
+  const triggers = [...document.querySelectorAll(".case-study-trigger")];
+
+  if (!slides.length || !triggers.length) return;
+
+  const prevBtn  = lightbox.querySelector(".cs-prev");
+  const nextBtn  = lightbox.querySelector(".cs-next");
+  const closeBtn = lightbox.querySelector(".cs-close");
+
+  let current = 0;
+
+  function open(index) {
+    current = index || 0;
+
+    lightbox.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    render();
+  }
+
+  function close() {
+    lightbox.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  function render() {
+
+    slides.forEach((slide,i)=>{
+      slide.style.display = i === current ? "block" : "none";
+    });
+
+    prevBtn.classList.toggle("active", current > 0);
+    nextBtn.classList.toggle("active", current < slides.length - 1);
+  }
+
+  function next(){
+    if(current < slides.length-1){
+      current++;
+      render();
+    }
+  }
+
+  function prev(){
+    if(current > 0){
+      current--;
+      render();
+    }
+  }
+
+  /* --- click triggers --- */
+
+  triggers.forEach((trigger,i)=>{
+    trigger.addEventListener("click", e=>{
+      e.preventDefault();
+      open(i);
+    });
+  });
+
+  /* --- buttons --- */
+
+  nextBtn?.addEventListener("click", next);
+  prevBtn?.addEventListener("click", prev);
+  closeBtn?.addEventListener("click", close);
+
+  /* --- click outside slide closes --- */
+
+  lightbox.addEventListener("click", e=>{
+    if(e.target === lightbox) close();
+  });
+
+  /* --- keyboard navigation --- */
+
+  document.addEventListener("keydown", e=>{
+
+    if(lightbox.style.display !== "block") return;
+
+    if(e.key === "Escape") close();
+    if(e.key === "ArrowRight") next();
+    if(e.key === "ArrowLeft") prev();
+
+  });
+
+};
 
 
-jQuery(document).ready(function() {
+
+window.addEventListener("load", function(){
     expandCollapseNav();
     activateScrollSections();
     lazyLoadImages();
     customizeLightbox2();
     designCarousel();
     isotopeFilteringAndMasonry();
+    caseStudiesLightbox();
 });

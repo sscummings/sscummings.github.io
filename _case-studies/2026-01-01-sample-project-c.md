@@ -1,0 +1,29 @@
+---
+layout: single-case-study
+title: "Sample Project C"
+slug: sample-project-c
+date: 2026-01-01
+
+img_main: /assets/photography/20150712-chicago-02.jpg
+img_square: /assets/design/2017-patronage-01.png
+
+intro: "Lorem ipsum short intro to the project."
+
+case_study_text: "Lorem ipsum brief preview summary of the project."
+
+my_role: "Lorem ipsum role"
+client: "Lorem ipsum client"
+employer: "Lorem ipsum employer"
+---
+
+## Background
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Process
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+
+## Outcome
+
+Ut enim ad minim veniam.

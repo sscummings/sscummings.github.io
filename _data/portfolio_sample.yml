@@ -1,0 +1,10 @@
+- name: "Sample Portfolio"
+
+  headline: "Selected Sample Work"
+
+  intro: "A selection of sample case studies."
+
+  case_studies:
+    - /case-studies/sample-project-c/
+    - /case-studies/sample-project-a/
+    # - /case-studies/sample-project-b/

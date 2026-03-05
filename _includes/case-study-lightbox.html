@@ -1,0 +1,28 @@
+<div id="case-study-lightbox">
+
+<button class="cs-close">Close</button>
+
+<button class="cs-prev">Prev</button>
+<button class="cs-next">Next</button>
+
+<div class="cs-slides">
+
+{% for item in include.posts %}
+
+    {% if item.url %}
+        {% assign post = item %}
+    {% else %}
+        {% assign post = site.case-studies | where: "url", item | first %}
+    {% endif %}
+
+    {% if post %}
+    <div class="cs-slide">
+        {% include case-study-content.html post=post %}
+    </div>
+    {% endif %}
+
+{% endfor %}
+
+</div>
+
+</div>

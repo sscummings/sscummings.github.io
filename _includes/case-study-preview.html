@@ -1,0 +1,20 @@
+{% assign post = include.post %}
+{% assign index = include.index %}
+
+<div class="case-study-preview">
+
+    <a href="javascript:void(0)"
+        class="case-study-trigger"
+        data-index="{{ index }}">
+
+        <img src="{{ post.img_square }}" alt="{{ post.title }}">
+
+        <h3>{{ post.title }}</h3>
+
+        <p>
+            {{ post.case_study_text | default: "View case study" }}
+        </p>
+
+    </a>
+
+</div>

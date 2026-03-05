@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% assign portfolio = page.datafile | prepend: "site.data." | replace: ".", "" %}
+
+{% assign groups = site.data[page.datafile] %}
+
+<section class="portfolio">
+
+    <h1>{{ groups[0].headline }}</h1>
+
+    <p>{{ groups[0].intro }}</p>
+
+    <div class="case-study-grid">
+
+    {% for post_url in groups[0].case_studies %}
+
+        {% assign post = site.case-studies | where: "url", post_url | first %}
+
+        {% if post %}
+            {% include case-study-preview.html post=post index=forloop.index0 %}
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+
+    {% assign case_study_posts = groups[0].case_studies %}
+
+    {% include case-study-lightbox.html posts=case_study_posts %}
+
+</section>

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="case-study-grid">
+
+{% for post in site.case-studies %}
+
+{% include case-study-preview.html post=post index=forloop.index0 %}
+
+{% endfor %}
+
+</div>
+
+{% include case-study-lightbox.html posts=site.case-studies %}

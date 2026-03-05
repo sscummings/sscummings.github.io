@@ -1,0 +1,12 @@
+#case-study-lightbox {
+  display:none;
+  z-index:9999;
+  position: fixed;
+  inset: 0;
+  background: lemonchiffon;
+  overflow-y: auto;
+}
+
+.cs-slide {
+  display:none;
+}

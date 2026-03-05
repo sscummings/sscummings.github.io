@@ -25,6 +25,9 @@ collections:
     output: true
   art:
     output: true
+  case-studies:
+    output: true
+    permalink: /case-studies/:slug/
   design:
     output: true
   # - dev
