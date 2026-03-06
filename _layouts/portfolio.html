@@ -6,27 +6,42 @@ layout: default
 
 {% assign groups = site.data[page.datafile] %}
 
+{% assign headline = page.headline | default: groups[0].headline %}
+{% assign intro = page.intro | default: groups[0].intro %}
+
+{% assign case_study_posts = nil %}
+
+{% if page.datafile %}
+  {% assign case_study_posts = "" | split: "" %}
+
+  {% for post_url in groups[0].case_studies %}
+    {% assign post = site.case-studies | where: "url", post_url | first %}
+    {% if post %}
+      {% assign case_study_posts = case_study_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+
+{% else %}
+  {% assign case_study_posts = site.case-studies %}
+{% endif %}
+
 <section class="portfolio">
+    
+    {% if headline %}
+        <h1>{{ headline }}</h1>
+    {% endif %}
 
-    <h1>{{ groups[0].headline }}</h1>
-
-    <p>{{ groups[0].intro }}</p>
+    {% if intro %}
+        <p>{{ intro }}</p>
+    {% endif %}
 
     <div class="case-study-grid">
 
-    {% for post_url in groups[0].case_studies %}
-
-        {% assign post = site.case-studies | where: "url", post_url | first %}
-
-        {% if post %}
-            {% include case-study-preview.html post=post index=forloop.index0 %}
-        {% endif %}
-
+    {% for post in case_study_posts %}
+        {% include case-study-preview.html post=post index=forloop.index0 %}
     {% endfor %}
 
     </div>
-
-    {% assign case_study_posts = groups[0].case_studies %}
 
     {% include case-study-lightbox.html posts=case_study_posts %}
 
