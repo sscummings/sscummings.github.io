@@ -55,7 +55,7 @@
 
 .projects-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: $grid-gutter-width/2;
     flex-wrap: wrap;
     

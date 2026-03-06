@@ -1,12 +1,42 @@
 #case-study-lightbox {
-  display:none;
-  z-index:9999;
-  position: fixed;
-  inset: 0;
-  background: lemonchiffon;
-  overflow-y: auto;
+    display:none;
+    z-index:9999;
+    position: fixed;
+    inset: 0;
+    background: $black;
+    overflow-y: auto;
+    color: $lightest-gray;
+    padding: calc(#{$header-height} + #{$section-padding}) 0 $section-padding;
+
+    @include mq-up($lg-up) {
+        background: coral;
+    }
 }
 
 .cs-slide {
   display:none;
+}
+
+.cs-lightbox-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: $header-height;
+    padding: 0 $grid-gutter-width;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($darkest-gray, .8);
+    backdrop-filter: blur(3px);
+
+    @include mq-down($xs-down) {
+        padding-right: $grid-gutter-width / 2;
+        padding-left: $grid-gutter-width / 2;
+    }
+}
+
+.cs-close, .cs-prev, .cs-next {
+    cursor: pointer;
 }

@@ -1,30 +1,37 @@
 <div id="case-study-lightbox">
 
-<button class="cs-close">Close</button>
+    <div class="container-fluid">
 
-<button class="cs-prev">Prev</button>
-<button class="cs-next">Next</button>
+        <div class="cs-lightbox-buttons">
+            <button class="cs-close">Close</button>
 
-<div class="cs-slides">
+            <div class="cs-prev-next">
+                <button class="cs-prev">Prev</button>
+                <button class="cs-next">Next</button>
+            </div>
+        </div>
 
-{% for item in include.posts %}
+        <div class="cs-slides">
 
-    {% if item.url %}
-        {% assign post = item %}
-    {% else %}
-        {% assign post = site.case-studies | where: "url", item | first %}
-    {% endif %}
+        {% for item in include.posts %}
 
-    {% assign cs_id = post.slug | default: post.url %}
+            {% if item.url %}
+                {% assign post = item %}
+            {% else %}
+                {% assign post = site.case-studies | where: "url", item | first %}
+            {% endif %}
 
-    {% if post %}
-    <div class="cs-slide" data-id="{{ cs_id }}">
-        {% include case-study-content.html post=post %}
+            {% assign cs_id = post.slug | default: post.url %}
+
+            {% if post %}
+            <div class="cs-slide" data-id="{{ cs_id }}">
+                {% include case-study-content.html post=post %}
+            </div>
+            {% endif %}
+
+        {% endfor %}
+
+        </div>
     </div>
-    {% endif %}
-
-{% endfor %}
-
-</div>
 
 </div>

@@ -2,25 +2,27 @@
 
 <div class="case-study-content">
 
-<h1>{{ post.title }}</h1>
+    <h1>{{ post.title }}</h1>
 
-<p class="case-study-meta">
-{% if post.client %}<strong>Client:</strong> {{ post.client }}<br>{% endif %}
-{% if post.employer %}<strong>Employer:</strong> {{ post.employer }}<br>{% endif %}
-{% if post.my_role %}<strong>Role:</strong> {{ post.my_role }}<br>{% endif %}
-<strong>Year:</strong> {{ post.date | date: "%Y" }}
-</p>
+    {% if post.intro %}
+        <p class="intro">{{ post.intro }}</p>
+    {% endif %}
 
-{% if post.img_main %}
-<img src="{{ post.img_main }}">
-{% endif %}
+    {% if post.img_main %}
+        <div class="image-radius-standard">
+            <img src="{{ post.img_main }}">
+        </div>
+    {% endif %}
 
-{% if post.intro %}
-<p class="intro">{{ post.intro }}</p>
-{% endif %}
+    <p class="case-study-meta">
+    {% if post.client %}<strong>Client:</strong> {{ post.client }}<br>{% endif %}
+    {% if post.employer %}<strong>Employer:</strong> {{ post.employer }}<br>{% endif %}
+    {% if post.my_role %}<strong>Role:</strong> {{ post.my_role }}<br>{% endif %}
+    <strong>Year:</strong> {{ post.date | date: "%Y" }}
+    </p>
 
-<div class="case-study-body">
-{{ post.content }}
-</div>
+    <div class="case-study-body">
+    {{ post.content }}
+    </div>
 
 </div>

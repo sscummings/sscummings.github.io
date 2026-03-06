@@ -1,5 +1,6 @@
 ---
 layout: default
+container:  none
 ---
 
 {% assign portfolio = page.datafile | prepend: "site.data." | replace: ".", "" %}
@@ -27,20 +28,26 @@ layout: default
 
 <section class="portfolio">
     
-    {% if headline %}
-        <h1>{{ headline }}</h1>
+    {% if headline or intro %}
+        <div class="container">
+            {% if headline %}
+                <h1>{{ headline }}</h1>
+            {% endif %}
+
+            {% if intro %}
+                <p>{{ intro }}</p>
+            {% endif %}
+        </div>
     {% endif %}
 
-    {% if intro %}
-        <p>{{ intro }}</p>
-    {% endif %}
+    <div class="container-fluid">
+        <div class="projects-grid three-projects">
 
-    <div class="case-study-grid">
+        {% for post in case_study_posts %}
+            {% include case-study-preview.html post=post index=forloop.index0 %}
+        {% endfor %}
 
-    {% for post in case_study_posts %}
-        {% include case-study-preview.html post=post index=forloop.index0 %}
-    {% endfor %}
-
+        </div>
     </div>
 
     {% include case-study-lightbox.html posts=case_study_posts %}
