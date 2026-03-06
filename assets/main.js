@@ -249,7 +249,7 @@ var caseStudiesLightbox = function () {
   let current = 0;
 
   function open(index) {
-    current = index || 0;
+    current = (index !== undefined) ? index : 0;
 
     lightbox.style.display = "block";
     document.body.style.overflow = "hidden";
@@ -288,11 +288,22 @@ var caseStudiesLightbox = function () {
 
   /* --- click triggers --- */
 
-  triggers.forEach((trigger,i)=>{
-    trigger.addEventListener("click", e=>{
+  triggers.forEach(el => {
+
+    el.addEventListener("click", function(e){
+
       e.preventDefault();
-      open(i);
+
+      let id = this.dataset.id;
+
+      let index = slides.findIndex(slide => slide.dataset.id === id);
+
+      if(index !== -1){
+        open(index);
+      }
+
     });
+
   });
 
   /* --- buttons --- */

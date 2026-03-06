@@ -15,8 +15,10 @@
         {% assign post = site.case-studies | where: "url", item | first %}
     {% endif %}
 
+    {% assign cs_id = post.slug | default: post.url %}
+
     {% if post %}
-    <div class="cs-slide">
+    <div class="cs-slide" data-id="{{ cs_id }}">
         {% include case-study-content.html post=post %}
     </div>
     {% endif %}

@@ -1,20 +1,31 @@
 {% assign post = include.post %}
-{% assign index = include.index %}
+{% assign cs_id = post.slug | default: post.url %}
 
 <div class="case-study-preview">
 
     <a href="javascript:void(0)"
         class="case-study-trigger"
-        data-index="{{ index }}">
-
+        data-id="{{ cs_id }}">
         <img src="{{ post.img_square }}" alt="{{ post.title }}">
-
-        <h3>{{ post.title }}</h3>
-
-        <p>
-            {{ post.case_study_text | default: "View case study" }}
-        </p>
-
     </a>
 
+    <h3>
+        <a href="javascript:void(0)"
+        class="case-study-trigger"
+        data-id="{{ cs_id }}">
+            {{ post.title }}
+        </a>
+    </h3>
+
+    <p>
+        <a href="javascript:void(0)"
+    class="case-study-trigger"
+    data-id="{{ cs_id }}">
+        {{ post.case_study_text | default: "View case study" }}
+        </a>
+    </p>
+
 </div>
+
+
+
