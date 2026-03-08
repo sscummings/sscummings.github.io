@@ -3,11 +3,11 @@
     <div class="container-fluid">
 
         <div class="cs-lightbox-buttons">
-            <button class="cs-close">Close</button>
+            <button class="cs-close" sr-only="">{% include icon-close.html %}<span class="sr-only">Close</span></button>
 
             <div class="cs-prev-next">
-                <button class="cs-prev">Prev</button>
-                <button class="cs-next">Next</button>
+                <button class="cs-prev">{% include icon-chevron_left.html %}<span class="sr-only">Previous</span></button>
+                <button class="cs-next">{% include icon-chevron_right.html %}<span class="sr-only">Next</span></button>
             </div>
         </div>
 
