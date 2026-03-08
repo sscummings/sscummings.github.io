@@ -11,7 +11,11 @@ intro: "Lorem ipsum short intro to the project."
 
 case_study_text: "Lorem ipsum brief preview summary of the project."
 
-my_role: "Lorem ipsum role"
+my_role:
+  - Lorem ipsum role 1
+  - Lorem ipsum role 2
+  - Lorem ipsum role 3
+
 client: "Lorem ipsum client"
 employer: "Lorem ipsum employer"
 ---

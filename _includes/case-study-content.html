@@ -17,7 +17,14 @@
     <p class="case-study-meta">
     {% if post.client %}<strong>Client:</strong> {{ post.client }}<br>{% endif %}
     {% if post.employer %}<strong>Employer:</strong> {{ post.employer }}<br>{% endif %}
-    {% if post.my_role %}<strong>Role:</strong> {{ post.my_role }}<br>{% endif %}
+    {% if post.my_role %}
+        <strong>Role:</strong>
+        <ul>
+        {% for role in post.my_role %}
+            <li>{{ role }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
     <strong>Year:</strong> {{ post.date | date: "%Y" }}
     </p>
 
