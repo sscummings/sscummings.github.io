@@ -1,10 +1,10 @@
 - name: "Sample Portfolio"
 
-  headline: "Selected Sample Work"
+  headline: "Stephen is a lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo."
 
-  intro: "A selection of sample case studies."
+  intro: "A selection of sample case studies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo."
 
   case_studies:
     - /case-studies/sample-project-c/
-    - /case-studies/sample-project-a/
-    # - /case-studies/sample-project-b/
+    - /case-studies/cacc/
+    - /case-studies/sample-project-b/

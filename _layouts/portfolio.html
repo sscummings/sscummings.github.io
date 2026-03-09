@@ -30,13 +30,15 @@ container:  none
     
     {% if headline or intro %}
         <div class="container">
-            {% if headline %}
-                <h1>{{ headline }}</h1>
-            {% endif %}
+            <header class="post-header {{ page.cs_archive }}">
+                {% if headline %}
+                    <h1 class="post-title">{{ headline }}</h1>
+                {% endif %}
 
-            {% if intro %}
-                <p>{{ intro }}</p>
-            {% endif %}
+                {% if intro %}
+                    <p>{{ intro }}</p>
+                {% endif %}
+            </header>
         </div>
     {% endif %}
 

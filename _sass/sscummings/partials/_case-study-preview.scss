@@ -1,6 +1,13 @@
 .case-study-preview {
+
+    .cs-project-title {
+        margin-top: $grid-gutter-width/2;
+    }
+
     h3 {
         margin-bottom: 0;
-        font-size: 1.6em;
+        font-size: 2em;
+        line-height: 1.15;
+        margin-bottom: .2em;
     }
 }

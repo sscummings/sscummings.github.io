@@ -57,6 +57,7 @@
     display: flex;
     justify-content: flex-start;
     gap: $grid-gutter-width/2;
+    row-gap: $grid-gutter-width;
     flex-wrap: wrap;
     
     .project-block {
@@ -82,7 +83,10 @@
     }
 
     .project-title {
-        margin: 0.5em $grid-gutter-width/2 0;
+        // margin-top: 0.5em;
+        margin-top: $grid-gutter-width/2;
+        margin-left: $grid-gutter-width/2;
+        margin-right: $grid-gutter-width/2;
     }
 }
 

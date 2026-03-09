@@ -1,0 +1,15 @@
+
+.portfolio {
+    .post-header:not(.cs-archive) {
+        width: 100%;
+
+        .post-title {
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+}
