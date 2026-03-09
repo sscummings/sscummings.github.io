@@ -9,7 +9,7 @@
     padding: calc(#{$header-height} + #{$section-padding}) 0 $section-padding;
 
     @include mq-up($lg-up) {
-        background: coral;
+        padding: 0;
     }
 }
 
@@ -19,6 +19,7 @@
 
 .cs-lightbox-buttons {
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     display: flex;
@@ -34,6 +35,13 @@
     @include mq-down($xs-down) {
         padding-right: $grid-gutter-width / 2;
         padding-left: $grid-gutter-width / 2;
+    }
+    @include mq-up($lg-up) {
+        position: sticky;
+        margin-bottom: -$header-height;
+        width: calc(100%*5/12 - #{$grid-gutter-width}/2);
+        max-width: 480px;
+        background-color: transparent;
     }
 }
 

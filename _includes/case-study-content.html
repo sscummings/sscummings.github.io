@@ -1,35 +1,69 @@
 {% assign post = include.post %}
 
+{% capture cs_meta %}
+    <div class="case-study-meta">
+        {% if post.my_role %}
+            <div class="cs-meta-item">
+            <h3>My Role</h3>
+            <ul class="cs-role">
+            {% for role in post.my_role %}
+                <li>{{ role }}</li>
+            {% endfor %}
+            </ul>
+            </div>
+        {% endif %}
+
+        {% if post.client %}
+            <div class="cs-meta-item">
+                <h3>Client</h3>
+                <p>{{ post.client }}</p>
+            </div>
+        {% endif %}
+        
+        {% if post.employer %}
+            <div class="cs-meta-item">
+            <h3>Employer</h3>
+            <p>{{ post.employer }}</p>
+            </div>
+        {% endif %}
+
+        <div class="cs-meta-item">
+            <h3>Year</h3>
+            <p>{{ post.date | date: "%Y" }}</p>
+        </div>
+    </div>
+{% endcapture %}
+
 <div class="case-study-content">
 
-    <h1>{{ post.title }}</h1>
+    <div class="cs-overview">
+        <div class="cs-overview-inner">
+            <h1>{{ post.title }}</h1>
 
-    {% if post.intro %}
-        <p class="intro">{{ post.intro }}</p>
-    {% endif %}
+            {% if post.intro %}
+                <p class="intro">{{ post.intro }}</p>
+            {% endif %}
 
-    {% if post.img_main %}
-        <div class="image-radius-standard">
-            <img src="{{ post.img_main }}">
+            <div class="hidden-md">
+                {{ cs_meta }}
+            </div>
         </div>
-    {% endif %}
+    </div>
 
-    <p class="case-study-meta">
-    {% if post.client %}<strong>Client:</strong> {{ post.client }}<br>{% endif %}
-    {% if post.employer %}<strong>Employer:</strong> {{ post.employer }}<br>{% endif %}
-    {% if post.my_role %}
-        <strong>Role:</strong>
-        <ul>
-        {% for role in post.my_role %}
-            <li>{{ role }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-    <strong>Year:</strong> {{ post.date | date: "%Y" }}
-    </p>
+    <div class="cs-main">
+        {% if post.img_main %}
+            <div class="cs-image-main image-radius-standard">
+                <img src="{{ post.img_main }}">
+            </div>
+        {% endif %}
 
-    <div class="case-study-body">
-    {{ post.content }}
+        <div class="hidden-lg">
+            {{ cs_meta }}
+        </div>
+
+        <div class="case-study-body">
+            {{ post.content }}
+        </div>
     </div>
 
 </div>

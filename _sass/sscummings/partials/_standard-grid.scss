@@ -99,6 +99,16 @@
     }
 }
 
+@include mq-up($md-up) {
+
+    .projects-grid.three-projects {
+        max-width: 100%;
+    }
+    .projects-grid.three-projects .project-block {
+        width: calc(100%/2 - 15px);
+    }
+}
+
 @include mq-up($lg-up) {
 
     .projects-grid.three-projects {

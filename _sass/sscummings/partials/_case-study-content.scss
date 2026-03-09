@@ -1,0 +1,134 @@
+
+.case-study-content {
+    
+    h1 {
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 1em;
+        text-transform: uppercase;
+        margin-bottom: 0.2em;
+    }
+
+    @include mq-up($md-up) {
+        width: 680px;
+        margin: auto;
+    }
+    @include mq-up($lg-up) {
+        width: 100%;
+        max-width: $content-width-fluid;
+        display: flex;
+        gap: $grid-gutter-width;
+        justify-content: space-between;
+
+        .cs-main h3 {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+.cs-image-main {
+    margin: $grid-gutter-width 0;
+    
+    @include mq-up($lg-up) {
+        margin-top: 0;
+    }
+}
+
+.case-study-meta {
+    margin: $grid-gutter-width 0;
+}
+.cs-meta-item {
+    margin: $grid-gutter-width*0.6 0;
+}
+
+.cs-role {
+    list-style-type: none;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    width: calc(100% + 1em);
+
+    @include mq-up($lg-up) {
+        margin-left: -0.75em;
+        margin-right: -0.75em;
+        width: calc(100% + 1.5em);
+    }
+
+    li {
+        display: inline-block;
+        background-color: $darkest-gray;
+        padding: 0.5em 1em;
+        line-height: 1;
+        margin: 0.3em 0.15em;
+        border-radius: 1em;
+
+        @include mq-up($lg-up) {
+            background-color: darken($darkest-gray, 5%);
+            margin: 0.25em 0.1em;
+        }
+    }
+}
+
+.cs-section {
+    margin: $grid-gutter-width 0;
+
+    @include mq-up($sm-up) {
+        margin: $grid-gutter-width*1.5 0;
+    }
+    @include mq-up($lg-up) {
+        margin: $section-padding 0;
+    }
+}
+
+.cs-image-block {
+    margin: $grid-gutter-width*0.6 0;
+    
+    @include mq-up($sm-up) {
+        margin: $grid-gutter-width*0.8 0;
+    }
+    @include mq-up($lg-up) {
+        margin: $grid-gutter-width 0;
+    }
+}
+
+.cs-overview {
+    @include mq-up($lg-up) {
+        width: calc(100%*5/12 - #{$grid-gutter-width}/2);
+        max-width: 480px;
+        background-color: $darkest-gray;
+
+        p, ul, ol {
+            font-size: $base-font-size;
+        }
+
+        .cs-overview-inner {
+            position: sticky;
+            top: 0;
+            padding: clamp($grid-gutter-width/2, 2.5vw, $grid-gutter-width*1.15);
+            padding-top: calc(#{$header-height} + #{$section-padding}/2);
+            padding-bottom: $section-padding;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+    }
+    // @include mq-up($xl-up) {
+    //     width: calc(100%/3 - #{$grid-gutter-width}/2);
+    // }
+}
+
+.cs-main {
+    letter-spacing: 0.015em;
+
+    @include mq-up($lg-up) {
+        width: calc(100%*7/12 - #{$grid-gutter-width}/2);
+        max-width: 700px;
+        margin: auto;
+        padding-top: calc(#{$header-height} + #{$section-padding}/2);
+        padding-bottom: $section-padding;
+        min-height: 100vh;
+    }
+    // @include mq-up($xl-up) {
+    //     width: calc(100%*7/12 - #{$grid-gutter-width}/2);
+    // }
+}
