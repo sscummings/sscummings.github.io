@@ -1,33 +1,60 @@
 ---
 layout: single-case-study
-title: "Sample Project A"
-slug: sample-project-a
-date: 2024-01-01
+title: "Campaign Against Corporate Complicity"
+slug: cacc
+date: 2021-07-12
 
-img_main: /assets/photography/20150703-duplicityensemble-01.jpg
-img_square: /assets/design/2013-ofatx-07.gif
+img_main: /assets/design/2021-cacc-02-main.jpg
+img_square: /assets/design/2021-cacc-01-square.jpg
 
-intro: "Lorem ipsum short intro to the project."
+intro: "In the midst of the national backlash against President Trump’s first term, a pair of nonprofit watchdog organizations, Accountable.US and American Oversight, sought to turn the rhetoric of corporate leaders who had condemned the administration’s most egregious failures and excesses into genuine professional consequences for the officials who had carried out Trump’s policies."
 
-case_study_text: "Lorem ipsum brief preview summary of the project."
+case_study_text: "Photo research case study"
 
 my_role:
-  - Lorem ipsum role 1
-  - Lorem ipsum role 2
-  - Lorem ipsum role 3
+  - Project Management
+  - Design Discovery
+  - Brand Design
+  - Web Design
+  - Photo Research
+  - Frontend Polishing
 
-client: "Lorem ipsum client"
-employer: "Lorem ipsum employer"
+client: "Accountable.US"
+employer: "Patronage"
 ---
 
-## Background
+<section class="cs-section" markdown="1">
+### Photo Research
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Based on the discovery process, and having worked previously with Accountable.US, I knew the project would be thoroughly researched and text heavy. To keep the site visually compelling, I sought to empower editors with numerous opportunities for photographic content to both emphasize the seriousness of the administration’s actions, and to drive home the contributions of specific individuals to everything the White House did. My design process delved into the Getty archive to source highly emotional imagery intended to breathe life into the words on the screen.
 
-## Process
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/design/2021-cacc-03-photoresearch-01.jpg" alt="A frame from the 2021 Campaign Against Corporate Complicity website design by Stephen Cummings. This section features text about the the 2017 Unite the Right rally in Charlottesville, VA, and photos sources from Getty Images of white supremacist demonstrations, an injured woman, and President Trump at his press conference in the events' aftermath." />
+  </div>
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/design/2021-cacc-03-photoresearch-03.jpg" alt="A frame from the 2021 Campaign Against Corporate Complicity website design by Stephen Cummings. This section outlines three of 'The Trump Administration's Greatest Transgressions', alongside accompanying photos from Getty Images." />
+  </div>
+</section>
 
-## Outcome
+<section class="cs-section" markdown="1">
+### Branding & Color Scheme
 
-Ut enim ad minim veniam.
+With no budget specifically allocated to branding, I kept font selections simple, rendering the logo in Metropolis, a clean, readable sans-serif. Befitting the research-intensity of the project, Roboto Slab carried the bulk of the site copy, while Roboto Condensed helped buttons stand out.
+
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/design/2021-cacc-03-photoresearch-02.jpg" alt="A frame from the 2021 Campaign Against Corporate Complicity website design by Stephen Cummings. This section features the website header, including the Campaign Against Corporate Complicity logo and site navigation, as well as a full bleed photograph of former acting United States Secretary of Homeland Security Chad Wolf with a Getty Images watermark, and some placeholder text in a call-to-action overlay in front of the photo." />
+  </div>
+
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/design/2021-cacc-04-branding-02.jpg" alt="Fonts and colors for the 2021 Campaign Against Corporate Complicity website design by Stephen Cummings." />
+  </div>
+
+  The palette was rooted in a combination of Accountable.US and American Oversight brand colors from that time. I used gradient overlays to mute and integrate background images, and added a corporate-inspired grey gradient, plus a dull gold accent as a nod to President Trump’s forever gilt.
+
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/design/2021-cacc-04-branding-03.jpg" alt="A frame from the 2021 Campaign Against Corporate Complicity website design by Stephen Cummings. This section features photos of 'Trump's key enablers', specifically Rudolph Giuliani, William Barr, and Stephen Miller. In a background image, Trump administration Press Secretary Sarah Huckabee Sanders can be seen gesturing in front of reporters and photographers outside the White House." />
+  </div>
+
+
+</section>
