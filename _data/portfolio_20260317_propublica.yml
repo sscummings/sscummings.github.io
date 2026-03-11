@@ -5,6 +5,6 @@
   # intro: "Sample intro"
 
   case_studies:
-    - /case-studies/sample-project-c/
     - /case-studies/cacc/
+    - /case-studies/caleitc4me/
     - /case-studies/sample-project-b/
