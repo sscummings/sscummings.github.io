@@ -1,8 +1,8 @@
 - name: "Sample Portfolio"
 
-  headline: "Stephen is a lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo."
+  headline: "Stephen Cummings is a designer and photographer adept at shaping and building compelling visual narratives."
 
-  intro: "A selection of sample case studies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque neque eget commodo."
+  # intro: "Sample intro"
 
   case_studies:
     - /case-studies/sample-project-c/
