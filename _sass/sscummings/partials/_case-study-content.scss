@@ -90,6 +90,38 @@
     @include mq-up($lg-up) {
         margin: $grid-gutter-width 0;
     }
+
+    &.cs-salad-programs {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: $grid-gutter-width/2;
+        flex-wrap: wrap;
+
+        > * {
+            width: calc(50% - #{$grid-gutter-width}/4);
+        }
+
+        @include mq-up($md-up) { 
+            width: calc(680px + (100vw - 680px) - #{$grid-gutter-width}*2);
+            margin-left: calc(-1 * ((100vw - 680px)/2 - #{$grid-gutter-width}));
+            margin-right: calc(-1 * ((100vw - 680px)/2 - #{$grid-gutter-width}));
+
+            > * {
+                width: calc(25% - #{$grid-gutter-width}*3/8);
+            }
+        }
+
+        @include mq-up($lg-up) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+
+            > * {
+                width: calc(50% - #{$grid-gutter-width}/4);
+            }
+        }
+    }
 }
 
 .cs-overview {

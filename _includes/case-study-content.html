@@ -28,8 +28,8 @@
         {% endif %}
 
         <div class="cs-meta-item">
-            <h3>Year</h3>
-            <p>{{ post.date | date: "%Y" }}</p>
+            <h3>Year{% if post.years %}s{% endif %}</h3>
+            <p>{{ post.years | default: (post.date | date: "%Y") }}</p>
         </div>
     </div>
 {% endcapture %}
