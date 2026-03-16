@@ -52,8 +52,8 @@
 
     <div class="cs-main">
         {% if post.img_main %}
-            <div class="cs-image-main image-radius-standard">
-                <img src="{{ post.img_main }}">
+            <div class="cs-image-main image-radius-standard {{ post.img_main_class }}">
+                <img src="{{ post.img_main }}" alt="{{ post.title }}">
             </div>
         {% endif %}
 
