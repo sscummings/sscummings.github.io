@@ -286,6 +286,9 @@ var caseStudiesLightbox = function () {
       slide.style.display = i === current ? "block" : "none";
     });
 
+    // Reset scroll position
+    lightbox.scrollTop = 0;
+
     const id = slides[current].dataset.id;
     history.replaceState(null, null, "#" + id);
 
