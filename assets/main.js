@@ -249,6 +249,9 @@ var caseStudiesLightbox = function () {
   let current = 0;
   let scrollPosition = 0;
 
+  let touchStartX = 0;
+  let touchEndX = 0;
+
   function open(index) {
 
     current = (index !== undefined) ? index : 0;
@@ -361,6 +364,28 @@ var caseStudiesLightbox = function () {
 
     if(index !== -1){
       open(index);
+    }
+
+  });
+
+  /* --- swipe navigation (mobile) --- */
+
+  lightbox.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener("touchend", e => {
+
+    touchEndX = e.changedTouches[0].screenX;
+
+    const swipeDistance = touchEndX - touchStartX;
+
+    if(Math.abs(swipeDistance) < 50) return; // ignore tiny swipes
+
+    if(swipeDistance < 0){
+      next(); // swipe left
+    } else {
+      prev(); // swipe right
     }
 
   });
