@@ -260,6 +260,8 @@ var caseStudiesLightbox = function () {
   function close() {
     lightbox.style.display = "none";
     document.body.style.overflow = "";
+
+    history.replaceState(null, null, window.location.pathname);
   }
 
   function render() {
@@ -267,6 +269,9 @@ var caseStudiesLightbox = function () {
     slides.forEach((slide,i)=>{
       slide.style.display = i === current ? "block" : "none";
     });
+
+    const id = slides[current].dataset.id;
+    history.replaceState(null, null, "#" + id);
 
     prevBtn.classList.toggle("active", current > 0);
     nextBtn.classList.toggle("active", current < slides.length - 1);
@@ -329,6 +334,37 @@ var caseStudiesLightbox = function () {
     if(e.key === "ArrowLeft") prev();
 
   });
+
+  window.addEventListener("hashchange", () => {
+
+    const hash = window.location.hash.replace("#", "");
+
+    if(!hash){
+      close();
+      return;
+    }
+
+    const index = slides.findIndex(slide => slide.dataset.id === hash);
+
+    if(index !== -1){
+      open(index);
+    }
+
+  });
+
+  /* --- open from URL hash --- */
+
+  const hash = window.location.hash.replace("#", "");
+
+  if(hash){
+
+    const index = slides.findIndex(slide => slide.dataset.id === hash);
+
+    if(index !== -1){
+      open(index);
+    }
+
+  }
 
 };
 
