@@ -11,6 +11,10 @@
     @include mq-up($lg-up) {
         padding: 0;
     }
+
+    a {
+        color: $white;
+    }
 }
 
 .cs-slide {
@@ -67,6 +71,7 @@
     border-radius: 50%;
     border: none;
     background-color: $light-gray;
+    color: $black;
     cursor: pointer;
 
     &:hover {
