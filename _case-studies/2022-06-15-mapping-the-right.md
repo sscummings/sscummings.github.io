@@ -26,7 +26,7 @@ employer: "Patronage"
 
 <section class="cs-section" markdown="1">
 
-## Interactive Network Visualization
+### Interactive Network Visualization
 
 Working with my supervisor, I helped develop the concept for an interactive network visualization representing relationships between organizations within the forthcoming dataset. Each organization would appear as a node within a web of connections, with links illustrating financial or institutional relationships between groups.
 
@@ -41,7 +41,7 @@ I developed wireframes to illustrate how the system could function, including ne
 
 <section class="cs-section" markdown="1">
 
-## Iterative Design & Engineering Collaboration
+### Iterative Design & Engineering Collaboration
 
 After the concept phase, I translated the wireframes into fully visualized site designs. Adapting colors and typography from the recently refreshed Accountable.US brand, I developed a visual system centered on a luminous network map with red and gold accents over a dark background to emphasize the illuminating potential of the dataset in an environment flooded with dark money.
 
