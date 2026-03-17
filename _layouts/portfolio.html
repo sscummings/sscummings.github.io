@@ -9,6 +9,8 @@ container:  none
 
 {% assign headline = page.headline | default: groups[0].headline %}
 {% assign intro = page.intro | default: groups[0].intro %}
+{% assign end_headline = page.end_headline | default: groups[0].end_headline %}
+{% assign end_text = page.end_text | default: groups[0].end_text %}
 
 {% assign case_study_posts = nil %}
 
@@ -57,6 +59,21 @@ container:  none
 
         </div>
     </div>
+
+    {% if end_headline or end_text %}
+        <div class="end-section">
+            <div class="container-medium">
+                <div class="design-group-heading text-left">
+                    {% if end_headline %}
+                        <h2>{{ end_headline }}</h2>
+                    {% endif %}
+                    {% if end_text %}
+                        <p>{{ end_text }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
 
     {% include case-study-lightbox.html posts=case_study_posts %}
 
