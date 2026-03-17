@@ -43,8 +43,12 @@ I developed wireframes to illustrate how the system could function, including ne
 
 ## Iterative Design & Engineering Collaboration
 
-After the concept phase, I translated the wireframes into fully visualized site designs. Adapting colors and typography from the recently refreshed Accountable.US brand, I developed a visual system centered on a luminous network map with red and gold accents over a dark background to emphasize the illuminating potential of the dataset in a world replete with flows dark money.
+After the concept phase, I translated the wireframes into fully visualized site designs. Adapting colors and typography from the recently refreshed Accountable.US brand, I developed a visual system centered on a luminous network map with red and gold accents over a dark background to emphasize the illuminating potential of the dataset in an environment flooded with dark money.
 
-Throughout the process I worked closely with front- and back-end developers to evaluate technical constraints and refine the design as the project evolved. Although the final scope shifted away from the full interactive network visualization, early versions of the system were successfully prototyped alongside the project’s searchable database.
+Throughout the process I worked closely with front- and back-end developers to evaluate technical constraints and refine the design as the project evolved. Although the final scope shifted away from the full, interactive network visualization, early versions of the system were successfully prototyped alongside the project’s searchable database.
+
+  <div class="cs-image-block image-radius-standard image-inner-shadow cs-mtr-shadow">
+    <img src="/assets/design/2022-mappingtheright-06-tour.gif" alt="An animated tour of pages designs by Stephen Cummings for Mapping the Right." />
+  </div>
 
 </section>
