@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $link-color;
   text-decoration: underline;
+  text-decoration-style: dotted;
   text-underline-offset: 0.15em;
 
   // &:visited {
@@ -87,8 +88,7 @@ a {
 
   &:hover {
     color: $link-hover;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
+    text-decoration-style: solid;
   }
 
   .dark & {
