@@ -247,19 +247,32 @@ var caseStudiesLightbox = function () {
   const closeBtn = lightbox.querySelector(".cs-close");
 
   let current = 0;
+  let scrollPosition = 0;
 
   function open(index) {
+
     current = (index !== undefined) ? index : 0;
 
+    scrollPosition = window.scrollY;
+
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
+
     lightbox.style.display = "block";
-    document.body.style.overflow = "hidden";
 
     render();
   }
 
   function close() {
+
     lightbox.style.display = "none";
-    document.body.style.overflow = "";
+
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+
+    window.scrollTo(0, scrollPosition);
 
     history.replaceState(null, null, window.location.pathname);
   }
