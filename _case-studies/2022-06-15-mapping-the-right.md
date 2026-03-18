@@ -51,6 +51,8 @@ Throughout the process I worked closely with front- and back-end developers to e
     <img src="/assets/design/2022-mappingtheright-06-tour.gif" alt="An animated tour of pages designs by Stephen Cummings for Mapping the Right." />
   </div>
 
+<p class="cs-footnote">Please note that most if not all of the numbers in these designs are placeholder, and do not necessarily reflect actual or disclosed amounts donated or received by any individual or organization.</p>
+
 </section>
 
 <section class="cs-section" markdown="1">
