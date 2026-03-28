@@ -21,6 +21,15 @@ a.image-hover-zoom {
     }
 }
 
+.image-radius-small {
+    border-radius: 10px;
+    overflow: hidden;
+
+    &.image-inner-shadow::after {
+        border-radius: 10px;
+    }
+}
+
 .image-inner-shadow {
     position: relative;
 

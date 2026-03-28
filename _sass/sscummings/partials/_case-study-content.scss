@@ -91,6 +91,32 @@
         margin: $grid-gutter-width 0;
     }
     
+    &.cs-two-by-two {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: $grid-gutter-width/2;
+        flex-wrap: wrap;
+        
+        > * {
+            width: calc(50% - #{$grid-gutter-width}/4);
+        }
+    }
+
+    &.cs-two-by-two-sm-up {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: $grid-gutter-width/2;
+        flex-wrap: wrap;
+
+        @include mq-up($sm-up) { 
+            > * {
+                width: calc(50% - #{$grid-gutter-width}/4);
+            }
+        }
+    }
+    
     &.cs-salad-programs {
         display: flex;
         width: 100%;
