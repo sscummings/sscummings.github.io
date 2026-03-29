@@ -6,7 +6,7 @@ date: 2015-09-05
 years: 2014 - 2015
 
 img_main: /assets/design/2015-duplicity-02.gif
-img_square: /assets/design/2015-duplicity_shakespeare_01_instagram.jpg
+img_square: /assets/design/2015-duplicity_shakespeare_01_square.jpg
 img_square_class: image-inner-shadow
 
 intro: "Chicago-based theatre company Duplicity Ensemble premiered their first original musical in 2014, and over a brief but fertile collaboration, debuted two more musicals and three plays. The company's two years together included independent productions in Chicago venues, and twice participating in both the Chicago Fringe Festival and the Chicago Musical Theatre Festival."
