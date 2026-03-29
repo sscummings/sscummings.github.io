@@ -9,7 +9,7 @@ img_main: /assets/design/2015-duplicity-02.gif
 img_square: /assets/design/2015-duplicity_shakespeare_01_instagram.jpg
 img_square_class: image-inner-shadow
 
-intro: "Duplicity Ensemble was a Chicago-based theater company creating original plays and musicals from 2014 through 2015. During their two-year run, the company debuted three plays and three musicals, producing independent runs in Chicago venues and participating twice each in the Chicago Fringe Festival and the Chicago Musical Theatre Festival."
+intro: "Chicago-based theatre company Duplicity Ensemble premiered their first original musical in 2014, and over a brief but fertile collaboration, debuted two more musicals and three plays. The company's two years together included independent productions in Chicago venues, and twice participating in both the Chicago Fringe Festival and the Chicago Musical Theatre Festival."
 
 case_study_text: "Illustration case study"
 
@@ -28,7 +28,7 @@ my_role:
 
 ### Translating Concept to Image
 
-I designed and illustrated posters and digital marketing materials for several of the company’s productions. Each project began with reading the script or discussing the work in development to understand tone and themes. From there, I developed original artwork to evoke the spirit of the production and spark audience interest.
+As a creative collaborator, I designed and illustrated posters and digital marketing materials for several of the company’s productions. Each project began with reading a script and/or discussing work in development to understand tone and themes. From there, I developed original artwork to spark audience interest and evoke the spirit of each production.
 
   <div class="cs-image-block cs-image-center cs-max-height-window">
     <img src="/assets/design/2015-duplicity-01.gif" alt="Poster design by Stephen Cummings for 'A Midwinter Night's Tale', an original play by Duplicity Ensemble" />
