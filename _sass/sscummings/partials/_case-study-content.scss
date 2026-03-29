@@ -90,6 +90,19 @@
     @include mq-up($lg-up) {
         margin: $grid-gutter-width 0;
     }
+
+    &.cs-image-center {
+        width: 100%;
+        
+        > * {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &.cs-max-height-window img {
+        max-height: calc(100vh - #{$grid-gutter-width}*2);
+    }
     
     &.cs-two-by-two {
         display: flex;
