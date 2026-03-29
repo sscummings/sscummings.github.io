@@ -23,6 +23,8 @@
 
             {% assign cs_id = post.slug | default: post.url %}
 
+            {% assign cs_context = "cs-context-lightbox" %}
+
             {% if post %}
             <div class="cs-slide" data-id="{{ cs_id }}">
                 {% include case-study-content.html post=post %}

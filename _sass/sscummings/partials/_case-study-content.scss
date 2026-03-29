@@ -1,5 +1,10 @@
 
 .case-study-content {
+
+    .cs-pre-title {
+        text-transform: uppercase;
+        margin-bottom: 0.25em;
+    }
     
     h1 {
         line-height: 1.1;
@@ -57,15 +62,22 @@
 
     li {
         display: inline-block;
-        background-color: $darkest-gray;
+        background-color: $lighter-gray;
         padding: 0.5em 1em;
         line-height: 1;
         margin: 0.3em 0.15em;
         border-radius: 1em;
 
         @include mq-up($lg-up) {
-            background-color: darken($darkest-gray, 5%);
             margin: 0.25em 0.1em;
+        }
+
+        &.cs-context-lightbox {
+            background-color: $darkest-gray;
+
+            @include mq-up($lg-up) {
+                background-color: darken($darkest-gray, 5%);
+            }
         }
     }
 }
@@ -93,7 +105,7 @@
 
     &.cs-image-center {
         width: 100%;
-        
+
         > * {
             display: block;
             margin: auto;
@@ -163,11 +175,13 @@
     }
 }
 
+$cs-overview-padding: clamp($grid-gutter-width/2, 2.5vw, $grid-gutter-width*1.15);
+$cs-overview-padding-lg-lightbox: calc(#{$header-height} + #{$section-padding}/2);
+
 .cs-overview {
     @include mq-up($lg-up) {
         width: calc(100%*5/12 - #{$grid-gutter-width}/2);
         max-width: 480px;
-        background-color: $darkest-gray;
 
         p, ul, ol {
             font-size: $base-font-size;
@@ -175,9 +189,8 @@
 
         .cs-overview-inner {
             position: sticky;
-            top: 0;
-            padding: clamp($grid-gutter-width/2, 2.5vw, $grid-gutter-width*1.15);
-            padding-top: calc(#{$header-height} + #{$section-padding}/2);
+            top: $section-padding;
+            padding: $cs-overview-padding;
             padding-bottom: $section-padding;
             max-height: 100vh;
             overflow-y: auto;
@@ -186,6 +199,17 @@
     // @include mq-up($xl-up) {
     //     width: calc(100%/3 - #{$grid-gutter-width}/2);
     // }
+    
+    &.cs-context-lightbox {
+        @include mq-up($lg-up) {
+            background-color: $darkest-gray;
+            
+            .cs-overview-inner {
+                top: 0;
+                padding-top: $cs-overview-padding-lg-lightbox;
+            }
+        }
+    }
 }
 
 .cs-main {
@@ -195,13 +219,16 @@
         width: calc(100%*7/12 - #{$grid-gutter-width}/2);
         max-width: 700px;
         margin: auto;
-        padding-top: calc(#{$header-height} + #{$section-padding}/2);
+        padding-top: $cs-overview-padding;
         padding-bottom: $section-padding;
         min-height: 100vh;
     }
-    // @include mq-up($xl-up) {
-    //     width: calc(100%*7/12 - #{$grid-gutter-width}/2);
-    // }
+    
+    &.cs-context-lightbox {
+        @include mq-up($lg-up) {
+            padding-top: $cs-overview-padding-lg-lightbox;
+        }
+    }
 }
 
 .cs-footnote {

@@ -7,7 +7,7 @@
             <h3>My Role</h3>
             <ul class="cs-role">
             {% for role in post.my_role %}
-                <li>{{ role }}</li>
+                <li class="{{ cs_context }}">{{ role }}</li>
             {% endfor %}
             </ul>
             </div>
@@ -36,8 +36,12 @@
 
 <div class="case-study-content">
 
-    <div class="cs-overview">
+    <div class="cs-overview {{ cs_context }}">
         <div class="cs-overview-inner">
+
+            {% if cs_context == "cs-context-single" %}
+                <p class="cs-pre-title">Case Study</p>
+            {% endif %}
             <h1>{{ post.title }}</h1>
 
             {% if post.intro %}
@@ -50,7 +54,7 @@
         </div>
     </div>
 
-    <div class="cs-main">
+    <div class="cs-main {{ cs_context }}">
         {% if post.img_main %}
             <div class="cs-image-main image-radius-standard {{ post.img_main_class }}">
                 <img src="{{ post.img_main }}" alt="{{ post.title }}">
