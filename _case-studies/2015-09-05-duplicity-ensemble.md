@@ -9,7 +9,7 @@ img_main: /assets/design/2015-duplicity-02.gif
 img_square: /assets/design/2015-duplicity_shakespeare_01_square.jpg
 img_square_class: image-inner-shadow
 
-intro: "Chicago-based theatre company Duplicity Ensemble premiered their first original musical in 2014, and over a brief but fertile two years debuted two more musicals and three plays. The company's run included independent productions in Chicago venues, and twice participating in both the Chicago Fringe Festival and the Chicago Musical Theatre Festival."
+intro: "Chicago-based theatre company Duplicity Ensemble premiered their first original musical in 2014, and over a brief but fertile two-year run, debuted two more musicals and three plays. The company staged independent productions at Chicago venues, as well as in the Chicago Musical Theatre Festival and the Chicago Fringe Festival."
 
 case_study_text: "Illustration case study"
 
