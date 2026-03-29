@@ -28,6 +28,14 @@ container:  none
   {% assign case_study_posts = site.case-studies %}
 {% endif %}
 
+{% assign case_studies_count = case_study_posts | size %}
+
+{% assign grid_class = "three-projects" %}
+
+{% if case_studies_count == 4 %}
+  {% assign grid_class = "four-projects" %}
+{% endif %}
+
 <section class="portfolio">
     
     {% if headline or intro %}
@@ -51,7 +59,7 @@ container:  none
     {% endif %}
 
     <div class="container-fluid">
-        <div class="projects-grid three-projects">
+        <div class="projects-grid {{ grid_class }}">
 
         {% for post in case_study_posts %}
             {% include case-study-preview.html post=post index=forloop.index0 %}

@@ -55,7 +55,7 @@
 
 .projects-grid {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: $grid-gutter-width/2;
     row-gap: $grid-gutter-width;
     flex-wrap: wrap;
@@ -100,6 +100,10 @@
 
     .projects-grid.four-projects .project-block {
         width: calc(100%/2 - 15px / 2);
+
+        h3 {
+            font-size: clamp(1.5em, 3vw, 2em);
+        }
     }
 }
 
@@ -124,5 +128,9 @@
 
     .projects-grid.four-projects .project-block {
         width: calc(100%/4 - 15px * 3 / 4);
+
+        h3 {
+            font-size: clamp(1.5em, 2vw, 2em);
+        }
     }
 }
