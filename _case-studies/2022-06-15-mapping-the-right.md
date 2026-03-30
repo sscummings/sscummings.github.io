@@ -61,4 +61,8 @@ Throughout the process I worked closely with front- and back-end developers to e
 
 For a scrollable view of these designs, check out <a href="https://www.figma.com/proto/nWLZTI2ycK2GOJcMxTmfGK/Stephen-Cummings-Portfolio---Mapping-the-Right?page-id=0%3A1&node-id=1-3&p=f&viewport=161%2C336%2C0.17&t=CjzswQHLULQXVNG8-1&scaling=scale-down-width&content-scaling=fixed" target="_blank">Mapping the Right in Figma</a>.
 
+  <div class="cs-image-block">
+    <iframe style="width: 100%; height: calc(100vh - 160px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/nWLZTI2ycK2GOJcMxTmfGK/Stephen-Cummings-Portfolio---Mapping-the-Right?node-id=1-282&p=f&viewport=105%2C186%2C0.06&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+  </div>
+
 </section>
