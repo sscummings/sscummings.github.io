@@ -10,7 +10,7 @@ img_square_class: image-inner-shadow
 
 intro: "When Charlie Crist sought to reclaim the Florida governorship, I joined the campaign as deputy digital director. With activity ramping up continuously, we leaned into visual storytelling to communicate momentum, encourage participation, and circulate the campaign’s message across multiple platforms."
 
-case_study_text: "Audience angagement case study"
+case_study_text: "Audience engagement case study"
 
 my_role:
   - Deputy Digital Director
