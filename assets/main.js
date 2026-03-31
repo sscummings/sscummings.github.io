@@ -252,7 +252,11 @@ var caseStudiesLightbox = function () {
   let touchStartX = 0;
   let touchEndX = 0;
 
+  let lastFocusedElement = null;
+
   function open(index) {
+
+    lastFocusedElement = document.activeElement;
 
     current = (index !== undefined) ? index : 0;
 
@@ -263,6 +267,11 @@ var caseStudiesLightbox = function () {
     document.body.style.width = "100%";
 
     lightbox.style.display = "block";
+
+    // defer focus so browser doesn't ignore it
+    setTimeout(() => {
+      lightbox.focus();
+    }, 0);
 
     render();
   }
@@ -278,6 +287,10 @@ var caseStudiesLightbox = function () {
     window.scrollTo(0, scrollPosition);
 
     history.replaceState(null, null, window.location.pathname);
+
+    if(lastFocusedElement){
+      lastFocusedElement.focus();
+    }
   }
 
   function render() {
@@ -318,6 +331,8 @@ var caseStudiesLightbox = function () {
 
       e.preventDefault();
 
+      this.blur();
+
       let id = this.dataset.id;
 
       let index = slides.findIndex(slide => slide.dataset.id === id);
@@ -344,7 +359,7 @@ var caseStudiesLightbox = function () {
 
   /* --- keyboard navigation --- */
 
-  document.addEventListener("keydown", e=>{
+  window.addEventListener("keydown", e=>{
 
     if(lightbox.style.display !== "block") return;
 
