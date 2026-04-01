@@ -5,7 +5,7 @@ slug: charlie-crist
 date: 2014-11-04
 
 img_main: /assets/design/20141103-charliecrist-01.jpg
-img_square: /assets/design/2014-crist-01-vote_01.jpg
+img_square: /assets/design/2014-charliecrist-01-gotv.jpg
 img_square_class: image-inner-shadow
 
 intro: "When Charlie Crist sought to reclaim the Florida governorship, I joined the campaign as deputy digital director. With activity ramping up continuously, we leaned into visual storytelling to communicate momentum, encourage participation, and circulate the campaign’s message across multiple platforms."
