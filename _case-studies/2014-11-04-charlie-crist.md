@@ -51,11 +51,11 @@ With day to day organizing efforts from the panhandle to the Keys, every campaig
 I coordinated with campaign photographers to ensure coverage of our most prominent events, and spent time reviewing and selecting images for use across the campaign’s website, blog, email program, and social channels. I focused on aligning image selection with message, tone, and audience — ensuring that visuals reinforced both the urgency and accessibility of the campaign’s storytelling. Careful archiving was key to having the right photos at hand for rapid response and campaign messaging.
 
   <div class="cs-image-block image-radius-standard">
-    <img src="/assets/design/20141024-charliecrist-gotv-01.jpg" alt="Opening page of the 2014 Charlie Crist for Governor Get Out The Vote signup series, featuring a photo by Brian Blanco of Charlie Crist waving to a crowd" />
+    <img src="/assets/design/20141024-CharlieCrist-gotv-01.jpg" alt="Opening page of the 2014 Charlie Crist for Governor Get Out The Vote signup series, featuring a photo by Brian Blanco of Charlie Crist waving to a crowd" />
   </div>
 
   <div class="cs-image-block image-radius-standard">
-    <img src="/assets/design/20141024-charliecrist-gotv-02.jpg" alt="Shift selection page of the 2014 Charlie Crist for Governor Get Out The Vote signup series, featuring a photo by Brian Blanco of Charlie Crist lauging with supporters" />
+    <img src="/assets/design/20141024-CharlieCrist-gotv-02.jpg" alt="Shift selection page of the 2014 Charlie Crist for Governor Get Out The Vote signup series, featuring a photo by Brian Blanco of Charlie Crist lauging with supporters" />
   </div>
 
   <div class="cs-image-block image-radius-standard">
@@ -69,7 +69,7 @@ I also designed and developed a range of digital tools to support organizing and
   </div>
 
   <div class="cs-image-block image-radius-standard">
-    <img src="/assets/design/20140911-charliecrist-05-vbm.jpg" alt="Vote-by-Mail confirmation page, part of the 2014 Charlie Crist for Governor 'Commit to Vote' signup series, featuring a photo by Brian Blanco of Charlie Crist ambracing a supporter" />
+    <img src="/assets/design/20140911-CharlieCrist-05-vbm.jpg" alt="Vote-by-Mail confirmation page, part of the 2014 Charlie Crist for Governor 'Commit to Vote' signup series, featuring a photo by Brian Blanco of Charlie Crist ambracing a supporter" />
   </div>
 
   <div class="cs-image-block image-radius-standard">
