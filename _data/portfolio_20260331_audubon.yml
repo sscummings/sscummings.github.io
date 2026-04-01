@@ -1,0 +1,13 @@
+- name: "Audubon Photo Editor Portfolio"
+
+  headline: "Stephen Cummings is a photo editor and visual storyteller connecting audiences to compelling, mission-driven narratives."
+
+  # intro: "Sample intro"
+
+  case_studies:
+    - /case-studies/max-ihlenburg-sweden/
+    - /case-studies/charlie-crist/
+    - /case-studies/nextgen-policy/
+  
+  end_headline: "Building stories through collaboration"
+  end_text: I work across teams to source, shape, and deliver impactful visual storytelling &mdash; coordinating, editing, refining, and creating systems that support strong narratives. <br /><br />See some of my <a href="/photography">photography</a>, more of my <a href="/background">background</a>, or get in touch at <a href="mailto:sscummings@gmail.com">sscummings@gmail.com</a>.
