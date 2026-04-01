@@ -27,7 +27,7 @@ When Max, a colleague from the International Center of Photography, asked for fe
 Check out Max's pitch <a href="https://www.figma.com/proto/QRZGzauB8kXs8uvO8QU6kU/Max-Ihlenburg---Clear-Cutting-Sweden%E2%80%99s-Indigenous-Land?page-id=0%3A1&node-id=45-105&p=f&viewport=466%2C25%2C0.06&t=N1b8yhTaqCq3HPmG-1&scaling=scale-down-width&content-scaling=fixed" target="_blank">"Clear-Cutting Sweden's Indigenous Land"</a> in Figma.
 
   <div class="cs-image-block">
-    <iframe style="width: 100%; height: calc(100vh - 120px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/QRZGzauB8kXs8uvO8QU6kU/Max-Ihlenburg---Clear-Cutting-Sweden%E2%80%99s-Indigenous-Land?page-id=0%3A1&node-id=45-105&p=f&viewport=466%2C25%2C0.06&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+    <iframe style="width: 100%; height: calc(100vh - 120px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/QRZGzauB8kXs8uvO8QU6kU/Max-Ihlenburg---Clear-Cutting-Sweden%E2%80%99s-Indigenous-Land?page-id=0%3A1&node-id=45-105&p=f&viewport=466%2C25%2C0.06&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen loading="lazy"></iframe>
   </div>
 
 </section>

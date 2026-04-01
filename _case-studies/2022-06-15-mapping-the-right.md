@@ -33,7 +33,7 @@ Working with my supervisor, I helped develop the concept for an interactive netw
 I developed wireframes to illustrate how the system could function, including network node sizing based on financial activity and filtering within the database search.
 
   <div class="cs-image-block image-radius-standard">
-    <img src="/assets/design/2022-mappingtheright-05-wireframe-01.jpg" alt="A wireframe from the 2022 design process by Stephen Cummings for Mapping the Right." />
+    <img src="/assets/design/2022-mappingtheright-05-wireframe-01.jpg" alt="A wireframe from the 2022 design process by Stephen Cummings for Mapping the Right." loading="lazy" />
   </div>
 
 </section>
@@ -48,7 +48,7 @@ After the concept phase, I translated the wireframes into fully visualized site 
 Throughout the process I worked closely with front- and back-end developers to evaluate technical constraints and refine the design as the project evolved. Although the final scope shifted away from the full, interactive network visualization, early versions of the system were successfully prototyped alongside the project’s searchable database.
 
   <div class="cs-image-block image-radius-standard image-inner-shadow cs-mtr-shadow">
-    <img src="/assets/design/2022-mappingtheright-06-tour.gif" alt="An animated tour of pages designs by Stephen Cummings for Mapping the Right." />
+    <img src="/assets/design/2022-mappingtheright-06-tour.gif" alt="An animated tour of pages designs by Stephen Cummings for Mapping the Right." loading="lazy" />
   </div>
 
 <p class="cs-footnote">Please note that most if not all of the numbers in these designs are placeholder, and do not necessarily reflect actual or disclosed amounts donated or received by any individual or organization.</p>
@@ -62,7 +62,7 @@ Throughout the process I worked closely with front- and back-end developers to e
 For a scrollable view of these designs, check out <a href="https://www.figma.com/proto/nWLZTI2ycK2GOJcMxTmfGK/Stephen-Cummings-Portfolio---Mapping-the-Right?page-id=0%3A1&node-id=1-3&p=f&viewport=161%2C336%2C0.17&t=CjzswQHLULQXVNG8-1&scaling=scale-down-width&content-scaling=fixed" target="_blank">Mapping the Right in Figma</a>.
 
   <div class="cs-image-block">
-    <iframe style="width: 100%; height: calc(100vh - 160px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/nWLZTI2ycK2GOJcMxTmfGK/Stephen-Cummings-Portfolio---Mapping-the-Right?node-id=1-282&p=f&viewport=105%2C186%2C0.06&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+    <iframe style="width: 100%; height: calc(100vh - 160px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/nWLZTI2ycK2GOJcMxTmfGK/Stephen-Cummings-Portfolio---Mapping-the-Right?node-id=1-282&p=f&viewport=105%2C186%2C0.06&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen loading="lazy"></iframe>
   </div>
 
 </section>

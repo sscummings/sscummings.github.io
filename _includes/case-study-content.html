@@ -57,7 +57,7 @@
     <div class="cs-main {{ cs_context }}">
         {% if post.img_main %}
             <div class="cs-image-main image-radius-standard {{ post.img_main_class }}">
-                <img src="{{ post.img_main }}" alt="{{ post.title }}">
+                <img src="{{ post.img_main }}" alt="{{ post.title }}" loading="lazy">
             </div>
         {% endif %}
 
