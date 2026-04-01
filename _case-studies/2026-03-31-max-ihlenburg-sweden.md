@@ -13,8 +13,8 @@ intro: "Maximilian Ihlenburg is a documentary photographer and filmmaker focusin
 case_study_text: "Photo editing case study"
 
 my_role:
-  - Photo editing
-  - Copy editing
+  - Photo Editing
+  - Copy Editing
 
 ---
 
