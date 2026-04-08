@@ -75,7 +75,7 @@ Following the initial launch, I continued working with NextGen Policy to expand 
 
 ### Keep Exploring
 
-For a scrollable view of these designs, check out <a href="https://www.figma.com/proto/o781qwIkQhRB487CWPIKx1/Stephen-Cummings-Portfolio---NextGen-Policy?node-id=1-35&viewport=517%2C348%2C0.33&t=3Yq63Cqld6n12Cwk-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" target="_blank">NextGen Policy in Figma</a>.
+For a scrollable view of these designs, check out <a href="https://www.figma.com/proto/o781qwIkQhRB487CWPIKx1/Stephen-Cummings---Portfolio---NextGen-Policy?node-id=1-3&p=f&viewport=69%2C277%2C0.05&t=mP2KpCXgO0jp0aIO-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" target="_blank">NextGen Policy in Figma</a>.
 
   <div class="cs-image-block">
     <iframe style="width: 100%; height: calc(100vh - 160px); border-radius: 20px; overflow: hidden;" frameborder="0" src="https://embed.figma.com/proto/o781qwIkQhRB487CWPIKx1/Stephen-Cummings-Portfolio---NextGen-Policy?node-id=1-35&viewport=517%2C348%2C0.33&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen loading="lazy"></iframe>
