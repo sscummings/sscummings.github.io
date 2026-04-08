@@ -17,6 +17,7 @@ my_role:
   - Design Discovery
   - Template Architecture
   - UI/UX Design
+  - Brand-aligned Visual Design
   - Frontend Development (HTML/MJML)
   - Design-Engineering Collaboration
   - Cross-client Coordination
@@ -28,9 +29,9 @@ employer: "Patronage"
 
 <section class="cs-section" markdown="1">
 
-### Design Within Constraints
+### Designing Inside the Lines
 
-HTML email development operates under severe technical limitations, requiring compatibility across outdated and inconsistent email clients from Microsoft Outlook to Gmail to Proton Mail and more. This project operated within Salesforce’s Pardot editor, adding an additional layer of complexity given the limits to how templates can be structured while maintaining user-friendly editing.
+HTML email development operates under severe technical limitations, requiring compatibility across outdated and inconsistent email clients from Microsoft Outlook to Gmail to Proton Mail and more. This project operated within Salesforce’s Pardot editor, adding an additional layer of complexity given how templates can be structured while maintaining user-friendly editing.
 
 As the designer on the project, I approached it as a systems design challenge, balancing visual ambition with the realities of table-based layouts, variable CSS support, and workarounds for pitfalls like dark mode rendering. The goal was not perfection, but consistency and reliability across environments.
 

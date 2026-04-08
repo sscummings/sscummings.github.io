@@ -14,6 +14,7 @@ case_study_text: "Photo editing case study"
 my_role:
   - Photo Editing
   - Copy Editing
+  - Layout Design
 
 ---
 
