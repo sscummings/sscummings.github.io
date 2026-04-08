@@ -43,6 +43,10 @@ a.image-hover-zoom {
         box-shadow: inset 0 0 80px rgba($black, 0.06);
         pointer-events: none;
     }
+
+    &.image-inner-shadow-light {
+        box-shadow: inset 0 0 40px rgba($black, 0.01);
+    }
 }
 
 a.arrow-link {
