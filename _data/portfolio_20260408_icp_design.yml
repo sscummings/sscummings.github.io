@@ -1,0 +1,13 @@
+- name: "ICP Graphic Design Portfolio"
+
+  headline: "Stephen Cummings is a designer translating ideas into effective visual communication across print, web, and exhibition spaces."
+
+  # intro: "Sample intro"
+
+  case_studies:
+    - /case-studies/gates-us-email/
+    - /case-studies/nextgen-policy/
+    - /case-studies/max-ihlenburg-sweden/
+  
+  end_headline: "Designing from concept to production"
+  end_text: I bring a systems-minded approach to design, creating and delivering visual assets that support storytelling across platforms. My work spans print, web, and exhibition contexts, with an emphasis on thoughtful execution, collaboration, and strong visual standards. <br /><br />See more of my <a href="/design">design background</a>, a sample of my <a href="/photography">photography</a>, or get in touch at <a href="mailto:sscummings@gmail.com">sscummings@gmail.com</a>.
