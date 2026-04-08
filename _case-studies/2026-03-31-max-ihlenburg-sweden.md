@@ -6,7 +6,6 @@ date: 2026-03-31
 
 img_main: /assets/editing/2026-MaxIhlenburgSweden-01.jpg
 img_square: /assets/editing/2026-MaxIhlenburgSweden-square.jpg
-img_square_class: image-inner-shadow
 
 intro: "Maximilian Ihlenburg is a documentary photographer and filmmaker focusing on the human relationship to the natural environment. In winter 2026 he traveled to Sweden to photograph and report on deforestation that threatens the livelihoods of indigenous Sami communities who graze herds of reindeer in the country's forests."
 

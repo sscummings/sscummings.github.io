@@ -7,7 +7,6 @@ years: 2020 - 2022
 
 img_main: /assets/design/2020-NextGenPolicy-02-main-03.jpg
 img_square: /assets/design/2020-NextGenPolicy-01-square-02.jpg
-img_square_class: image-inner-shadow
 
 intro: "NextGen Policy is a nonprofit advocacy organization focused on advancing progressive policy in California, particularly around climate, energy, and sustainability. The organization partnered with Patronage in 2020 for a website redesign to better communicate their priorities and expand storytelling capabilities."
 
