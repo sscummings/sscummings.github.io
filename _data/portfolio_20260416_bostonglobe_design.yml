@@ -1,0 +1,16 @@
+- name: "Boston Globe Design Portfolio"
+
+  headline: "Stephen Cummings is a designer building visual narratives and editorial tools across print and digital platforms."
+
+  # intro: "Sample intro"
+
+  case_studies:
+    - /case-studies/nextgen-policy/
+    - /case-studies/gates-us-email/
+    - /case-studies/mapping-the-right/
+    - /case-studies/max-ihlenburg-sweden/
+    - /case-studies/nycphotostroll-zines/
+    - /case-studies/salad/
+  
+  end_headline: "Designing from concept to production"
+  end_text: I approach design as a tool for structuring and communicating complex ideas. My work spans editorial design, data visualization, and responsive storytelling, with an emphasis on collaboration, iteration, and strong visual standards. <br /><br />See more examples of my <a href="/design">design</a>, a sample of my <a href="/photography">photography</a>, or get in touch at <a href="mailto:sscummings@gmail.com">sscummings@gmail.com</a>.
