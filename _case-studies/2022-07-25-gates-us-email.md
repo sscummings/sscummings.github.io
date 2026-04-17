@@ -1,6 +1,6 @@
 ---
 layout: single-case-study
-title: "Gates Foundation Email Templates"
+title: "Gates Foundation Email"
 slug: gates-us-email
 date: 2022-07-25
 
