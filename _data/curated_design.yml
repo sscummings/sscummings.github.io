@@ -27,12 +27,12 @@
     - /design/2019-12-20-caleitc4me-01
     - /design/2019-12-20-caleitc4me-02
     - /design/2019-12-20-caleitc4me-03
-- name: "NextGen Policy"
-  intro: "Design to build partnerships, shape policy, and deliver progress."
-  layout: "nextgenpolicy"
-  background: "#FEF7F5"
-  posts:
-    # - /design/2022-09-16-nextgenpolicy-01
-    - /design/2021-03-08-nextgenpolicy-01
-    - /design/2021-05-20-nextgenpolicy-01
-    - /design/2020-07-08-nextgenpolicy-01
+# - name: "NextGen Policy"
+#   intro: "Design to build partnerships, shape policy, and deliver progress."
+#   layout: "nextgenpolicy"
+#   background: "#FEF7F5"
+#   posts:
+#     # - /design/2022-09-16-nextgenpolicy-01
+#     - /design/2021-03-08-nextgenpolicy-01
+#     - /design/2021-05-20-nextgenpolicy-01
+#     - /design/2020-07-08-nextgenpolicy-01

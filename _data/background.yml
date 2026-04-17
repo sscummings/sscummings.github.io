@@ -2,21 +2,21 @@
 #
 #
 
-- name: "Fine Art"
-  blurb: "I have a BFA and an MFA in painting and drawing from Arizona State University and the University of Washington, respectively. I’ve taught art classes, published exhibition reviews, and participated in artist residencies."
-  img: /art/2019-drawing-01.jpg
-  imgAlt: "Artwork by Stephen Cummings"
-  link: "/art/"
-  linkText: "Explore artworks"
 - name: "Campaigns, Organizing, & Political Photography"
   blurb: "I got my start as an organizer on President Obama’s reelection campaign, and worked for Organizing for Action, Charlie Crist for Governor, and Hillary for America. Since then, I’ve continued to volunteer my time to get out the vote, and have photographed political activism in the U.S. and Europe."
   img: /photography/20180923-lasvegas-03.jpg
   imgAlt: "Photography by Stephen Cummings"
   link: "/photography/politics-and-protest"
   linkText: "See photos"
-- name: "Web Design, Dev, & <br class=\"hidden-sm\" />Project Management"
-  blurb: "I spent the better part of a decade designing and writing code for the web. Thinking in systems that could grow with client needs, I tested, iterated, and managed projects from start to finish, always with an eye toward cleanly designed, user friendly products."
-  img: /design/nextgenamerica-home-desktop-02-square.jpg
-  imgAlt: "Design by Stephen Cummings"
-  link: "/design"
-  linkText: "Design with purpose"
+- name: "Fine Art"
+  blurb: "I have a BFA and an MFA in painting and drawing from Arizona State University and the University of Washington, respectively. I’ve taught art classes, published exhibition reviews, and participated in artist residencies."
+  img: /art/2019-drawing-01.jpg
+  imgAlt: "Artwork by Stephen Cummings"
+  link: "/art/"
+  linkText: "Explore artworks"
+# - name: "Web Design, Dev, & <br class=\"hidden-sm\" />Project Management"
+#   blurb: "I spent the better part of a decade designing and writing code for the web. Thinking in systems that could grow with client needs, I tested, iterated, and managed projects from start to finish, always with an eye toward cleanly designed, user friendly products."
+#   img: /design/nextgenamerica-home-desktop-02-square.jpg
+#   imgAlt: "Design by Stephen Cummings"
+#   link: "/design"
+#   linkText: "Design with purpose"
