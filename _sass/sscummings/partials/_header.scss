@@ -21,6 +21,13 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 
+  .site-header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .site-title {
     @include relative-font-size(1.25);
     line-height: 1;
@@ -200,7 +207,7 @@
           display: inline-block;
           a,
           a:visited {
-            padding: 0 20px;
+            padding: 0 clamp(10px, 1.5vw, 20px);
           }
           a:hover {
             text-decoration: underline;

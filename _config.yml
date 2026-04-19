@@ -91,15 +91,11 @@ nav:
       #   title: Politics & Protest
       #   url: /photography/politics-and-protest/
   - item:
+    title: Editing & Production
+    url: /editing/
+  - item:
     title: Design & Dev
     url: /design/
-    # children:
-    #   - item:
-    #     title: Art
-    #     url: /art/
-    #   - item:
-    #     title: Design & Dev
-    #     url: /design/
   - item:
     title: About
     url: /about/
