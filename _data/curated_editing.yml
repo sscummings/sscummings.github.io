@@ -1,0 +1,13 @@
+- name: "Editing, Curation, and Production"
+
+  headline: "Editing, Curation, Production"
+
+  intro: "I work with artists and storytellers of all kinds to sharpen creative content and share it with the world."
+
+  case_studies:
+    - /case-studies/max-ihlenburg-sweden/
+    - /case-studies/salad/
+    - /case-studies/nycphotostroll-zines/
+  
+  # end_headline: "..."
+  # end_text: ...

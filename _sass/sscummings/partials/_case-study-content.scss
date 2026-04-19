@@ -16,6 +16,10 @@
         margin-bottom: 0.2em;
     }
 
+    a:not(:hover) {
+        text-decoration: none;
+    }
+
     @include mq-up($md-up) {
         width: 680px;
         margin: auto;
