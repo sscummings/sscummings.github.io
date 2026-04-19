@@ -33,9 +33,9 @@ my_role:
 
 As editor-in-chief for the second NYC Photo Stroll zine, I led a fully volunteer team through the entire production process from submission to print. Working with a deputy editor, I established a project timeline and coordinated submission intake, photo review and selection, design iteration, and print layout. In the final phase, my deputy editor and I guided the project through to production; standardizing typography and resolving gaps in layout, and aligning interior pages with a late-stage cover redesign to prepare the 100-page zine for the printer.
 
-  <!--<div class="cs-image-block image-radius-standard">
-    <img src="/assets/editing/___.jpg" alt="" loading="lazy" />
-  </div>-->
+  <div class="cs-image-block image-radius-standard">
+    <img src="/assets/editing/2023-nycphotostrollzine2-02-spread.jpg" alt="An interior spread from NYC Photo Stoll Zine #2, featuring a photo by Steevenson Jean Louis" loading="lazy" />
+  </div>
 
 </section>
 
@@ -46,7 +46,7 @@ As editor-in-chief for the second NYC Photo Stroll zine, I led a fully volunteer
 For the third edition of the zine, I initially joined in a more limited capacity as a contributor across editing, curation, and design. I participated in the photo selection process, contributed layout ideas, and helped establish a shared workflow in Figma to enable real-time collaboration across a large, multi-designer document, a significant improvement over the more traditional workflow of passing around Adobe InDesign files. I also recruited an illustrator and collage artist based in Portugal to collaborate with us on the zine's cover design.
 
   <div class="cs-image-block image-radius-standard">
-    <img src="/assets/editing/2025-nycphotostrollzine3-02-collaboration.jpg" alt="A screenshot from our NYC Photo Stroll's collaborative zine design process, featuring page layouts in Figma along with comments from contirbutors" loading="lazy" />
+    <img src="/assets/editing/2025-nycphotostrollzine3-02-collaboration.jpg" alt="A screenshot from NYC Photo Stroll's collaborative zine design process, featuring page layouts in Figma along with comments from contirbutors" loading="lazy" />
   </div>
 
   <div class="cs-image-block image-radius-standard">
