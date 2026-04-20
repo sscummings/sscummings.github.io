@@ -90,9 +90,9 @@ nav:
       # - item:
       #   title: Politics & Protest
       #   url: /photography/politics-and-protest/
-  - item:
-    title: Editing & Production
-    url: /editing/
+  # - item:
+  #   title: Editing & Production
+  #   url: /editing/
   - item:
     title: Design & Dev
     url: /design/
