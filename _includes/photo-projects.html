@@ -1,0 +1,35 @@
+
+<div class="container {{ project_group_intro_classes }}">
+    <header class="post-header">
+        <h1 class="post-title">{{ project_group_title | escape }}</h1>
+    </header>
+</div>
+
+<div class="container-fluid">
+    <div class="projects-grid three-projects">
+        {% for project in project_group_source limit:project_group_limit offset:project_group_offset %}
+            {% assign post = site.photography | where: "url", project.associatedPost | first %}
+            <div class="project-block">
+                <a
+                    class="project-image image-hover-zoom image-radius-standard"
+                    href="{{ project.link }}"
+                >
+                    <img
+                        alt="{{ post.caption | escape }}"
+                        class="{{ img_classes }}"
+                        src="../../assets/{{ post.img }}"
+                    />
+                </a>
+                <h3 class="project-title">
+                    <a
+                        class="arrow-link"
+                        href="{{ project.link }}"
+                    >
+                        <span>{{ project.name }}</span>
+                        {% include icon-arrow_right.html %}
+                    </a>
+                </h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>
