@@ -17,6 +17,6 @@
 # - name: "Walk"
 #   link: "/photography/walk/"
 #   associatedPost: /photography/2023-11-08-tempe-12
-# - name: "Politics & Protest"
-#   link: "/photography/politics-and-protest/"
-#   associatedPost: /photography/2018-09-23-lasvegas-03
+- name: "Politics & Protest"
+  link: "/photography/politics-and-protest/"
+  associatedPost: /photography/2018-09-23-lasvegas-03
