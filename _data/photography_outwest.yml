@@ -1,0 +1,19 @@
+# Uses the same .standard-grid layout as the homepage
+#
+#
+- name: "Out West"
+  blurbTitle: "(Un)familiar ground"
+  blurb: "Returning to the landscapes of my youth after years away, I find myself reveling in the otherworldly contrasts of scale, color, and light at the intersections of our natural and built environments. It leaves me wondering: to what extent are we able to shape the world around us, and to what extent does it force our hand?"
+  posts:
+    - /photography/2023-11-08-tempe-12
+    - /photography/2025-12-28-renosparks-04
+    - /photography/2026-01-02-chandlerscottsdale-03
+    - /photography/2026-01-01-nevada-05
+    - /photography/2026-01-01-nevada-02
+    - /photography/2026-01-05-arizona-03
+    - /photography/2026-01-01-nevada-09
+    - /photography/2026-01-06-azca-01
+    - /photography/2026-01-05-arizona-10
+    - /photography/2026-01-06-azca-02
+    - /photography/2026-01-05-arizona-06
+    - /photography/2026-01-05-arizona-08
