@@ -6,6 +6,7 @@ date: 2022-10-07
 years: 2020 - 2022
 
 img_main: /assets/design/2020-NextGenPolicy-02-main-03.jpg
+img_main_class: "image-inner-shadow image-inner-shadow-light"
 img_square: /assets/design/2020-NextGenPolicy-01-square-02.jpg
 
 intro: "NextGen Policy is a nonprofit advocacy organization focused on advancing progressive policy in California, particularly around climate, energy, and sustainability. The organization partnered with Patronage in 2020 for a website redesign to better communicate their priorities and expand storytelling capabilities."
@@ -35,10 +36,10 @@ As the designer on this project, it became clear to me that NextGen's content te
 
 To counterbalance dense, text-heavy subject matter, I emphasized the use of photography as a storytelling tool, including photo research across stock and open-source libraries, as well as NextGen Policy's own archives to establish a visual tone that felt timely, human, and grounded in real-world impact. These explorations helped demonstrate how strong visual choices could make policy content more accessible and engaging to a broader audience.
 
-  <div class="cs-image-block image-radius-standard">
+  <div class="cs-image-block image-radius-standard image-inner-shadow image-inner-shadow-light">
     <img src="/assets/design/2020-NextGenPolicy-04-module-01.jpg" alt="A page header example from Stephen Cummings's 2022 website designs for NextGen Policy" loading="lazy" />
   </div>
-  <div class="cs-image-block image-radius-standard">
+  <div class="cs-image-block image-radius-standard image-inner-shadow image-inner-shadow-light">
     <img src="/assets/design/2022-NextGenPolicy-04-module-04.jpg" alt="An example of blocks of content with large, circular images from Stephen Cummings's 2022 website designs for NextGen Policy" loading="lazy" />
   </div>
   <div class="cs-image-block image-radius-standard">
@@ -65,7 +66,7 @@ When we updated our tech stack at Patronage, we took the next design update as a
 
 Following the initial launch, I continued working with NextGen Policy to expand the system’s capabilities as their needs evolved. This included designing new content modules to support new sections of the site like community partnerships, or a legislative tracking feature with structured bill pages, incorporating status indicators, contextual information, related media, and calls to action. These iterative updates extended the system’s usefulness while maintaining visual and structural consistency.
 
-  <div class="cs-image-block image-radius-standard">
+  <div class="cs-image-block image-radius-standard image-inner-shadow image-inner-shadow-light">
     <img src="/assets/design/2022-NextGenPolicy-07.jpg" alt="A sample legislation tracking page from Stephen Cummings's 2022 website designs for NextGen Policy" loading="lazy" />
   </div>
 
