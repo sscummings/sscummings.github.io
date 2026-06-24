@@ -94,6 +94,9 @@ nav:
   #   title: Editing & Production
   #   url: /editing/
   - item:
+    title: Objects
+    url: /art/
+  - item:
     title: Design & Dev
     url: /design/
   - item:
