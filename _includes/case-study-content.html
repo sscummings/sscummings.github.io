@@ -59,6 +59,9 @@
             <div class="cs-image-main image-radius-standard {{ post.img_main_class }}">
                 <img src="{{ post.img_main }}" alt="{{ post.title }}" loading="lazy">
             </div>
+            {% if post.img_main_caption %}
+                <p class="cs-image-caption">{{ post.img_main_caption }}</p>
+            {% endif %}
         {% endif %}
 
         <div class="hidden-lg">

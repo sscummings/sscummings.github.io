@@ -6,6 +6,7 @@ date: 2025-11-08
 years: 2023 - 2025
 
 img_main: /assets/editing/2023-nycphotostrollzine2-01-main.jpg
+img_main_caption: "Zine #2 cover design by Emily Fecsko"
 img_square: /assets/editing/2025-nycphotostrollzine3-01-square.jpg
 # img_square_class: image-inner-shadow
 
@@ -52,6 +53,7 @@ For the third edition of the zine, I initially joined in a more limited capacity
   <div class="cs-image-block image-radius-standard">
     <img src="/assets/editing/2025-nycphotostrollzine3-02-cover.jpg" alt="NYC Photo Stroll's Zine #3 cover design by Portuguese artist Mariana Magalhães" loading="lazy" />
   </div>
+  <p class="cs-image-caption">Zine #3 cover design by Mariana Magalhães</p>
 
 </section>
 
@@ -72,5 +74,6 @@ Working with a low-budget printer introduced additional challenges, requiring su
   <div class="cs-image-block image-radius-standard">
     <img src="/assets/editing/2025-nycphotostrollzine3-03-onsale.jpg" alt="NYC Photo Stroll zines on sale in New York City. Photo by Matt Baer." loading="lazy" />
   </div>
+  <p class="cs-image-caption">Photo by Matt Baer</p>
 
 </section>

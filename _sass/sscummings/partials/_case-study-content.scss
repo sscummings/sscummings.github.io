@@ -45,6 +45,31 @@
     }
 }
 
+.cs-image-caption {
+    font-size: 0.8em;
+    text-align: right;
+    opacity: 0.6;
+
+    .cs-image-main + & {
+        margin-top: -$grid-gutter-width/2;
+    }
+    .cs-image-block + & {
+        margin-top: -$grid-gutter-width*0.3;
+        
+        @include mq-up($sm-up) {
+            margin-top: -$grid-gutter-width*0.4;
+        }
+        @include mq-up($lg-up) {
+            margin-top: -$grid-gutter-width/2;
+        }
+    }
+
+    .image-radius-standard + & {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .case-study-meta {
     margin: $grid-gutter-width 0;
 }
