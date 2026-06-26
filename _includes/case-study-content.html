@@ -27,10 +27,12 @@
             </div>
         {% endif %}
 
+        {% comment %}
         <div class="cs-meta-item">
             <h3>Year{% if post.years %}s{% endif %}</h3>
             <p>{{ post.years | default: (post.date | date: "%Y") }}</p>
         </div>
+        {% endcomment %}
     </div>
 {% endcapture %}
 
