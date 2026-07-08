@@ -1,0 +1,13 @@
+- name: "ProPublica Interactive Story Designer"
+
+  headline: "Stephen Cummings is a designer and visual storyteller who transforms complex information into accessible, engaging digital experiences."
+
+  # intro: "Sample intro"
+
+  case_studies:
+    - /case-studies/mapping-the-right/
+    - /case-studies/caleitc4me/
+    - /case-studies/gates-us-email/
+  
+  end_headline: "Designing for clarity"
+  end_text: I combine design, frontend development, and editorial thinking to help audiences navigate complicated subjects. Whether building interactive tools, data-driven experiences, or visually rich content systems, I work collaboratively to translate dense information into clear, useful stories that inform and empower the public. <br /><br />Get in touch at <a href="mailto:sscummings@gmail.com">sscummings@gmail.com</a>, and let's work together.
