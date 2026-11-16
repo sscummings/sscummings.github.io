@@ -96,9 +96,9 @@ nav:
   - item:
     title: Objects
     url: /art/
-  - item:
-    title: Design & Dev
-    url: /design/
+  # - item:
+  #   title: Design & Dev
+  #   url: /design/
   - item:
     title: About
     url: /about/
